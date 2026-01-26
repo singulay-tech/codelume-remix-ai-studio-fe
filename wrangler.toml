@@ -1,8 +1,1 @@
-name = "codelume-remix-ai-studio-fe"
 pages_build_output_dir = "dist"
-
-[build]
-command = "pnpm build"
-
-[build.upload]
-format = "service-worker"
