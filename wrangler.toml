@@ -1,19 +1,8 @@
 name = "codelume-remix-ai-studio-fe"
-type = "javascript"
-account_id = ""
-workers_dev = true
-route = ""
-zone_id = ""
-
-[env.production]
-name = "codelume-remix-ai-studio-fe-prod"
-route = ""
-zone_id = ""
+pages_build_output_dir = "dist"
 
 [build]
 command = "pnpm build"
-cwd = "./"
-watch_paths = ["src/**/*.ts", "src/**/*.tsx"]
 
 [build.upload]
 format = "service-worker"
