@@ -19,7 +19,7 @@ import enAboutUs from './locales/en/aboutUs.json'
 import enWorkshop from './locales/en/workshop.json'
 import enErrors from './locales/en/errors.json'
 
-// Chinese language packs
+// Simplified Chinese language packs
 import zhCommon from './locales/zh/common.json'
 import zhNavigation from './locales/zh/navigation.json'
 import zhHero from './locales/zh/hero.json'
@@ -34,6 +34,54 @@ import zhDownloads from './locales/zh/downloads.json'
 import zhAboutUs from './locales/zh/aboutUs.json'
 import zhWorkshop from './locales/zh/workshop.json'
 import zhErrors from './locales/zh/errors.json'
+
+// Traditional Chinese language packs
+import zhTWCommon from './locales/zh-TW/common.json'
+import zhTWNavigation from './locales/zh-TW/navigation.json'
+import zhTWHero from './locales/zh-TW/hero.json'
+import zhTWAbout from './locales/zh-TW/about.json'
+import zhTWServices from './locales/zh-TW/services.json'
+import zhTWPortfolio from './locales/zh-TW/portfolio.json'
+import zhTWTeam from './locales/zh-TW/team.json'
+import zhTWContact from './locales/zh-TW/contact.json'
+import zhTWFooter from './locales/zh-TW/footer.json'
+import zhTWAwards from './locales/zh-TW/awards.json'
+import zhTWDownloads from './locales/zh-TW/downloads.json'
+import zhTWAboutUs from './locales/zh-TW/aboutUs.json'
+import zhTWWorkshop from './locales/zh-TW/workshop.json'
+import zhTWErrors from './locales/zh-TW/errors.json'
+
+// Japanese language packs
+import jaCommon from './locales/ja/common.json'
+import jaNavigation from './locales/ja/navigation.json'
+import jaHero from './locales/ja/hero.json'
+import jaAbout from './locales/ja/about.json'
+import jaServices from './locales/ja/services.json'
+import jaPortfolio from './locales/ja/portfolio.json'
+import jaTeam from './locales/ja/team.json'
+import jaContact from './locales/ja/contact.json'
+import jaFooter from './locales/ja/footer.json'
+import jaAwards from './locales/ja/awards.json'
+import jaDownloads from './locales/ja/downloads.json'
+import jaAboutUs from './locales/ja/aboutUs.json'
+import jaWorkshop from './locales/ja/workshop.json'
+import jaErrors from './locales/ja/errors.json'
+
+// Korean language packs
+import koCommon from './locales/ko/common.json'
+import koNavigation from './locales/ko/navigation.json'
+import koHero from './locales/ko/hero.json'
+import koAbout from './locales/ko/about.json'
+import koServices from './locales/ko/services.json'
+import koPortfolio from './locales/ko/portfolio.json'
+import koTeam from './locales/ko/team.json'
+import koContact from './locales/ko/contact.json'
+import koFooter from './locales/ko/footer.json'
+import koAwards from './locales/ko/awards.json'
+import koDownloads from './locales/ko/downloads.json'
+import koAboutUs from './locales/ko/aboutUs.json'
+import koWorkshop from './locales/ko/workshop.json'
+import koErrors from './locales/ko/errors.json'
 
 const resources = {
   en: {
@@ -50,7 +98,7 @@ const resources = {
     downloads: enDownloads,
     aboutUs: enAboutUs,
     workshop: enWorkshop,
-    errors: enErrors
+    errors: enErrors,
   },
   zh: {
     common: zhCommon,
@@ -66,9 +114,57 @@ const resources = {
     downloads: zhDownloads,
     aboutUs: zhAboutUs,
     workshop: zhWorkshop,
-    errors: zhErrors
-  }
-}
+    errors: zhErrors,
+  },
+  'zh-TW': {
+    common: zhTWCommon,
+    navigation: zhTWNavigation,
+    hero: zhTWHero,
+    about: zhTWAbout,
+    services: zhTWServices,
+    portfolio: zhTWPortfolio,
+    team: zhTWTeam,
+    contact: zhTWContact,
+    footer: zhTWFooter,
+    awards: zhTWAwards,
+    downloads: zhTWDownloads,
+    aboutUs: zhTWAboutUs,
+    workshop: zhTWWorkshop,
+    errors: zhTWErrors,
+  },
+  ja: {
+    common: jaCommon,
+    navigation: jaNavigation,
+    hero: jaHero,
+    about: jaAbout,
+    services: jaServices,
+    portfolio: jaPortfolio,
+    team: jaTeam,
+    contact: jaContact,
+    footer: jaFooter,
+    awards: jaAwards,
+    downloads: jaDownloads,
+    aboutUs: jaAboutUs,
+    workshop: jaWorkshop,
+    errors: jaErrors,
+  },
+  ko: {
+    common: koCommon,
+    navigation: koNavigation,
+    hero: koHero,
+    about: koAbout,
+    services: koServices,
+    portfolio: koPortfolio,
+    team: koTeam,
+    contact: koContact,
+    footer: koFooter,
+    awards: koAwards,
+    downloads: koDownloads,
+    aboutUs: koAboutUs,
+    workshop: koWorkshop,
+    errors: koErrors,
+  },
+} as const
 
 i18n
   .use(LanguageDetector)
@@ -77,6 +173,9 @@ i18n
     resources,
     fallbackLng,
     supportedLngs: [...supportedLngs],
+    // Normalize region variants (e.g. ja-JP -> ja) to avoid falling back to English.
+    load: 'languageOnly',
+    nonExplicitSupportedLngs: true,
     defaultNS,
     ns: [
       'common',
@@ -92,7 +191,7 @@ i18n
       'downloads',
       'aboutUs',
       'workshop',
-      'errors'
+      'errors',
     ],
 
     interpolation: {
@@ -102,12 +201,29 @@ i18n
     detection: {
       order: ['localStorage', 'navigator', 'htmlTag'],
       caches: ['localStorage'],
-      lookupLocalStorage: 'i18nextLng'
+      lookupLocalStorage: 'i18nextLng',
+      convertDetectedLanguage: (lng) => {
+        if (lng.startsWith('zh-TW') || lng.startsWith('zh-Hant') || lng.startsWith('zh-HK')) {
+          return 'zh-TW'
+        }
+        if (lng.startsWith('zh-CN') || lng.startsWith('zh-SG')) {
+          return 'zh'
+        }
+        const base = lng.split('-')[0]
+        return supportedLngs.includes(base as (typeof supportedLngs)[number]) ? base : lng
+      }
     },
 
     react: {
       useSuspense: true
     }
   })
+
+// Keep <html lang="..."> in sync with the active language.
+i18n.on('languageChanged', (lng) => {
+  if (typeof document !== 'undefined') {
+    document.documentElement.lang = lng
+  }
+})
 
 export default i18n

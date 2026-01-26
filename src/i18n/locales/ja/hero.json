@@ -1,0 +1,14 @@
+{
+  "title": {
+    "line1": "ダイナミック",
+    "line2": "壁紙",
+    "line3": "macOS向け"
+  },
+  "cta": {
+    "download": "Codelumeをダウンロード",
+    "soundOn": "サウンドオン"
+  },
+  "video": {
+    "unsupported": "お使いのブラウザは動画タグに対応していません。"
+  }
+}

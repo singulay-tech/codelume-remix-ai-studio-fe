@@ -534,7 +534,7 @@ export function Services() {
           {/* 暗房氛围提示 */}
           <div className="mt-16 text-center">
             <p className="text-sm text-amber-200/70 leading-relaxed max-w-2xl mx-auto">
-              {t('footer')}
+              {/* {t('footer')} */}
             </p>
           </div>
         </div>

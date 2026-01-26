@@ -1,0 +1,12 @@
+{
+  "notFound": {
+    "title": "404",
+    "message": "ページが見つかりません",
+    "action": "ホームへ戻る"
+  },
+  "generic": {
+    "title": "エラー",
+    "message": "問題が発生しました",
+    "action": "再試行"
+  }
+}

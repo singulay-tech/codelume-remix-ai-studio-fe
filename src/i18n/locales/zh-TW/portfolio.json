@@ -1,0 +1,30 @@
+{
+  "badge": "创意作品集",
+  "title": "创意作品集",
+  "subtitle": "我们支持本地任意作品的私有化使用。",
+  "latestProject": "精选演示",
+  "featured": {
+    "type": "本地包",
+    "client": "用途：个人私有库",
+    "title": "Codelume 桌面预览",
+    "description": "展示本地壁纸包、多屏播放与电影级动态效果，完整离线运行于 macOS。",
+    "details": {
+      "industry": {
+        "label": "格式",
+        "value": "视频 / 2D 场景 / 3D 场景"
+      },
+      "style": {
+        "label": "播放",
+        "value": "多屏 / 同步"
+      },
+      "tone": {
+        "label": "隐私",
+        "value": "本地运行"
+      },
+      "format": {
+        "label": "平台",
+        "value": "macOS"
+      }
+    }
+  }
+}

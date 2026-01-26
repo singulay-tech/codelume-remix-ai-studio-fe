@@ -1,0 +1,44 @@
+{
+  "badge": "워크플로우",
+  "title": "설치부터 몰입까지",
+  "subtitle": "데스크톱을 살아 있게 유지하는 간단하고 프라이빗한 흐름.",
+  "steps": {
+    "start": "START",
+    "end": "END",
+    "step1": {
+      "number": "01",
+      "title": "설치 및 실행",
+      "description": "앱을 다운로드하고 메뉴 막대에서 시작하세요."
+    },
+    "step2": {
+      "number": "02",
+      "title": "번들 가져오기",
+      "description": "로컬 비디오 또는 씬 번들을 한 번에 가져옵니다."
+    },
+    "step3": {
+      "number": "03",
+      "title": "화면에 할당",
+      "description": "각 디스플레이에서 재생할 월페이퍼를 선택합니다."
+    },
+    "step4": {
+      "number": "04",
+      "title": "재생 조정",
+      "description": "채우기 모드, 볼륨, 일시정지 규칙을 조정합니다."
+    },
+    "step5": {
+      "number": "05",
+      "title": "즐기고 잠들기",
+      "description": "화면 보호기 모드에서도 움직임을 유지합니다."
+    }
+  },
+  "stats": {
+    "fps": "macOS 네이티브",
+    "duration": "오프라인 우선",
+    "quality": "멀티 스크린 지원"
+  },
+  "gallery": {
+    "title": "로컬 컬렉션을 하나의 라이브러리에서 미리보기",
+    "caption": "번들은 Mac에 저장되어 프라이빗하게 재생됩니다",
+    "imageAlt": "로컬 월페이퍼 번들의 스토리보드형 미리보기 그리드"
+  }
+}

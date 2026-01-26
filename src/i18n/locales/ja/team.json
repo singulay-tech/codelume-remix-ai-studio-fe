@@ -1,0 +1,54 @@
+{
+  "badge": "アウトローたち",
+  "title": {
+    "line1": "この人たちは",
+    "line2": "指名手配"
+  },
+  "subtitle": "高度なスキルと危険な創造力",
+  "wanted": "指名手配",
+  "bounty": "報奨金",
+  "members": {
+    "marcus": {
+      "name": "Marcus 'The Pixel Bandit'",
+      "crime": "創造的強盗",
+      "bounty": "$8,500",
+      "description": "平凡な映像を奪い、非凡な視覚体験へと変えることで悪名高い。危険なレベルの創造性と技術力を所持。"
+    },
+    "sofia": {
+      "name": "Sofia 'The Frame Thief'",
+      "crime": "想像力の大窃盗",
+      "bounty": "$6,200",
+      "description": "不可能なブリーフを盗み出し、受賞級の作品へ変える容疑で指名手配。戦略思考と高いPM能力を武器にする。"
+    },
+    "jake": {
+      "name": "Jake 'The Render Rogue'",
+      "crime": "技術的強奪の首謀",
+      "bounty": "$11,800",
+      "description": "レンダリング犯罪の首領。ハードウェアの限界を超える高度な処理計画を主導した容疑。"
+    },
+    "maya": {
+      "name": "Maya 'The Code Crusher'",
+      "crime": "デジタル魔術とアルゴリズム錬金術",
+      "bounty": "$9,300",
+      "description": "混沌とした要件から完璧なコードを召喚する禁断の魔法の使い手。複雑さを優雅に解く謎の技術力で知られる。"
+    },
+    "connor": {
+      "name": "Connor 'The Digital Desperado'",
+      "crime": "驚嘆を目的とした制作",
+      "bounty": "$13,700",
+      "description": "革新的なコンテンツ制作作戦の黒幕。従来の制作手法を揺るがし、競合に再考を迫った容疑。"
+    },
+    "zara": {
+      "name": "Zara 'The Motion Maverick'",
+      "crime": "アニメーション操作と効果偽造",
+      "bounty": "$7,900",
+      "description": "物理法則を無視するほど滑らかなモーショングラフィックスを作ることで有名。After Effectsの達人。"
+    },
+    "leo": {
+      "name": "Leo 'The Effect Enforcer'",
+      "crime": "放浪するVFX合成計画",
+      "bounty": "$10,400",
+      "description": "プロジェクトを渡り歩き、驚異的な合成と不可能な映画的魔法を残していく流浪のVFXアウトロー。"
+    }
+  }
+}

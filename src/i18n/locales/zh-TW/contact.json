@@ -1,0 +1,26 @@
+{
+  "badge": "让我们一起创作",
+  "title": "准备好点亮银幕了吗？",
+  "subtitle": "预约一次探索性通话，讨论您的项目，看看我们如何将您的愿景变为电影级现实",
+  "calendar": {
+    "title": "MOJJU 探索性通话",
+    "duration": "30 分钟",
+    "type": "视频通话",
+    "price": "免费咨询",
+    "availability": "现在可预约"
+  },
+  "features": {
+    "discussion": {
+      "title": "项目讨论",
+      "description": "与我们的团队分享您的愿景和需求"
+    },
+    "strategy": {
+      "title": "定制策略",
+      "description": "为您的独特项目获取量身定制的方案"
+    },
+    "nextSteps": {
+      "title": "后续步骤",
+      "description": "清晰的时间线和路线图，将您的想法变为现实"
+    }
+  }
+}

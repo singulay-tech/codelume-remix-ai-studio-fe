@@ -1,0 +1,71 @@
+{
+  "badge": "크리에이티브 랩",
+  "teaser": {
+    "title": "크리에이티브 랩",
+    "subtitle": "Codelume 번들을 위한 미래의 마켓플레이스 겸 에디터. 현재는 자리 표시용 프리뷰입니다.",
+    "cta": "크리에이티브 랩 열기",
+    "note": "새 탭에서 열립니다"
+  },
+  "header": {
+    "title": "Codelume 크리에이티브 랩",
+    "subtitle": "마켓플레이스 & 에디터 프리뷰",
+    "back": "Codelume로 돌아가기"
+  },
+  "hero": {
+    "title": "동적 월페이퍼를 만들고, 리믹스하고, 관리하세요",
+    "subtitle": "다가올 크리에이티브 랩의 정적 프리뷰입니다. 자산, 템플릿, 편집 워크플로우의 허브가 됩니다."
+  },
+  "tabs": {
+    "market": "마켓",
+    "editor": "에디터",
+    "publish": "퍼블리시"
+  },
+  "market": {
+    "items": [
+      {
+        "badge": "번들",
+        "title": "로컬 월페이퍼",
+        "description": "프라이빗 팩을 큐레이션하고 자산을 로컬에 저장합니다."
+      },
+      {
+        "badge": "템플릿",
+        "title": "씬 레이아웃",
+        "description": "Scene2D와 Scene3D용 모션 프리셋을 바로 적용합니다."
+      },
+      {
+        "badge": "라이브러리",
+        "title": "크리에이터 컬렉션",
+        "description": "큐레이션된 세트를 팔로우하고 분위기별로 정리합니다."
+      }
+    ]
+  },
+  "editor": {
+    "badge": "에디터",
+    "title": "타임라인 + 레이어 제어",
+    "description": "루프 트리밍, 오디오 밸런스, 재생 프리셋으로 번들을 준비합니다.",
+    "features": {
+      "tooling": {
+        "title": "번들 빌더",
+        "description": "비디오 또는 씬 자산을 하나의 Codelume 번들로 패키징합니다."
+      },
+      "timeline": {
+        "title": "씬 타임라인",
+        "description": "루프 지점, 전환, 프리뷰 클립을 즉시 설정합니다."
+      },
+      "preview": {
+        "title": "프리뷰 스튜디오",
+        "description": "내보내기 전에 여러 화면 크기에서 재생을 비교합니다."
+      }
+    }
+  },
+  "publish": {
+    "badge": "퍼블리시",
+    "title": "안심하고 출시",
+    "description": "메타데이터를 준비하고, 내보내기 프리셋을 만들고, 번들을 프라이빗하게 공유하세요.",
+    "tags": {
+      "review": "리뷰 & QA",
+      "export": "내보내기 프리셋",
+      "share": "프라이빗 공유"
+    }
+  }
+}

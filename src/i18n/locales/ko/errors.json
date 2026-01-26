@@ -1,0 +1,12 @@
+{
+  "notFound": {
+    "title": "404",
+    "message": "페이지를 찾을 수 없습니다",
+    "action": "홈으로 돌아가기"
+  },
+  "generic": {
+    "title": "오류",
+    "message": "문제가 발생했습니다",
+    "action": "다시 시도"
+  }
+}

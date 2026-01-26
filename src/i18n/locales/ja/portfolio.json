@@ -1,0 +1,30 @@
+{
+  "badge": "クリエイティブ作品集",
+  "title": "クリエイティブ作品集",
+  "subtitle": "ローカルの作品を、あらゆる個人用途でプライベートに使えます。",
+  "latestProject": "注目デモ",
+  "featured": {
+    "type": "ローカルバンドル",
+    "client": "用途: プライベートライブラリ",
+    "title": "Codelume デスクトッププレビュー",
+    "description": "ローカルバンドル、マルチ画面再生、macOSでの映画的な動きを、すべてオフラインで示す短いループです。",
+    "details": {
+      "industry": {
+        "label": "形式",
+        "value": "動画 / Scene2D / Scene3D"
+      },
+      "style": {
+        "label": "再生",
+        "value": "マルチ画面 / 同期"
+      },
+      "tone": {
+        "label": "プライバシー",
+        "value": "ローカル限定"
+      },
+      "format": {
+        "label": "プラットフォーム",
+        "value": "macOS"
+      }
+    }
+  }
+}

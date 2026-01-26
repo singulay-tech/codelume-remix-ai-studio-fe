@@ -1,0 +1,26 @@
+{
+  "badge": "함께 만들어봐요",
+  "title": "화면을 빛낼 준비가 되었나요?",
+  "subtitle": "프로젝트를 논의하고 당신의 비전을 시네마틱 현실로 만드는 방법을 확인해 보세요",
+  "calendar": {
+    "title": "MOJJU 디스커버리 콜",
+    "duration": "30분",
+    "type": "화상 통화",
+    "price": "무료 상담",
+    "availability": "지금 가능"
+  },
+  "features": {
+    "discussion": {
+      "title": "프로젝트 논의",
+      "description": "팀과 비전과 요구 사항을 공유하세요"
+    },
+    "strategy": {
+      "title": "맞춤 전략",
+      "description": "고유한 프로젝트를 위한 맞춤 접근 방식을 제공합니다"
+    },
+    "nextSteps": {
+      "title": "다음 단계",
+      "description": "아이디어를 현실로 만드는 명확한 타임라인과 로드맵"
+    }
+  }
+}

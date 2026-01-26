@@ -1,0 +1,44 @@
+{
+  "badge": "使用流程",
+  "title": "从安装到沉浸",
+  "subtitle": "一个简单、私密的工作流，让桌面持续焕发生机。",
+  "steps": {
+    "start": "开始",
+    "end": "结束",
+    "step1": {
+      "number": "01",
+      "title": "安装与启动",
+      "description": "下载安装后从菜单栏快速进入。"
+    },
+    "step2": {
+      "number": "02",
+      "title": "导入本地包",
+      "description": "一键导入视频或场景壁纸包。"
+    },
+    "step3": {
+      "number": "03",
+      "title": "分配屏幕",
+      "description": "为每块屏幕选择不同的动态壁纸。"
+    },
+    "step4": {
+      "number": "04",
+      "title": "播放微调",
+      "description": "设置填充模式、音量与暂停策略。"
+    },
+    "step5": {
+      "number": "05",
+      "title": "持续体验",
+      "description": "在屏保模式下也保持动态播放。"
+    }
+  },
+  "stats": {
+    "fps": "原生 macOS",
+    "duration": "离线优先",
+    "quality": "多屏就绪"
+  },
+  "gallery": {
+    "title": "本地素材统一管理与预览",
+    "caption": "壁纸包只保存在你的设备上，私密安全",
+    "imageAlt": "本地壁纸包的故事板式预览"
+  }
+}

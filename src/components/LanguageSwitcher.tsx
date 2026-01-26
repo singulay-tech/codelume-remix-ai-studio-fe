@@ -8,13 +8,25 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu'
-import { supportedLngs, languageNames, type SupportedLanguage } from '@/i18n/config'
+import { fallbackLng, supportedLngs, languageNames, type SupportedLanguage } from '@/i18n/config'
 
 export function LanguageSwitcher() {
   const { i18n } = useTranslation()
-  const currentLang = (i18n.language?.split('-')[0] || 'en') as SupportedLanguage
+  const resolved = (i18n.resolvedLanguage || i18n.language || fallbackLng) as string
+  const base = resolved.split('-')[0] as SupportedLanguage
+  const currentLang = (
+    supportedLngs.includes(resolved as SupportedLanguage)
+      ? resolved
+      : supportedLngs.includes(base)
+        ? base
+        : fallbackLng
+  ) as SupportedLanguage
 
   const handleLanguageChange = (lng: SupportedLanguage) => {
+    // Persist explicit user choice so it wins over auto-detection on reload.
+    if (typeof window !== 'undefined') {
+      window.localStorage.setItem('i18nextLng', lng)
+    }
     i18n.changeLanguage(lng)
   }
 

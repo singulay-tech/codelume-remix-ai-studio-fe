@@ -1,0 +1,39 @@
+{
+  "badge": "ダウンロード",
+  "title": "Codelumeを入手",
+  "subtitle": "自動更新のApp Store版か、検証やアーカイブ向けに過去バージョンを選べます。",
+  "table": {
+    "headers": {
+      "version": "バージョン",
+      "date": "リリース日",
+      "notes": "ハイライト",
+      "download": "ダウンロード"
+    },
+    "rows": [
+      {
+        "version": "App Store（自動更新）",
+        "date": "常に最新",
+        "notes": "ほとんどのユーザーに推奨。自動更新とサンドボックス準拠を含みます。",
+        "linkLabel": "App Storeを開く",
+        "linkUrl": "https://apps.apple.com/us/app/%E7%A0%81%E9%95%9C/id6751061329?mt=12"
+      },
+      {
+        "version": "v1.4.0",
+        "date": "2025年12月25日",
+        "notes": "安定性の修正、スクリーンセーバー体験の改善、再生ルールの洗練。",
+        "linkLabel": "ダウンロード",
+        "linkUrl": "https://github.com/guang-zi-yu/CodelumeApp/releases/tag/v1.4.0",
+        "secondaryLabel": "リリースノート",
+        "secondaryUrl": "https://github.com/guang-zi-yu/CodelumeApp/releases/tag/v1.4.0"
+      },
+      {
+        "version": "リリースアーカイブ",
+        "date": "2025年",
+        "notes": "互換性テスト向けに、過去のビルドと資産を参照できます。",
+        "linkLabel": "リリースを見る",
+        "linkUrl": "https://github.com/guang-zi-yu/CodelumeApp/releases"
+      }
+    ]
+  },
+  "footnote": "App Store版は自動更新されます。過去版は互換性確認のためにのみ提供されています。"
+}
