@@ -39,14 +39,14 @@ export function Awards() {
   return (
     <section id="awards" className="relative py-20 bg-background overflow-hidden">
       
-      {/* Elegant Background */}
+      {/* 优雅背景 */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-card/30 to-background" />
       
 
 
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         
-        {/* Header */}
+        {/* 标题 */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 mb-6">
             <div className="w-3 h-3 bg-accent-purple rounded-full animate-pulse" />
@@ -65,10 +65,10 @@ export function Awards() {
           </p>
         </div>
 
-        {/* Awards Display */}
+        {/* 奖项展示 */}
         <div className="relative max-w-7xl mx-auto">
           
-          {/* Awards Grid */}
+          {/* 奖项网格 */}
           <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
             {awards.map((award, index) => (
               <div
@@ -77,10 +77,10 @@ export function Awards() {
                 style={{ animationDelay: award.delay }}
               >
                 
-                {/* Award Pedestal */}
+                {/* 奖杯底座 */}
                 <div className="relative mb-6">
                   
-                  {/* Floating Award Display */}
+                  {/* 悬浮奖项展示 */}
                   <div className={`relative p-6 rounded-2xl border shadow-md transition-all duration-500 hover:scale-105 ${
                     index === 2 || index === 3 ? 'bg-gray-800 border-gray-700' : 'bg-background border-border'
                   }`}
@@ -88,7 +88,7 @@ export function Awards() {
                          boxShadow: '0 8px 24px rgba(0,0,0,0.08)'
                        }}>
                     
-                    {/* Award Image */}
+                    {/* 奖项图片 */}
                     <img 
                       src={award.image}
                       alt="Film Festival Award Laurel"
@@ -101,7 +101,7 @@ export function Awards() {
 
                   </div>
                   
-                  {/* Floating Animation */}
+                  {/* 漂浮动画 */}
                   <div className="float-gentle absolute inset-0 pointer-events-none" />
                 </div>
 

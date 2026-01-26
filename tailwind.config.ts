@@ -7,7 +7,7 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: 'calc(var(--spacing) * 4)', // 1rem with 14px base = 14px padding
+      padding: 'calc(var(--spacing) * 4)', // 以 14px 基准的 1rem = 14px 内边距
       screens: {
         sm: '40rem',
         md: '48rem', 

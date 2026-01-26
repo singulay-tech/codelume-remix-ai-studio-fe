@@ -12,7 +12,7 @@ const GlassCard = ({ title, description, className }: GlassCardProps) => {
       <h3 className="text-2xl font-semibold mb-4 text-shadow-medium">{title}</h3>
       <p className="text-muted-foreground leading-relaxed">{description}</p>
       
-      {/* Decorative elements */}
+      {/* 装饰元素 */}
       <div className="mt-6 flex space-x-2">
         <div 
           className="w-3 h-3 rounded-full"

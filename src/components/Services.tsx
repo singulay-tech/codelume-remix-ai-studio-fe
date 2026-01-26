@@ -69,24 +69,24 @@ export function Services() {
       overflow: 'visible'
     }}>
       
-      {/* Photo Lab Background Elements */}
+      {/* 摄影暗房背景元素 */}
       <div className="absolute inset-0">
-        {/* Darkroom ambient lighting effect */}
+        {/* 暗房环境光效果 */}
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-red-900/20 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-amber-900/15 rounded-full blur-2xl" />
         
-        {/* Equipment silhouettes */}
+        {/* 设备剪影 */}
         <div className="absolute bottom-8 left-8 w-16 h-24 bg-black/40 rounded-t-lg transform rotate-3" />
         <div className="absolute bottom-8 right-8 w-12 h-20 bg-black/30 rounded-lg transform -rotate-2" />
         
-        {/* Chemical trays suggestion */}
+        {/* 化学托盘意象 */}
         <div className="absolute bottom-12 left-1/4 w-32 h-8 bg-black/30 rounded-lg transform rotate-1" />
         <div className="absolute bottom-12 right-1/4 w-28 h-6 bg-black/25 rounded-lg transform -rotate-1" />
       </div>
 
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         
-        {/* Header */}
+        {/* 标题 */}
         <div className="text-center mb-16">
           <div className={`inline-flex items-center gap-3 mb-6 transform transition-all duration-1000 ${
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
@@ -111,19 +111,19 @@ export function Services() {
           </p>
         </div>
 
-        {/* Photo Lab Clotheslines */}
+        {/* 摄影暗房晾片绳 */}
         <div className={`w-full transform transition-all duration-1000 delay-600 ${
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
         }`} style={{ overflow: 'visible' }}>
           
-          {/* First Clothesline - Top Row */}
+          {/* 第一条晾片绳 - 上排 */}
           <div className="relative mb-24" style={{ overflow: 'visible' }}>
-            {/* Ultra-Realistic Rope - Full width from edge to edge */}
+            {/* 超写实绳索 - 从边到边全宽 */}
             <div className="absolute top-8 left-0 right-0 h-4 rope-sway">
-              {/* Rope base with realistic hemp coloring */}
+              {/* 绳索基底与真实麻绳颜色 */}
               <div className="w-full h-full bg-gradient-to-b from-yellow-800 via-amber-900 to-yellow-900 rounded-full shadow-lg" />
               
-              {/* Primary twisted fiber strands */}
+              {/* 主要扭绞纤维线 */}
               <div className="absolute inset-0 opacity-90 rounded-full" 
                    style={{
                      backgroundImage: `
@@ -162,7 +162,7 @@ export function Services() {
                      backgroundSize: '100% 100%, 12px 100%, 14px 100%'
                    }} />
               
-              {/* Individual fiber highlights */}
+              {/* 单根纤维高光 */}
               <div className="absolute inset-0 opacity-60 rounded-full" 
                    style={{
                      backgroundImage: `
@@ -173,18 +173,18 @@ export function Services() {
                      `
                    }} />
               
-              {/* Rope dimensional highlighting */}
+              {/* 绳索立体高光 */}
               <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-transparent via-yellow-700 to-transparent rounded-full opacity-80" />
               
-              {/* Deep rope shadow for realism */}
+              {/* 真实感深层绳影 */}
               <div className="absolute top-2 left-0 right-0 h-2 bg-gradient-to-r from-transparent via-yellow-950 to-transparent rounded-full opacity-70" />
               
-              {/* Multi-layer drop shadow */}
+              {/* 多层投影 */}
               <div className="absolute -bottom-3 left-0 right-0 h-4 bg-black/30 rounded-full blur-xl" />
               <div className="absolute -bottom-1 left-0 right-0 h-2 bg-black/50 rounded-full blur-sm" />
             </div>
             
-            {/* Heavy-duty wall anchor points */}
+            {/* 重型墙面锚点 */}
             <div className="absolute left-0 sm:-left-10 top-4 w-10 h-10 bg-gradient-to-br from-gray-500 to-gray-800 rounded-full shadow-xl border border-gray-400">
               <div className="absolute top-1.5 left-1.5 w-3 h-3 bg-gray-300 rounded-full opacity-80" />
               <div className="absolute bottom-1.5 right-1.5 w-1.5 h-1.5 bg-black/60 rounded-full" />
@@ -196,7 +196,7 @@ export function Services() {
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1 h-1 bg-gray-900 rounded-full" />
             </div>
             
-            {/* Photos hanging from first line */}
+            {/* 第一条绳上悬挂的照片 */}
             <div className="flex flex-wrap justify-center gap-4 sm:gap-8 lg:gap-16 pt-20 max-w-7xl mx-auto px-4">
               {services.slice(0, 3).map((service, index) => (
                 <div
@@ -212,13 +212,13 @@ export function Services() {
                   onMouseEnter={() => setHoveredPhoto(service.id)}
                   onMouseLeave={() => setHoveredPhoto(null)}
                 >
-                  {/* Simple Realistic Wooden Clothespin */}
+                  {/* 简洁写实木夹 */}
                   <div className="absolute -top-8 left-1/2 -translate-x-1/2 z-20">
-                    {/* Clothespin body */}
+                    {/* 木夹主体 */}
                     <div className="relative w-5 h-10">
-                      {/* Left wooden half */}
+                      {/* 左侧木片 */}
                       <div className="absolute left-0 top-0 w-2.5 h-10 bg-gradient-to-r from-yellow-200 to-orange-200 rounded-l-md shadow-md border-r border-orange-300/30">
-                        {/* Simple wood grain */}
+                        {/* 简单木纹 */}
                         <div className="absolute inset-0 opacity-30 rounded-l-md"
                              style={{
                                backgroundImage: `
@@ -235,9 +235,9 @@ export function Services() {
                              }} />
                       </div>
                       
-                      {/* Right wooden half */}
+                      {/* 右侧木片 */}
                       <div className="absolute right-0 top-0 w-2.5 h-10 bg-gradient-to-l from-yellow-200 to-orange-200 rounded-r-md shadow-md border-l border-orange-300/30">
-                        {/* Simple wood grain */}
+                        {/* 简单木纹 */}
                         <div className="absolute inset-0 opacity-30 rounded-r-md"
                              style={{
                                backgroundImage: `
@@ -254,20 +254,20 @@ export function Services() {
                              }} />
                       </div>
                       
-                      {/* Simple metal spring */}
+                      {/* 简单金属弹簧 */}
                       <div className="absolute top-2 left-1/2 -translate-x-1/2 w-4 h-2 bg-gradient-to-b from-gray-300 to-gray-500 rounded-sm shadow-sm">
-                        {/* Spring coils */}
+                        {/* 弹簧线圈 */}
                         <div className="absolute top-0.5 left-1/2 -translate-x-1/2 w-3 h-0.5 bg-gray-400 rounded-full" />
                         <div className="absolute bottom-0.5 left-1/2 -translate-x-1/2 w-3 h-0.5 bg-gray-400 rounded-full" />
                       </div>
                       
-                      {/* Clothespin tips */}
+                      {/* 木夹尖端 */}
                       <div className="absolute bottom-0 left-0 w-2.5 h-2 bg-gradient-to-b from-orange-200 to-orange-300 rounded-b-md" />
                       <div className="absolute bottom-0 right-0 w-2.5 h-2 bg-gradient-to-b from-orange-200 to-orange-300 rounded-b-md" />
                     </div>
                   </div>
                   
-                  {/* Photo */}
+                  {/* 照片 */}
                   <div className="relative bg-white p-4 pb-8 shadow-2xl cursor-pointer w-[260px] sm:w-[280px] max-w-[90vw]"
                        style={{
                          filter: hoveredPhoto === service.id ? 'brightness(1.1) contrast(1.05)' : 'brightness(1) contrast(0.95)',
@@ -278,7 +278,7 @@ export function Services() {
                          `
                        }}>
                     
-                    {/* Photo Area */}
+                    {/* 照片区域 */}
                     <div className="h-48 mb-6 rounded-sm relative">
                       <ImageWithFallback
                         src={service.image}
@@ -289,7 +289,7 @@ export function Services() {
                         }}
                       />
                       
-                      {/* Darkroom development effects */}
+                      {/* 暗房显影效果 */}
                       <div className="absolute inset-0 bg-red-900/5 rounded-sm" />
                       <div className="absolute inset-0 opacity-[0.03] rounded-sm" 
                            style={{
@@ -297,11 +297,11 @@ export function Services() {
                              backgroundSize: '3px 3px'
                            }} />
                       
-                      {/* Corner curl effect */}
+                      {/* 角落卷曲效果 */}
                       <div className="absolute top-2 right-2 w-6 h-6 bg-white/20 rounded-full transform rotate-45" />
                     </div>
                     
-                    {/* Text */}
+                    {/* 文字 */}
                     <div className="relative">
                       <h3 className="font-black text-lg text-gray-800 mb-3 leading-tight">
                         {service.title}
@@ -312,11 +312,11 @@ export function Services() {
                       </p>
                     </div>
                     
-                    {/* Vintage photo aging effects */}
+                    {/* 复古照片做旧效果 */}
                     <div className="absolute top-3 right-3 w-4 h-4 bg-yellow-100/30 rounded-full" />
                     <div className="absolute bottom-8 left-3 w-2 h-8 bg-yellow-100/20 rounded-full transform rotate-15" />
                     
-                    {/* Developer stamp */}
+                    {/* 显影章 */}
                     <div className="absolute bottom-2 right-2 text-xs text-gray-400 font-mono opacity-60">
                       MOJJU LAB
                     </div>
@@ -326,14 +326,14 @@ export function Services() {
             </div>
           </div>
 
-          {/* Second Clothesline - Bottom Row */}
+          {/* 第二条晾片绳 - 下排 */}
           <div className="relative" style={{ overflow: 'visible' }}>
-            {/* Ultra-Realistic Rope - Full width from edge to edge */}
+            {/* 超写实绳索 - 从边到边全宽 */}
             <div className="absolute top-8 left-0 right-0 h-4 rope-sway" style={{ animationDelay: '2s' }}>
-              {/* Rope base with realistic hemp coloring */}
+              {/* 绳索基底与真实麻绳颜色 */}
               <div className="w-full h-full bg-gradient-to-b from-yellow-800 via-amber-900 to-yellow-900 rounded-full shadow-lg" />
               
-              {/* Primary twisted fiber strands */}
+              {/* 主要扭绞纤维线 */}
               <div className="absolute inset-0 opacity-90 rounded-full" 
                    style={{
                      backgroundImage: `
@@ -372,7 +372,7 @@ export function Services() {
                      backgroundSize: '100% 100%, 12px 100%, 14px 100%'
                    }} />
               
-              {/* Individual fiber highlights */}
+              {/* 单根纤维高光 */}
               <div className="absolute inset-0 opacity-60 rounded-full" 
                    style={{
                      backgroundImage: `
@@ -383,18 +383,18 @@ export function Services() {
                      `
                    }} />
               
-              {/* Rope dimensional highlighting */}
+              {/* 绳索立体高光 */}
               <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-transparent via-yellow-700 to-transparent rounded-full opacity-80" />
               
-              {/* Deep rope shadow for realism */}
+              {/* 真实感深层绳影 */}
               <div className="absolute top-2 left-0 right-0 h-2 bg-gradient-to-r from-transparent via-yellow-950 to-transparent rounded-full opacity-70" />
               
-              {/* Multi-layer drop shadow */}
+              {/* 多层投影 */}
               <div className="absolute -bottom-3 left-0 right-0 h-4 bg-black/30 rounded-full blur-xl" />
               <div className="absolute -bottom-1 left-0 right-0 h-2 bg-black/50 rounded-full blur-sm" />
             </div>
             
-            {/* Heavy-duty wall anchor points */}
+            {/* 重型墙面锚点 */}
             <div className="absolute left-0 sm:-left-10 top-4 w-10 h-10 bg-gradient-to-br from-gray-500 to-gray-800 rounded-full shadow-xl border border-gray-400">
               <div className="absolute top-1.5 left-1.5 w-3 h-3 bg-gray-300 rounded-full opacity-80" />
               <div className="absolute bottom-1.5 right-1.5 w-1.5 h-1.5 bg-black/60 rounded-full" />
@@ -406,7 +406,7 @@ export function Services() {
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1 h-1 bg-gray-900 rounded-full" />
             </div>
             
-            {/* Photos hanging from second line */}
+            {/* 第二条绳上悬挂的照片 */}
             <div className="flex flex-wrap justify-center gap-4 sm:gap-8 lg:gap-16 pt-20 max-w-7xl mx-auto px-4">
               {services.slice(3, 6).map((service, index) => (
                 <div
@@ -423,13 +423,13 @@ export function Services() {
                   onMouseEnter={() => setHoveredPhoto(service.id)}
                   onMouseLeave={() => setHoveredPhoto(null)}
                 >
-                  {/* Simple Realistic Wooden Clothespin */}
+                  {/* 简洁写实木夹 */}
                   <div className="absolute -top-8 left-1/2 -translate-x-1/2 z-20">
-                    {/* Clothespin body */}
+                    {/* 木夹主体 */}
                     <div className="relative w-5 h-10">
-                      {/* Left wooden half */}
+                      {/* 左侧木片 */}
                       <div className="absolute left-0 top-0 w-2.5 h-10 bg-gradient-to-r from-yellow-200 to-orange-200 rounded-l-md shadow-md border-r border-orange-300/30">
-                        {/* Simple wood grain */}
+                        {/* 简单木纹 */}
                         <div className="absolute inset-0 opacity-30 rounded-l-md"
                              style={{
                                backgroundImage: `
@@ -446,9 +446,9 @@ export function Services() {
                              }} />
                       </div>
                       
-                      {/* Right wooden half */}
+                      {/* 右侧木片 */}
                       <div className="absolute right-0 top-0 w-2.5 h-10 bg-gradient-to-l from-yellow-200 to-orange-200 rounded-r-md shadow-md border-l border-orange-300/30">
-                        {/* Simple wood grain */}
+                        {/* 简单木纹 */}
                         <div className="absolute inset-0 opacity-30 rounded-r-md"
                              style={{
                                backgroundImage: `
@@ -465,20 +465,20 @@ export function Services() {
                              }} />
                       </div>
                       
-                      {/* Simple metal spring */}
+                      {/* 简单金属弹簧 */}
                       <div className="absolute top-2 left-1/2 -translate-x-1/2 w-4 h-2 bg-gradient-to-b from-gray-300 to-gray-500 rounded-sm shadow-sm">
-                        {/* Spring coils */}
+                        {/* 弹簧线圈 */}
                         <div className="absolute top-0.5 left-1/2 -translate-x-1/2 w-3 h-0.5 bg-gray-400 rounded-full" />
                         <div className="absolute bottom-0.5 left-1/2 -translate-x-1/2 w-3 h-0.5 bg-gray-400 rounded-full" />
                       </div>
                       
-                      {/* Clothespin tips */}
+                      {/* 木夹尖端 */}
                       <div className="absolute bottom-0 left-0 w-2.5 h-2 bg-gradient-to-b from-orange-200 to-orange-300 rounded-b-md" />
                       <div className="absolute bottom-0 right-0 w-2.5 h-2 bg-gradient-to-b from-orange-200 to-orange-300 rounded-b-md" />
                     </div>
                   </div>
                   
-                  {/* Photo - Same structure as above */}
+                  {/* 照片 - 结构同上 */}
                   <div className="relative bg-white p-4 pb-8 shadow-2xl cursor-pointer w-[260px] sm:w-[280px] max-w-[90vw]"
                        style={{
                          filter: hoveredPhoto === service.id ? 'brightness(1.1) contrast(1.05)' : 'brightness(1) contrast(0.95)',
@@ -529,7 +529,7 @@ export function Services() {
             </div>
           </div>
           
-          {/* Darkroom atmosphere note */}
+          {/* 暗房氛围提示 */}
           <div className="mt-16 text-center">
             <p className="text-sm text-amber-200/70 leading-relaxed max-w-2xl mx-auto">
               Each piece is carefully developed in our creative darkroom, ensuring every detail captures the essence of your vision with precision and artistic flair.

@@ -10,18 +10,18 @@ export function Hero() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
 
-  // Scroll detection
+  // 滚动检测
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY
-      setIsScrolled(scrollTop > 50) // Show background after 50px scroll
+      setIsScrolled(scrollTop > 50) // 滚动超过 50px 后显示背景
     }
 
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Ensure video is muted immediately on load to prevent any audio
+  // 确保加载时立即静音，避免任何声音
   useEffect(() => {
     if (videoRef.current) {
       console.log('Video element found, setting up...')
@@ -29,14 +29,14 @@ export function Hero() {
       videoRef.current.muted = true
       videoRef.current.defaultMuted = true
       
-      // Add event listeners for debugging
+      // 添加调试用事件监听
       videoRef.current.addEventListener('loadstart', () => console.log('Video: loadstart'))
       videoRef.current.addEventListener('loadedmetadata', () => console.log('Video: loadedmetadata'))
       videoRef.current.addEventListener('canplay', () => console.log('Video: canplay'))
       videoRef.current.addEventListener('playing', () => console.log('Video: playing'))
       videoRef.current.addEventListener('error', (e) => console.error('Video error:', e))
       
-      // Force mute on play
+      // 播放时强制静音
       videoRef.current.addEventListener('play', () => {
         if (videoRef.current) {
           console.log('Video play event fired')
@@ -45,7 +45,7 @@ export function Hero() {
         }
       })
       
-      // Try to play the video
+      // 尝试播放视频
       const playPromise = videoRef.current.play()
       if (playPromise !== undefined) {
         playPromise
@@ -55,7 +55,7 @@ export function Hero() {
     }
   }, [])
 
-  // Update video mute state when isMuted changes
+  // isMuted 变化时更新视频静音状态
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.muted = isMuted
@@ -63,7 +63,7 @@ export function Hero() {
     }
   }, [isMuted])
 
-  // Handle body scroll lock when mobile menu is open
+  // 移动端菜单打开时锁定页面滚动
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = 'hidden'
@@ -71,13 +71,13 @@ export function Hero() {
       document.body.style.overflow = 'unset'
     }
 
-    // Cleanup on unmount
+    // 卸载时清理
     return () => {
       document.body.style.overflow = 'unset'
     }
   }, [isMobileMenuOpen])
 
-  // Close mobile menu on scroll
+  // 滚动时关闭移动端菜单
   useEffect(() => {
     const handleScroll = () => {
       if (isMobileMenuOpen) {
@@ -98,7 +98,7 @@ export function Hero() {
 
   return (
     <div className="relative h-screen w-full overflow-hidden bg-black">
-      {/* MASSIVE VIDEO - Takes up 95% of space */}
+      {/* 超大视频 - 占据 95% 空间 */}
       <video
         ref={videoRef}
         className="absolute inset-0 w-full h-full object-cover scale-110"
@@ -111,7 +111,7 @@ export function Hero() {
         Your browser does not support the video tag.
       </video>
 
-      {/* Full-Width Navbar */}
+      {/* 全宽导航栏 */}
       <motion.nav
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -126,7 +126,7 @@ export function Hero() {
           }`}
         >
           <div className="flex items-center justify-between">
-            {/* Logo */}
+            {/* 徽标 */}
             <motion.div
               whileHover={{ scale: 1.05 }}
               className="flex items-center cursor-pointer"
@@ -137,7 +137,7 @@ export function Hero() {
               <span className="font-bagel text-white text-xl tracking-wider">CODELUME</span>
             </motion.div>
 
-            {/* Navigation Menu */}
+            {/* 导航菜单 */}
             <div className="hidden md:flex items-center space-x-8">
               <a 
                 href="#portfolio" 
@@ -171,9 +171,9 @@ export function Hero() {
               </a>
             </div>
 
-            {/* Right Side - Video Controls + CTA + Mobile Menu */}
+            {/* 右侧 - 视频控制 + 行动按钮 + 移动菜单 */}
             <div className="flex items-center space-x-3 relative">
-              {/* Video Controls with Sound On indicator */}
+              {/* 带提示的音量控制 */}
               <div className="relative">
                 <button
                   onClick={() => setIsMuted(!isMuted)}
@@ -182,7 +182,7 @@ export function Hero() {
                   {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
                 </button>
                 
-                {/* Sound On indicator - only show when muted */}
+                {/* 提示开启声音 - 仅在静音时显示 */}
                 {isMuted && (
                   <div className="absolute -bottom-10 right-0 flex items-center text-white/80">
                     <span className="whitespace-nowrap font-medium text-sm mr-2">Sound On</span>
@@ -191,7 +191,7 @@ export function Hero() {
                 )}
               </div>
               
-              {/* CTA Button - Hidden on mobile */}
+              {/* 行动按钮 - 移动端隐藏 */}
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -204,7 +204,7 @@ export function Hero() {
                 Book a Call
               </motion.button>
 
-              {/* Mobile Hamburger Menu Button */}
+              {/* 移动端汉堡菜单按钮 */}
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 className="md:hidden glass-effect p-3 rounded-full text-white hover:bg-white/20 active:bg-white/30 gentle-animation cursor-pointer z-[120] relative"
@@ -216,7 +216,7 @@ export function Hero() {
         </div>
       </motion.nav>
 
-      {/* Mobile Menu Overlay */}
+      {/* 移动端菜单遮罩 */}
       {isMobileMenuOpen && (
         <motion.div
           initial={{ opacity: 0 }}
@@ -228,7 +228,7 @@ export function Hero() {
         />
       )}
 
-      {/* Mobile Menu Panel */}
+      {/* 移动端菜单面板 */}
       <motion.div
         initial={{ x: '100%' }}
         animate={{ x: isMobileMenuOpen ? '0%' : '100%' }}
@@ -237,7 +237,7 @@ export function Hero() {
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex flex-col h-full">
-          {/* Close Button at the top */}
+          {/* 顶部关闭按钮 */}
           <div className="flex justify-end p-4">
             <button
               onClick={() => setIsMobileMenuOpen(false)}
@@ -248,7 +248,7 @@ export function Hero() {
           </div>
           
           <div className="flex flex-col px-6 pb-6 h-full">
-            {/* Mobile Navigation Links */}
+            {/* 移动端导航链接 */}
             <div className="flex flex-col space-y-4 text-white">
               <a 
                 href="#portfolio" 
@@ -287,7 +287,7 @@ export function Hero() {
               </a>
             </div>
 
-            {/* Mobile CTA Button */}
+            {/* 移动端行动按钮 */}
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -306,7 +306,7 @@ export function Hero() {
 
 
 
-      {/* Big Studio Title - Lower Left */}
+      {/* 大标题 - 左下角 */}
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}

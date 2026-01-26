@@ -41,25 +41,25 @@ export function About() {
   ]
 
   useEffect(() => {
-    // Start film animation after a 3 second pause
+    // 区块加载后暂停 3 秒再开始胶片动画
     setTimeout(() => {
       setAnimationStarted(true)
       processSteps.forEach((_, index) => {
         setTimeout(() => {
           setActiveFrame(index)
          
-        }, index * 2000 + 1000) // Ultra slow: Start after 24s, then every 72s
+        }, index * 2000 + 1000) // 超慢：24 秒后开始，然后每 72 秒一次
       })
-    }, 3000) // 3 second pause after section loads
+    }, 3000) // 区块加载后暂停 3 秒
   }, [])
 
   return (
     <section id="about" className="relative py-20 bg-background overflow-hidden">
       
-      {/* Cinematic Background */}
+      {/* 电影感背景 */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-card/20 to-background" />
       
-      {/* Film Grain Effect */}
+      {/* 胶片颗粒效果 */}
       <div className="absolute inset-0 opacity-[0.02] pointer-events-none">
         <div className="w-full h-full" style={{
           backgroundImage: `radial-gradient(circle at 1px 1px, rgba(0,0,0,0.8) 1px, transparent 0)`,
@@ -70,7 +70,7 @@ export function About() {
 
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         
-        {/* Header */}
+        {/* 标题 */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 mb-6">
             <div className="w-3 h-3 bg-accent-emerald rounded-full animate-pulse" />
@@ -89,24 +89,24 @@ export function About() {
           </p>
         </div>
 
-        {/* Film Strip Container */}
+        {/* 胶片带容器 */}
         <div className="relative max-w-7xl mx-auto">
           
-          {/* Film Strip Background */}
+          {/* 胶片带背景 */}
           <div className="relative bg-gradient-to-r from-gray-950 via-gray-900 to-gray-950 rounded-xl overflow-hidden"
                style={{ boxShadow: '0 25px 50px rgba(0,0,0,0.5), inset 0 2px 0 rgba(255,255,255,0.05)' }}>
             
-            {/* Film Perforations - Top - Now animated */}
+            {/* 胶片齿孔 - 顶部 - 现在带动画 */}
             <div className="absolute top-0 left-0 right-0 h-6 bg-black z-20 overflow-hidden">
               <div className={`flex items-center justify-between px-12 h-full ${
                 animationStarted ? 'perforations-scroll-animation' : ''
               }`} style={{ width: '200%' }}>
-                {/* First set of perforations */}
+                {/* 第一组齿孔 */}
                 {[...Array(20)].map((_, i) => (
                   <div key={`top-${i}`} className="w-4 h-3 bg-gray-800 rounded-sm border border-gray-700 flex-shrink-0" 
                        style={{ boxShadow: 'inset 0 1px 2px rgba(0,0,0,0.8)' }} />
                 ))}
-                {/* Duplicate set for seamless loop */}
+                {/* 复制一组用于无缝循环 */}
                 {[...Array(20)].map((_, i) => (
                   <div key={`top-dup-${i}`} className="w-4 h-3 bg-gray-800 rounded-sm border border-gray-700 flex-shrink-0" 
                        style={{ boxShadow: 'inset 0 1px 2px rgba(0,0,0,0.8)' }} />
@@ -114,17 +114,17 @@ export function About() {
               </div>
             </div>
             
-            {/* Film Perforations - Bottom - Now animated */}
+            {/* 胶片齿孔 - 底部 - 现在带动画 */}
             <div className="absolute bottom-0 left-0 right-0 h-6 bg-black z-20 overflow-hidden">
               <div className={`flex items-center justify-between px-12 h-full ${
                 animationStarted ? 'perforations-scroll-animation' : ''
               }`} style={{ width: '200%' }}>
-                {/* First set of perforations */}
+                {/* 第一组齿孔 */}
                 {[...Array(20)].map((_, i) => (
                   <div key={`bottom-${i}`} className="w-4 h-3 bg-gray-800 rounded-sm border border-gray-700 flex-shrink-0"
                        style={{ boxShadow: 'inset 0 1px 2px rgba(0,0,0,0.8)' }} />
                 ))}
-                {/* Duplicate set for seamless loop */}
+                {/* 复制一组用于无缝循环 */}
                 {[...Array(20)].map((_, i) => (
                   <div key={`bottom-dup-${i}`} className="w-4 h-3 bg-gray-800 rounded-sm border border-gray-700 flex-shrink-0"
                        style={{ boxShadow: 'inset 0 1px 2px rgba(0,0,0,0.8)' }} />
@@ -132,20 +132,20 @@ export function About() {
               </div>
             </div>
 
-            {/* Film Frames Container - Scrolling Animation */}
+            {/* 胶片画格容器 - 滚动动画 */}
             <div className="relative py-6 px-8 overflow-hidden h-64 max-w-full">
               <div className={`flex transition-transform duration-1000 ease-in-out ${
                 animationStarted ? 'film-scroll-animation' : ''
               }`} style={{ width: 'max-content', gap: '32px' }}>
                 
-                {/* Original sequence for seamless loop */}
-                {/* Start frame */}
+                {/* 原始序列用于无缝循环 */}
+                {/* 起始画格 */}
                 <div className="flex-shrink-0 w-80 h-52 bg-gray-800 rounded-lg border-2 border-gray-700 opacity-60 flex items-center justify-center" 
                      style={{ boxShadow: 'inset 0 2px 4px rgba(0,0,0,0.4)' }}>
                   <div className="text-gray-400 font-mono tracking-wider">● START</div>
                 </div>
                 
-                {/* Process Step Frames */}
+                {/* 流程步骤画格 */}
                 {processSteps.map((step, index) => (
                   <div
                     key={step.number}
@@ -159,30 +159,30 @@ export function About() {
                     }}
                   >
                     
-                    {/* Frame Content */}
+                    {/* 画格内容 */}
                     <div className="relative h-full p-6 flex flex-col justify-between">
                       
-                      {/* Frame Number Badge */}
+                      {/* 画格编号徽标 */}
                       <div className="absolute -top-4 -left-4 w-12 h-12 bg-foreground text-background rounded-full flex items-center justify-center font-black z-10 border-3 border-white text-lg"
                            style={{ boxShadow: '0 6px 12px rgba(0,0,0,0.4)' }}>
                         {step.number}
                       </div>
                       
-                      {/* Content */}
+                      {/* 内容 */}
                       <div className="opacity-100">
                         
-                        {/* Step Title */}
+                        {/* 步骤标题 */}
                         <h3 className="font-black text-xl leading-tight mb-4 text-foreground">
                           {step.title}
                         </h3>
                         
-                        {/* Step Description */}
+                        {/* 步骤描述 */}
                         <p className="text-sm text-muted-foreground leading-relaxed">
                           {step.description}
                         </p>
                       </div>
                       
-                      {/* Film frame edge lines */}
+                      {/* 胶片边缘线 */}
                       <div className="absolute left-1 top-1 bottom-1 w-px bg-gray-300/20" />
                       <div className="absolute right-1 top-1 bottom-1 w-px bg-gray-300/20" />
                       <div className="absolute top-1 left-1 right-1 h-px bg-gray-300/20" />
@@ -191,20 +191,20 @@ export function About() {
                   </div>
                 ))}
                 
-                {/* End frame */}
+                {/* 结束画格 */}
                 <div className="flex-shrink-0 w-80 h-52 bg-gray-800 rounded-lg border-2 border-gray-700 opacity-60 flex items-center justify-center"
                      style={{ boxShadow: 'inset 0 2px 4px rgba(0,0,0,0.4)' }}>
                   <div className="text-gray-400 font-mono tracking-wider">● END</div>
                 </div>
                 
-                {/* Duplicate set for seamless loop */}
-                {/* Start frame duplicate */}
+                {/* 复制一组用于无缝循环 */}
+                {/* 起始画格副本 */}
                 <div className="flex-shrink-0 w-80 h-52 bg-gray-800 rounded-lg border-2 border-gray-700 opacity-60 flex items-center justify-center" 
                      style={{ boxShadow: 'inset 0 2px 4px rgba(0,0,0,0.4)' }}>
                   <div className="text-gray-400 font-mono tracking-wider">● START</div>
                 </div>
                 
-                {/* Process Step Frames duplicate */}
+                {/* 流程步骤画格副本 */}
                 {processSteps.map((step, index) => (
                   <div
                     key={`duplicate-${step.number}`}
@@ -218,30 +218,30 @@ export function About() {
                     }}
                   >
                     
-                    {/* Frame Content */}
+                    {/* 画格内容 */}
                     <div className="relative h-full p-6 flex flex-col justify-between">
                       
-                      {/* Frame Number Badge */}
+                      {/* 画格编号徽标 */}
                       <div className="absolute -top-4 -left-4 w-12 h-12 bg-foreground text-background rounded-full flex items-center justify-center font-black z-10 border-3 border-white text-lg"
                            style={{ boxShadow: '0 6px 12px rgba(0,0,0,0.4)' }}>
                         {step.number}
                       </div>
                       
-                      {/* Content */}
+                      {/* 内容 */}
                       <div className="opacity-100">
                         
-                        {/* Step Title */}
+                        {/* 步骤标题 */}
                         <h3 className="font-black text-xl leading-tight mb-4 text-foreground">
                           {step.title}
                         </h3>
                         
-                        {/* Step Description */}
+                        {/* 步骤描述 */}
                         <p className="text-sm text-muted-foreground leading-relaxed">
                           {step.description}
                         </p>
                       </div>
                       
-                      {/* Film frame edge lines */}
+                      {/* 胶片边缘线 */}
                       <div className="absolute left-1 top-1 bottom-1 w-px bg-gray-300/20" />
                       <div className="absolute right-1 top-1 bottom-1 w-px bg-gray-300/20" />
                       <div className="absolute top-1 left-1 right-1 h-px bg-gray-300/20" />
@@ -253,7 +253,7 @@ export function About() {
             </div>
           </div>
           
-          {/* Enhanced Projector Light Effect */}
+          {/* 加强的投影光效 */}
           {activeFrame >= 0 && (
             <div className="absolute inset-0 pointer-events-none">
               <div 
@@ -267,11 +267,11 @@ export function About() {
           )}
         </div>
 
-        {/* Film Controls */}
+        {/* 胶片控制 */}
         <div className="mt-12 text-center">
           <div className="inline-flex items-center gap-6 bg-card/80 backdrop-blur-sm clean-border rounded-2xl px-8 py-4 subtle-shadow">
             
-            {/* Film Speed Indicator */}
+            {/* 胶片速度指示 */}
             <div className="flex items-center gap-3">
               <div className="w-2 h-2 bg-accent-emerald rounded-full animate-pulse" />
               <span className="text-sm font-semibold text-foreground">24 FPS</span>
@@ -279,7 +279,7 @@ export function About() {
             
             <div className="w-px h-6 bg-border" />
             
-            {/* Duration */}
+            {/* 时长 */}
             <div className="flex items-center gap-3">
               <div className="w-2 h-2 bg-accent-blue rounded-full animate-pulse" style={{animationDelay: '0.5s'}} />
               <span className="text-sm font-semibold text-foreground">5-7 Days</span>
@@ -287,7 +287,7 @@ export function About() {
             
             <div className="w-px h-6 bg-border" />
             
-            {/* Quality */}
+            {/* 质量 */}
             <div className="flex items-center gap-3">
               <div className="w-2 h-2 bg-accent-purple rounded-full animate-pulse" style={{animationDelay: '1s'}} />
               <span className="text-sm font-semibold text-foreground">Cinema Quality</span>
@@ -295,7 +295,7 @@ export function About() {
           </div>
         </div>
 
-        {/* AI Generated Content Gallery */}
+        {/* AI 生成内容画廊 */}
         <div className="mt-20">
           <div className="text-center mb-8">
             <p className="text-muted-foreground">
@@ -303,18 +303,18 @@ export function About() {
             </p>
           </div>
           
-          {/* Gallery Image */}
+          {/* 画廊图片 */}
           <div className="relative max-w-6xl mx-auto">
             <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-2xl p-4 overflow-hidden">
               
-              {/* Film grain overlay for authenticity */}
+              {/* 为真实感添加胶片颗粒叠加 */}
               <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
                    style={{
                      backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.8) 1px, transparent 0)`,
                      backgroundSize: '4px 4px'
                    }} />
               
-              {/* Main gallery image */}
+              {/* 主要画廊图片 */}
               <img 
                 src={storyboardImage}
                 alt="Collection of AI-generated video content thumbnails showcasing Codelume's diverse output"
@@ -324,14 +324,14 @@ export function About() {
                 }}
               />
               
-              {/* Subtle overlay gradient for depth */}
+              {/* 细腻叠加渐变以增强纵深 */}
               <div className="absolute inset-4 rounded-xl pointer-events-none"
                    style={{
                      background: 'linear-gradient(135deg, rgba(37,99,235,0.03) 0%, transparent 20%, transparent 80%, rgba(124,58,237,0.03) 100%)'
                    }} />
             </div>
             
-            {/* Caption */}
+            {/* 说明文字 */}
             <div className="mt-6 text-center">
               <p className="text-sm text-muted-foreground italic">
                 "Diverse scenarios, characters, and styles — all generated through our AI pipeline"

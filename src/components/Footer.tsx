@@ -19,7 +19,7 @@ export function Footer() {
     <footer className="relative py-20 bg-foreground text-background">
       <div className="container mx-auto px-6 sm:px-8 lg:px-12">
         <div className="grid grid-cols-12 gap-12">
-          {/* Logo and Description */}
+          {/* 徽标与描述 */}
           <div className="col-span-12 md:col-span-4">
             <div>
               <div className="font-bagel text-background text-3xl tracking-wider mb-4">
@@ -29,9 +29,9 @@ export function Footer() {
                 Revolutionizing video production with intelligent AI that understands 
                 creativity, storytelling, and human emotion.
               </p>
-              {/* Social Media Icons */}
+              {/* 社交媒体图标 */}
               <div className="flex items-center space-x-6">
-                {/* X (Twitter) */}
+                {/* X（推特） */}
                 <a
                   href="https://x.com/Mojjuai"
                   target="_blank"
@@ -43,7 +43,7 @@ export function Footer() {
                   </svg>
                 </a>
 
-                {/* TikTok */}
+                {/* TikTok（抖音） */}
                 <a
                   href="https://www.tiktok.com/@mojju.ai"
                   target="_blank"
@@ -55,7 +55,7 @@ export function Footer() {
                   </svg>
                 </a>
 
-                {/* Instagram */}
+                {/* Instagram（照片墙） */}
                 <a
                   href="https://www.instagram.com/mojju.ai"
                   target="_blank"
@@ -74,7 +74,7 @@ export function Footer() {
                   </svg>
                 </a>
 
-                {/* LinkedIn */}
+                {/* 领英 */}
                 <a
                   href="https://linkedin.com/company/mojju"
                   target="_blank"
@@ -89,12 +89,12 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Tools We Use Section */}
+          {/* 我们使用的工具区 */}
           <div className="col-span-12 md:col-span-8">
             <div>
               <h4 className="font-black text-2xl text-background mb-4">TOOLS WE USE</h4>
               
-              {/* AI Tools Description */}
+              {/* AI 工具说明 */}
               <p className="text-background/70 text-base mb-8 leading-relaxed">
                 We leverage the latest AI technology to deliver cutting-edge video production. 
                 Our toolkit combines the best generative AI models for video, audio, and visual content creation.
@@ -114,11 +114,11 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar - Simplified */}
+        {/* 底部栏 - 简化版 */}
         <div className="border-t border-background/20 pt-8 mt-16">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-sm text-background/70 mb-4 md:mb-0">
-              © 2025 CODELUME. All rights reserved.
+              © {new Date().getFullYear()} CODELUME. All rights reserved.
             </div>
             <div className="text-sm text-background/70">
               2847 HIGHLAND AVE. SUITE 310 BIRMINGHAM 35205, AL, USA

@@ -6,7 +6,7 @@ import GlassCard from "@/components/GlassCard";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero Section */}
+      {/* 英雄区 */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-accent-blue/20 via-accent-purple/10 to-accent-emerald/20"></div>
         
@@ -34,13 +34,13 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Floating elements */}
+        {/* 浮动元素 */}
         <div className="absolute top-20 left-20 w-4 h-4 bg-accent-blue rounded-full float-gentle opacity-60"></div>
         <div className="absolute top-40 right-32 w-6 h-6 bg-accent-emerald rounded-full drift-left opacity-40"></div>
         <div className="absolute bottom-32 left-1/4 w-5 h-5 bg-accent-purple rounded-full drift-right opacity-50"></div>
       </section>
 
-      {/* Animation Showcase */}
+      {/* 动画展示 */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-16 font-bagel">
@@ -50,7 +50,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Glass Effects Section */}
+      {/* 玻璃效果区 */}
       <section className="py-20 px-4 bg-gradient-to-r from-accent-blue/5 via-accent-purple/5 to-accent-emerald/5">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-16 font-bagel">
@@ -77,7 +77,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Typography Section */}
+      {/* 排版区 */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h2 className="text-4xl font-bold font-bagel">Типографика</h2>
@@ -94,7 +94,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Color Palette */}
+      {/* 配色板 */}
       <section className="py-20 px-4 bg-muted/30">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-16 font-bagel">

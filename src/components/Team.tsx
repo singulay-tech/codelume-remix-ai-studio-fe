@@ -117,7 +117,7 @@ export function Team() {
         maxHeight: 'none' 
       }}>
         
-        {/* Section Header */}
+        {/* 区块标题 */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 mb-6">
             <div className="w-3 h-3 bg-accent-emerald rounded-full animate-pulse" />
@@ -137,7 +137,7 @@ export function Team() {
           </p>
         </div>
 
-        {/* Framed Wanted Board */}
+        {/* 带框通缉板 */}
         <div className="max-w-7xl mx-auto" style={{ 
           overflow: 'visible', 
           height: 'auto', 
@@ -151,7 +151,7 @@ export function Team() {
             maxHeight: 'none' 
           }}>
             
-            {/* Black Frame */}
+            {/* 黑色边框 */}
             <div className="bg-gradient-to-br from-black via-gray-900 to-black p-8 rounded-2xl shadow-2xl relative border border-gray-800/50" style={{ 
               overflow: 'visible', 
               height: 'auto', 
@@ -159,7 +159,7 @@ export function Team() {
               maxHeight: 'none' 
             }}>
               
-              {/* Black frame texture */}
+              {/* 黑色边框纹理 */}
               <div className="absolute inset-0 opacity-15"
                    style={{
                      backgroundImage: `
@@ -170,7 +170,7 @@ export function Team() {
                      backgroundSize: '60px 60px, 100px 100px, 80px 80px'
                    }} />
               
-              {/* Modern Board Background */}
+              {/* 现代板面背景 */}
               <div className="bg-gradient-to-br from-slate-100 via-gray-50 to-slate-200 rounded-xl p-8 relative border border-slate-300/50" style={{ 
                 overflow: 'visible', 
                 height: 'auto', 
@@ -178,7 +178,7 @@ export function Team() {
                 maxHeight: 'none' 
               }}>
                 
-                {/* Modern subtle texture */}
+                {/* 现代细腻纹理 */}
                 <div className="absolute inset-0 opacity-30"
                      style={{
                        backgroundImage: `
@@ -189,14 +189,14 @@ export function Team() {
                        backgroundSize: '30px 30px, 45px 45px, 100% 100%'
                      }} />
 
-                {/* Wanted Posters Grid */}
+                {/* 通缉海报网格 */}
                 <div className="relative z-10" style={{ 
                   overflow: 'visible', 
                   height: 'auto', 
                   minHeight: '0', 
                   maxHeight: 'none' 
                 }}>
-                  {/* First row - 4 posters */}
+                  {/* 第一行 - 4 张海报 */}
                   <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 mb-8" style={{ 
                     overflow: 'visible', 
                     height: 'auto', 
@@ -216,7 +216,7 @@ export function Team() {
                         }}
                       >
                         
-                        {/* Black Framed Wanted Poster */}
+                        {/* 黑框通缉海报 */}
                         <div className="bg-gradient-to-b from-white to-gray-50 border-4 border-black relative shadow-lg" style={{ 
                           overflow: 'visible', 
                           height: 'auto', 
@@ -224,18 +224,18 @@ export function Team() {
                           maxHeight: 'none' 
                         }}>
                           
-                          {/* Modern push pins */}
+                          {/* 现代图钉 */}
                           <div className="absolute -top-2 left-4 w-4 h-4 bg-gradient-to-br from-red-500 to-red-600 rounded-full shadow-lg border border-red-700" />
                           <div className="absolute -top-2 right-4 w-4 h-4 bg-gradient-to-br from-red-500 to-red-600 rounded-full shadow-lg border border-red-700" />
                           
-                          {/* Subtle modern paper effect */}
+                          {/* 细腻现代纸张效果 */}
                           <div className="absolute inset-0 bg-gradient-to-br from-slate-50/30 via-transparent to-gray-100/20" />
                           <div className="absolute top-4 right-4 w-6 h-6 bg-slate-200/40 rounded-full" />
                           <div className="absolute bottom-6 left-4 w-4 h-4 bg-gray-300/30 rounded-full" />
 
                           <div className="p-6 text-center relative z-10">
                             
-                            {/* WANTED Header */}
+                            {/* 通缉标题 */}
                             <div className="mb-4">
                               <h3 className="text-3xl font-black text-black mb-2"
                                   style={{ 
@@ -247,7 +247,7 @@ export function Team() {
                               <div className="w-full h-0.5 bg-black mb-2" />
                             </div>
 
-                            {/* Photo */}
+                            {/* 照片 */}
                             <div className="relative mb-4 mx-auto w-32 h-32 border-2 border-black bg-gray-100 rounded-sm" style={{ 
                               overflow: 'visible' 
                             }}>
@@ -260,17 +260,17 @@ export function Team() {
                                 }}
                               />
                               
-                              {/* Subtle modern overlay */}
+                              {/* 细腻现代叠加 */}
                               <div className="absolute inset-0 bg-gradient-to-t from-slate-100/10 to-transparent rounded-sm" />
                               
-                              {/* Mustache */}
+                              {/* 小胡子 */}
                               <Mustache 
                                 style={criminal.mustacheStyle} 
                                 className="bottom-4 left-1/2 -translate-x-1/2 opacity-80" 
                               />
                             </div>
 
-                            {/* Details */}
+                            {/* 详情 */}
                             <div className="text-left space-y-2" style={{ fontFamily: 'serif' }}>
                               <div className="font-black text-lg text-black">{criminal.name}</div>
                               <div className="font-bold text-red-600 text-base">BOUNTY: {criminal.bounty}</div>
@@ -284,7 +284,7 @@ export function Team() {
                     ))}
                   </div>
                   
-                  {/* Second row - 3 posters centered */}
+                  {/* 第二行 - 3 张海报居中 */}
                   <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 max-w-5xl mx-auto" style={{ 
                     overflow: 'visible', 
                     height: 'auto', 
@@ -304,7 +304,7 @@ export function Team() {
                         }}
                       >
                         
-                        {/* Black Framed Wanted Poster */}
+                        {/* 黑框通缉海报 */}
                         <div className="bg-gradient-to-b from-white to-gray-50 border-4 border-black relative shadow-lg" style={{ 
                           overflow: 'visible', 
                           height: 'auto', 
@@ -312,18 +312,18 @@ export function Team() {
                           maxHeight: 'none' 
                         }}>
                           
-                          {/* Modern push pins */}
+                          {/* 现代图钉 */}
                           <div className="absolute -top-2 left-4 w-4 h-4 bg-gradient-to-br from-red-500 to-red-600 rounded-full shadow-lg border border-red-700" />
                           <div className="absolute -top-2 right-4 w-4 h-4 bg-gradient-to-br from-red-500 to-red-600 rounded-full shadow-lg border border-red-700" />
                           
-                          {/* Subtle modern paper effect */}
+                          {/* 细腻现代纸张效果 */}
                           <div className="absolute inset-0 bg-gradient-to-br from-slate-50/30 via-transparent to-gray-100/20" />
                           <div className="absolute top-4 right-4 w-6 h-6 bg-slate-200/40 rounded-full" />
                           <div className="absolute bottom-6 left-4 w-4 h-4 bg-gray-300/30 rounded-full" />
 
                           <div className="p-6 text-center relative z-10">
                             
-                            {/* WANTED Header */}
+                            {/* 通缉标题 */}
                             <div className="mb-4">
                               <h3 className="text-3xl font-black text-black mb-2"
                                   style={{ 
@@ -335,7 +335,7 @@ export function Team() {
                               <div className="w-full h-0.5 bg-black mb-2" />
                             </div>
 
-                            {/* Photo */}
+                            {/* 照片 */}
                             <div className="relative mb-4 mx-auto w-32 h-32 border-2 border-black bg-gray-100 rounded-sm" style={{ 
                               overflow: 'visible' 
                             }}>
@@ -348,17 +348,17 @@ export function Team() {
                                 }}
                               />
                               
-                              {/* Subtle modern overlay */}
+                              {/* 细腻现代叠加 */}
                               <div className="absolute inset-0 bg-gradient-to-t from-slate-100/10 to-transparent rounded-sm" />
                               
-                              {/* Mustache */}
+                              {/* 小胡子 */}
                               <Mustache 
                                 style={criminal.mustacheStyle} 
                                 className="bottom-4 left-1/2 -translate-x-1/2 opacity-80" 
                               />
                             </div>
 
-                            {/* Details */}
+                            {/* 详情 */}
                             <div className="text-left space-y-2" style={{ fontFamily: 'serif' }}>
                               <div className="font-black text-lg text-black">{criminal.name}</div>
                               <div className="font-bold text-red-600 text-base">BOUNTY: {criminal.bounty}</div>
@@ -375,7 +375,7 @@ export function Team() {
               </div>
             </div>
             
-            {/* Black frame shadow */}
+            {/* 黑色边框阴影 */}
             <div className="absolute -inset-4 bg-black/30 rounded-2xl -z-10 blur-xl" />
           </div>
         </div>

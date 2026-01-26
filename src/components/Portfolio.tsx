@@ -7,7 +7,7 @@ export function Portfolio() {
   return (
     <section id="portfolio" className="relative py-32 bg-background">
       <div className="container mx-auto px-6 sm:px-8 lg:px-12">
-        {/* Section Header */}
+        {/* 区块标题 */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center gap-3 mb-6">
             <div className="w-3 h-3 bg-accent-emerald rounded-full animate-pulse" />
@@ -26,10 +26,10 @@ export function Portfolio() {
           </p>
         </div>
 
-        {/* Featured Video */}
+        {/* 精选视频 */}
         <div className="max-w-6xl mx-auto">
           <div className="relative bg-card clean-border rounded-3xl overflow-hidden elevated-shadow">
-            {/* Video Embed */}
+            {/* 视频嵌入 */}
             <div className="relative">
               <div className="aspect-video">
                 <iframe
@@ -42,7 +42,7 @@ export function Portfolio() {
                 />
               </div>
               
-              {/* Floating Status Badge */}
+              {/* 浮动状态徽标 */}
               <div className="absolute top-6 right-6">
                 <span className="glass-effect rounded-xl px-4 py-2 text-sm font-medium text-white backdrop-blur-md">
                   Latest Project
@@ -50,7 +50,7 @@ export function Portfolio() {
               </div>
             </div>
 
-            {/* Project Details */}
+            {/* 项目详情 */}
             <div className="p-8 lg:p-12">
               <div className="flex-1">
                 <div className="flex items-center gap-4 mb-4">

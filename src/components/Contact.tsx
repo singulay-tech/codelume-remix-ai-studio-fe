@@ -5,7 +5,7 @@ import { useEffect } from 'react'
 export function Contact() {
 
   useEffect(() => {
-    // Load Cal.com embed script
+    // 加载 Cal.com 嵌入脚本
     const script = document.createElement('script')
     script.type = 'text/javascript'
     script.innerHTML = `
@@ -50,7 +50,7 @@ export function Contact() {
     document.body.appendChild(script)
     
     return () => {
-      // Cleanup script on unmount
+      // 卸载时清理脚本
       if (document.body.contains(script)) {
         document.body.removeChild(script)
       }
@@ -60,7 +60,7 @@ export function Contact() {
   return (
     <section id="contact" className="relative py-32 bg-card/30">
       <div className="container mx-auto px-6 sm:px-8 lg:px-12">
-        {/* Section Header */}
+        {/* 区块标题 */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 mb-6">
             <div className="w-3 h-3 bg-accent-emerald rounded-full animate-pulse" />
@@ -80,10 +80,10 @@ export function Contact() {
           </p>
         </div>
 
-        {/* Cal.com Booking Widget */}
+        {/* Cal.com 预约组件 */}
         <div className="max-w-5xl mx-auto">
           <div className="bg-background clean-border rounded-3xl overflow-hidden elevated-shadow">
-            {/* Widget Header */}
+            {/* 组件标题 */}
             <div className="bg-card/50 px-8 py-6 border-b border-border">
               <div className="flex items-center justify-between">
                 <div>
@@ -101,7 +101,7 @@ export function Contact() {
               </div>
             </div>
             
-            {/* Cal.com Embed Container */}
+            {/* Cal.com 嵌入容器 */}
             <div className="p-0 bg-white">
               <div 
                 style={{
@@ -115,7 +115,7 @@ export function Contact() {
           </div>
         </div>
 
-        {/* Bottom Info */}
+        {/* 底部信息 */}
         <div className="text-center mt-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="bg-background clean-border rounded-2xl p-6 subtle-shadow">

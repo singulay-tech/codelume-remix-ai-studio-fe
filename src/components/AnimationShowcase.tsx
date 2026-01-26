@@ -1,9 +1,10 @@
 import { Card } from "@/components/ui/card";
 
+// 动画展示组件
 const AnimationShowcase = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {/* Float Gentle */}
+      {/* 轻柔漂浮 */}
       <Card className="p-6 subtle-shadow">
         <div className="float-gentle">
           <div 
@@ -15,7 +16,7 @@ const AnimationShowcase = () => {
         <p className="text-muted-foreground text-center">Плавное покачивание вверх-вниз</p>
       </Card>
 
-      {/* Drift Left */}
+      {/* 向左漂移 */}
       <Card className="p-6 subtle-shadow">
         <div className="drift-left">
           <div 
@@ -27,7 +28,7 @@ const AnimationShowcase = () => {
         <p className="text-muted-foreground text-center">Медленное движение влево-вправо</p>
       </Card>
 
-      {/* Drift Right */}
+      {/* 向右漂移 */}
       <Card className="p-6 subtle-shadow">
         <div className="drift-right">
           <div 
@@ -39,7 +40,7 @@ const AnimationShowcase = () => {
         <p className="text-muted-foreground text-center">Плавное колебание вправо-влево</p>
       </Card>
 
-      {/* Photo Sway 1 */}
+      {/* 照片摇摆 1 */}
       <Card className="p-6 subtle-shadow">
         <div className="photo-sway-1">
           <div 
@@ -51,7 +52,7 @@ const AnimationShowcase = () => {
         <p className="text-muted-foreground text-center">Имитация покачивания фото</p>
       </Card>
 
-      {/* Pulse Glow */}
+      {/* 脉冲光晕 */}
       <Card className="p-6 subtle-shadow">
         <div className="pulse-glow">
           <div 
@@ -63,7 +64,7 @@ const AnimationShowcase = () => {
         <p className="text-muted-foreground text-center">Пульсирующее свечение</p>
       </Card>
 
-      {/* Gentle Animation */}
+      {/* 轻柔动画 */}
       <Card className="p-6 subtle-shadow gentle-animation hover:elevated-shadow">
         <div 
           className="w-16 h-16 rounded-lg mx-auto mb-4"
