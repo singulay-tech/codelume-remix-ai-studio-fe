@@ -45,8 +45,27 @@ export function Footer() {
                   className="hover:scale-110 gentle-animation cursor-pointer"
                   aria-label={t('labels.appStore')}
                 >
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="#E5E7EB" aria-hidden="true">
-                    <path d="M16.5 2c-1.3 0-2.4.7-3 1.8-.6-1.1-1.7-1.8-3-1.8-2 0-3.5 1.6-3.5 3.6 0 2.4 2.1 4.7 4.8 7.6 1.3 1.4 2.7 2.9 3.7 4.3 1-1.4 2.4-2.9 3.7-4.3 2.7-2.9 4.8-5.2 4.8-7.6 0-2-1.5-3.6-3.5-3.6z"/>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M9.2 4.5 5.5 10.9" stroke="#E5E7EB" strokeWidth="1.8" strokeLinecap="round" />
+                    <path d="M14.8 4.5 18.5 10.9" stroke="#E5E7EB" strokeWidth="1.8" strokeLinecap="round" />
+                    <path d="M7.2 14.2h9.6" stroke="#E5E7EB" strokeWidth="1.8" strokeLinecap="round" />
+                    <path d="M10.9 10.9 7.8 16.5" stroke="#E5E7EB" strokeWidth="1.8" strokeLinecap="round" />
+                    <path d="M13.1 10.9 16.2 16.5" stroke="#E5E7EB" strokeWidth="1.8" strokeLinecap="round" />
+                  </svg>
+                </a>
+
+                {/* Douyin */}
+                <a
+                  href={t('links.douyin')}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:scale-110 gentle-animation cursor-pointer"
+                  aria-label={t('labels.douyin')}
+                  title={t('labels.douyinId')}
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M14 3v9.2a3.7 3.7 0 1 1-2.6-3.5" stroke="#E5E7EB" strokeWidth="1.8" strokeLinecap="round" />
+                    <path d="M14 6.1c1 .9 2.2 1.4 3.5 1.5" stroke="#E5E7EB" strokeWidth="1.8" strokeLinecap="round" />
                   </svg>
                 </a>
 
