@@ -14,6 +14,9 @@ import enTeam from './locales/en/team.json'
 import enContact from './locales/en/contact.json'
 import enFooter from './locales/en/footer.json'
 import enAwards from './locales/en/awards.json'
+import enDownloads from './locales/en/downloads.json'
+import enAboutUs from './locales/en/aboutUs.json'
+import enWorkshop from './locales/en/workshop.json'
 import enErrors from './locales/en/errors.json'
 
 // Chinese language packs
@@ -27,6 +30,9 @@ import zhTeam from './locales/zh/team.json'
 import zhContact from './locales/zh/contact.json'
 import zhFooter from './locales/zh/footer.json'
 import zhAwards from './locales/zh/awards.json'
+import zhDownloads from './locales/zh/downloads.json'
+import zhAboutUs from './locales/zh/aboutUs.json'
+import zhWorkshop from './locales/zh/workshop.json'
 import zhErrors from './locales/zh/errors.json'
 
 const resources = {
@@ -41,6 +47,9 @@ const resources = {
     contact: enContact,
     footer: enFooter,
     awards: enAwards,
+    downloads: enDownloads,
+    aboutUs: enAboutUs,
+    workshop: enWorkshop,
     errors: enErrors
   },
   zh: {
@@ -54,6 +63,9 @@ const resources = {
     contact: zhContact,
     footer: zhFooter,
     awards: zhAwards,
+    downloads: zhDownloads,
+    aboutUs: zhAboutUs,
+    workshop: zhWorkshop,
     errors: zhErrors
   }
 }
@@ -77,6 +89,9 @@ i18n
       'contact',
       'footer',
       'awards',
+      'downloads',
+      'aboutUs',
+      'workshop',
       'errors'
     ],
 

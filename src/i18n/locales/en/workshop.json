@@ -1,0 +1,71 @@
+{
+  "badge": "Creative Lab",
+  "teaser": {
+    "title": "Creative Lab",
+    "subtitle": "A future marketplace and editor for Codelume bundles. Placeholder preview only.",
+    "cta": "Open Creative Lab",
+    "note": "Opens in a new tab"
+  },
+  "header": {
+    "title": "Codelume Creative Lab",
+    "subtitle": "Marketplace & editor preview",
+    "back": "Back to Codelume"
+  },
+  "hero": {
+    "title": "Build, remix, and manage dynamic wallpapers",
+    "subtitle": "This is a static preview of the upcoming Creative Lab — a home for assets, templates, and editing workflows."
+  },
+  "tabs": {
+    "market": "Marketplace",
+    "editor": "Editor",
+    "publish": "Publish"
+  },
+  "market": {
+    "items": [
+      {
+        "badge": "Bundle",
+        "title": "Local Wallpapers",
+        "description": "Curate private packs and keep assets stored locally."
+      },
+      {
+        "badge": "Template",
+        "title": "Scene Layouts",
+        "description": "Drop in motion presets for Scene2D and Scene3D." 
+      },
+      {
+        "badge": "Library",
+        "title": "Creator Collections",
+        "description": "Follow curated sets and organize them by mood." 
+      }
+    ]
+  },
+  "editor": {
+    "badge": "Editor",
+    "title": "Timeline + Layer Controls",
+    "description": "Prepare bundles with trimmed loops, audio balance, and playback presets.",
+    "features": {
+      "tooling": {
+        "title": "Bundle Builder",
+        "description": "Package video or scene assets into a single Codelume bundle." 
+      },
+      "timeline": {
+        "title": "Scene Timeline",
+        "description": "Set loop points, transitions, and preview clips instantly." 
+      },
+      "preview": {
+        "title": "Preview Studio",
+        "description": "Compare playback on multiple screen sizes before export." 
+      }
+    }
+  },
+  "publish": {
+    "badge": "Publish",
+    "title": "Ship with confidence",
+    "description": "Prepare metadata, export presets, and share bundles privately.",
+    "tags": {
+      "review": "Review & QA",
+      "export": "Export Presets",
+      "share": "Private Share"
+    }
+  }
+}

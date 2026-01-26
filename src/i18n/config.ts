@@ -18,6 +18,9 @@ export const namespaces = [
   'portfolio',
   'team',
   'contact',
+  'downloads',
+  'aboutUs',
+  'workshop',
   'footer',
   'awards',
   'errors'

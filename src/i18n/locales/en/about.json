@@ -1,44 +1,44 @@
 {
-  "badge": "Behind the Scenes",
-  "title": "How We Create Magic",
-  "subtitle": "Watch our process unfold frame by frame",
+  "badge": "Workflow",
+  "title": "From Install to Immersion",
+  "subtitle": "A simple, private workflow to keep your desktop alive.",
   "steps": {
     "start": "START",
     "end": "END",
     "step1": {
       "number": "01",
-      "title": "Concept & Script",
-      "description": "Scene-by-scene draft with dialogues and time-codes"
+      "title": "Install & Launch",
+      "description": "Download the app and start from the menu bar."
     },
     "step2": {
       "number": "02",
-      "title": "Look & Storyboard",
-      "description": "AI engine selection and visual testing"
+      "title": "Import Bundles",
+      "description": "Bring in local video or scene bundles in one click."
     },
     "step3": {
       "number": "03",
-      "title": "AI Production",
-      "description": "Motion tests and multi-variant generation"
+      "title": "Assign Screens",
+      "description": "Choose which wallpaper plays on each display."
     },
     "step4": {
       "number": "04",
-      "title": "Post-production",
-      "description": "VFX, color grading, and audio mixing"
+      "title": "Tune Playback",
+      "description": "Adjust fill mode, volume, and pause rules."
     },
     "step5": {
       "number": "05",
-      "title": "Master Delivery",
-      "description": "Multi-format export and secure transfer"
+      "title": "Enjoy & Sleep",
+      "description": "Keep the motion running, even in screen saver mode."
     }
   },
   "stats": {
-    "fps": "24 FPS",
-    "duration": "5-7 Days",
-    "quality": "Cinema Quality"
+    "fps": "Native macOS",
+    "duration": "Offline First",
+    "quality": "Multi-Screen Ready"
   },
   "gallery": {
-    "title": "A glimpse into our storyboard development process",
-    "caption": "Diverse scenarios, characters, and styles — all generated through our AI pipeline",
-    "imageAlt": "Collection of AI-generated video content thumbnails showcasing Codelume's diverse output"
+    "title": "Local collections previewed in one unified library",
+    "caption": "Bundles stay private, stored and played directly on your Mac",
+    "imageAlt": "Storyboard-style preview grid of local wallpaper bundles"
   }
 }

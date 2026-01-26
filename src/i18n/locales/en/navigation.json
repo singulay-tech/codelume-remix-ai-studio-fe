@@ -1,8 +1,9 @@
 {
   "brand": "CODELUME",
-  "work": "Work",
+  "work": "Works",
   "process": "Process",
-  "capabilities": "Capabilities",
-  "team": "Team",
-  "contact": "Contact"
+  "features": "Features",
+  "download": "Download",
+  "about": "About",
+  "workshop": "Creative Lab"
 }

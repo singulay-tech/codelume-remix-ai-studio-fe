@@ -1,10 +1,33 @@
 {
   "brand": "CODELUME",
-  "description": "Revolutionizing video production with intelligent AI that understands creativity, storytelling, and human emotion.",
+  "description": "Codelume is a native macOS dynamic wallpaper studio focused on local playback, multi-screen control, and privacy-first performance.",
   "tools": {
-    "title": "TOOLS WE USE",
-    "description": "We leverage the latest AI technology to deliver cutting-edge video production. Our toolkit combines the best generative AI models for video, audio, and visual content creation."
+    "title": "Core Stack",
+    "description": "Built with Apple-native frameworks and a lightweight toolchain.",
+    "items": [
+      "SwiftUI",
+      "AppKit",
+      "AVFoundation",
+      "SpriteKit",
+      "SceneKit",
+      "SQLite",
+      "CodelumeBundle",
+      "SwiftyBeaver",
+      "macOS Sandbox",
+      "Launch Services",
+      "Screen Saver"
+    ]
   },
-  "copyright": "© {{year}} CODELUME. All rights reserved.",
-  "address": "2847 HIGHLAND AVE. SUITE 310 BIRMINGHAM 35205, AL, USA"
+  "links": {
+    "github": "https://github.com/guang-zi-yu/CodelumeApp.git",
+    "appStore": "https://apps.apple.com/us/app/%E7%A0%81%E9%95%9C/id6751061329?mt=12",
+    "email": "codelume@163.com"
+  },
+  "labels": {
+    "github": "Codelume GitHub",
+    "appStore": "Codelume App Store",
+    "email": "Email Codelume"
+  },
+  "copyright": "© {{year}} Codelume Studio",
+  "address": "Designed for macOS desktop immersion"
 }

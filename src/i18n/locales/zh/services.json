@@ -1,33 +1,31 @@
 {
-  "badge": "暗房新作",
-  "title": "我们的服务",
-  "subtitle": "精心制作，倾情交付",
-  "labWatermark": "MOJJU 工作室",
+  "badge": "功能",
+  "title": "播放能力",
+  "subtitle": "为每块屏幕、每种格式、每次使用提供本地化控制。",
   "items": {
     "campaigns": {
-      "title": "营销广告内容",
-      "description": "多平台视频营销方案，覆盖YouTube、TikTok、Instagram等全渠道。"
+      "title": "本地壁纸包",
+      "description": "支持视频、2D 场景、3D 场景包的本地导入。"
     },
     "brandFilms": {
-      "title": "品牌故事影片",
-      "description": "电影级品牌视频，捕捉您的品牌精髓，在情感层面与观众建立连接。"
+      "title": "多屏播放",
+      "description": "为每块屏幕分配不同壁纸，并通过菜单栏与单屏控制。"
     },
     "trailers": {
-      "title": "预告片与宣传片",
-      "description": "高冲击力预告，瞬间抓住观众眼球——适用于发布会、活动和公告。"
+      "title": "智能暂停规则",
+      "description": "可根据全屏应用、桌面占用、电源状态自动暂停。"
     },
     "shortFilms": {
-      "title": "短片电影",
-      "description": "电影节级别的短片作品，时长5分钟以内——适合投资者演示、活动展示和高端内容。"
+      "title": "音频控制",
+      "description": "支持全局与单屏音量、静音和播放控制。"
     },
     "animation": {
-      "title": "动画与动态设计",
-      "description": "风格化动画内容，无需真人演员即可解释复杂概念。"
+      "title": "屏保模式",
+      "description": "导出 Codelume 屏保，桌面与待机无缝衔接。"
     },
     "social": {
-      "title": "社交媒体内容",
-      "description": "让人停下滑动的竖版视频，批量交付，让您的信息流始终保持吸引力。"
+      "title": "沙盒与离线",
+      "description": "运行于 macOS 沙盒，无需外网连接。"
     }
-  },
-  "footer": "每件作品都在我们的创意暗房中精心制作，确保每个细节都精准捕捉您的愿景，兼具精准度与艺术气息。"
+  }
 }

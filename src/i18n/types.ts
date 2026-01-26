@@ -11,6 +11,9 @@ import type team from './locales/en/team.json'
 import type contact from './locales/en/contact.json'
 import type footer from './locales/en/footer.json'
 import type awards from './locales/en/awards.json'
+import type downloads from './locales/en/downloads.json'
+import type aboutUs from './locales/en/aboutUs.json'
+import type workshop from './locales/en/workshop.json'
 import type errors from './locales/en/errors.json'
 
 // Type definitions for language resources (for documentation purposes)
@@ -25,6 +28,9 @@ export interface I18nResources {
   contact: typeof contact
   footer: typeof footer
   awards: typeof awards
+  downloads: typeof downloads
+  aboutUs: typeof aboutUs
+  workshop: typeof workshop
   errors: typeof errors
 }
 

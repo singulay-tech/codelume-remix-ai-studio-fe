@@ -1,29 +1,29 @@
 {
-  "badge": "精选作品",
+  "badge": "创意作品集",
   "title": "创意作品集",
-  "subtitle": "我们为Hampton制作的最新商业广告——探索创业者的孤独旅程与社群的力量。",
-  "latestProject": "最新项目",
+  "subtitle": "我们支持本地任意作品的私有化使用。",
+  "latestProject": "精选演示",
   "featured": {
-    "type": "商业广告",
-    "client": "客户：Hampton",
-    "title": "孤独的旅程",
-    "description": "一支震撼人心的商业广告，探索创业者面临的孤独感，以及加入Hampton社群如何改变这段旅程。这部作品捕捉了创业的情感重量，以及找到志同道合者后的释然。",
+    "type": "本地包",
+    "client": "用途：个人私有库",
+    "title": "Codelume 桌面预览",
+    "description": "展示本地壁纸包、多屏播放与电影级动态效果，完整离线运行于 macOS。",
     "details": {
       "industry": {
-        "label": "行业",
-        "value": "社群平台"
+        "label": "格式",
+        "value": "视频 / 2D 场景 / 3D 场景"
       },
       "style": {
-        "label": "风格",
-        "value": "叙事剧情"
+        "label": "播放",
+        "value": "多屏 / 同步"
       },
       "tone": {
-        "label": "基调",
-        "value": "情感旅程"
+        "label": "隐私",
+        "value": "本地运行"
       },
       "format": {
-        "label": "格式",
-        "value": "数字广告"
+        "label": "平台",
+        "value": "macOS"
       }
     }
   }

@@ -1,0 +1,39 @@
+{
+  "badge": "下载",
+  "title": "获取 Codelume",
+  "subtitle": "建议使用 App Store 版本以获得自动更新，也可下载历史版本用于测试与归档。",
+  "table": {
+    "headers": {
+      "version": "版本",
+      "date": "发布日期",
+      "notes": "更新亮点",
+      "download": "下载"
+    },
+    "rows": [
+      {
+        "version": "App Store（自动更新）",
+        "date": "始终最新",
+        "notes": "推荐大多数用户使用，自动更新且符合沙盒规范。",
+        "linkLabel": "前往 App Store",
+        "linkUrl": "https://apps.apple.com/us/app/%E7%A0%81%E9%95%9C/id6751061329?mt=12"
+      },
+      {
+        "version": "v1.4.0",
+        "date": "2025-12-25",
+        "notes": "提升稳定性，优化屏保体验并完善播放规则。",
+        "linkLabel": "下载",
+        "linkUrl": "https://github.com/guang-zi-yu/CodelumeApp/releases/tag/v1.4.0",
+        "secondaryLabel": "查看说明",
+        "secondaryUrl": "https://github.com/guang-zi-yu/CodelumeApp/releases/tag/v1.4.0"
+      },
+      {
+        "version": "历史版本",
+        "date": "2025",
+        "notes": "浏览更早构建与资源，用于兼容性测试。",
+        "linkLabel": "查看 Releases",
+        "linkUrl": "https://github.com/guang-zi-yu/CodelumeApp/releases"
+      }
+    ]
+  },
+  "footnote": "App Store 版本自动更新，历史版本仅用于兼容性参考。"
+}

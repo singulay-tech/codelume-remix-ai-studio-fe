@@ -1,10 +1,33 @@
 {
   "brand": "CODELUME",
-  "description": "以理解创意、叙事和人类情感的智能AI，革新视频制作。",
+  "description": "Codelume 是一款原生 macOS 动态壁纸工作室，专注于本地播放、多屏控制与隐私优先体验。",
   "tools": {
-    "title": "我们使用的工具",
-    "description": "我们利用最新的AI技术提供前沿的视频制作服务。我们的工具组合了用于视频、音频和视觉内容创作的最佳生成式AI模型。"
+    "title": "核心技术栈",
+    "description": "以 Apple 原生框架和轻量工具链构建。",
+    "items": [
+      "SwiftUI",
+      "AppKit",
+      "AVFoundation",
+      "SpriteKit",
+      "SceneKit",
+      "SQLite",
+      "CodelumeBundle",
+      "SwiftyBeaver",
+      "macOS 沙盒",
+      "启动服务",
+      "屏幕保护程序"
+    ]
   },
-  "copyright": "© {{year}} CODELUME. 保留所有权利。",
-  "address": "美国阿拉巴马州伯明翰市高地大道2847号310室 35205"
+  "links": {
+    "github": "https://github.com/guang-zi-yu/CodelumeApp.git",
+    "appStore": "https://apps.apple.com/us/app/%E7%A0%81%E9%95%9C/id6751061329?mt=12",
+    "email": "codelume@163.com"
+  },
+  "labels": {
+    "github": "Codelume GitHub",
+    "appStore": "Codelume App Store",
+    "email": "联系 Codelume"
+  },
+  "copyright": "© {{year}} Codelume Studio",
+  "address": "为 macOS 桌面沉浸体验而生"
 }

@@ -1,14 +1,14 @@
 {
   "title": {
-    "line1": "AI 影视",
-    "line2": "制作",
-    "line3": "无限可能"
+    "line1": "动态",
+    "line2": "壁纸",
+    "line3": "为 macOS"
   },
   "cta": {
-    "bookCall": "预约通话",
+    "download": "下载 Codelume",
     "soundOn": "开启声音"
   },
   "video": {
-    "unsupported": "您的浏览器不支持视频标签。"
+    "unsupported": "您的浏览器不支持视频播放。"
   }
 }
