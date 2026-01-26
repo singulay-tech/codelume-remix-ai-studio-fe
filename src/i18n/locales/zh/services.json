@@ -1,0 +1,33 @@
+{
+  "badge": "暗房新作",
+  "title": "我们的服务",
+  "subtitle": "精心制作，倾情交付",
+  "labWatermark": "MOJJU 工作室",
+  "items": {
+    "campaigns": {
+      "title": "营销广告内容",
+      "description": "多平台视频营销方案，覆盖YouTube、TikTok、Instagram等全渠道。"
+    },
+    "brandFilms": {
+      "title": "品牌故事影片",
+      "description": "电影级品牌视频，捕捉您的品牌精髓，在情感层面与观众建立连接。"
+    },
+    "trailers": {
+      "title": "预告片与宣传片",
+      "description": "高冲击力预告，瞬间抓住观众眼球——适用于发布会、活动和公告。"
+    },
+    "shortFilms": {
+      "title": "短片电影",
+      "description": "电影节级别的短片作品，时长5分钟以内——适合投资者演示、活动展示和高端内容。"
+    },
+    "animation": {
+      "title": "动画与动态设计",
+      "description": "风格化动画内容，无需真人演员即可解释复杂概念。"
+    },
+    "social": {
+      "title": "社交媒体内容",
+      "description": "让人停下滑动的竖版视频，批量交付，让您的信息流始终保持吸引力。"
+    }
+  },
+  "footer": "每件作品都在我们的创意暗房中精心制作，确保每个细节都精准捕捉您的愿景，兼具精准度与艺术气息。"
+}

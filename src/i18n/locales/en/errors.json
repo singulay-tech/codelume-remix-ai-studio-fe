@@ -1,0 +1,12 @@
+{
+  "notFound": {
+    "title": "404",
+    "message": "Oops! Page not found",
+    "action": "Return to Home"
+  },
+  "generic": {
+    "title": "Error",
+    "message": "Something went wrong",
+    "action": "Try again"
+  }
+}

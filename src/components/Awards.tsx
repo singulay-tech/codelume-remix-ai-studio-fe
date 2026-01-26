@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import minimalBestFilm from '../assets/minimal-best-film.png'
 import minimalAudienceChoice from '../assets/minimal-audience-choice.png'
 import minimalInnovation from '../assets/minimal-innovation.png'
@@ -9,6 +10,7 @@ import minimalExcellence from '../assets/minimal-excellence.png'
 import minimalRisingTalent from '../assets/minimal-rising-talent.png'
 
 export function Awards() {
+  const { t } = useTranslation('awards')
   const awards = [
     {
       image: minimalBestFilm,
@@ -51,17 +53,17 @@ export function Awards() {
           <div className="inline-flex items-center gap-3 mb-6">
             <div className="w-3 h-3 bg-accent-purple rounded-full animate-pulse" />
             <span className="text-sm font-semibold text-muted-foreground">
-              Recognition & Achievement
+              {t('badge')}
             </span>
             <div className="w-3 h-3 bg-accent-blue rounded-full animate-pulse" />
           </div>
-          
+
           <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight mb-6 text-foreground">
-            Awards & Recognition
+            {t('title')}
           </h2>
-          
+
           <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-            Celebrated excellence in AI-powered film production
+            {t('subtitle')}
           </p>
         </div>
 
@@ -89,9 +91,9 @@ export function Awards() {
                        }}>
                     
                     {/* 奖项图片 */}
-                    <img 
+                    <img
                       src={award.image}
-                      alt="Film Festival Award Laurel"
+                      alt={t('imageAlt')}
                       className="w-full h-auto max-w-48 mx-auto"
                       style={{
                         filter: 'contrast(1.02) saturate(1.1)',

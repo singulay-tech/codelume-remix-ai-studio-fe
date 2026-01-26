@@ -1,8 +1,10 @@
 'use client'
 
 import { useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 
 export function Contact() {
+  const { t } = useTranslation('contact')
 
   useEffect(() => {
     // 加载 Cal.com 嵌入脚本
@@ -65,18 +67,17 @@ export function Contact() {
           <div className="inline-flex items-center gap-3 mb-6">
             <div className="w-3 h-3 bg-accent-emerald rounded-full animate-pulse" />
             <span className="text-sm font-semibold text-muted-foreground">
-              Let's Create Together
+              {t('badge')}
             </span>
             <div className="w-3 h-3 bg-accent-blue rounded-full animate-pulse" />
           </div>
-          
+
           <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight mb-8">
-            <span className="block mb-2">Ready to Light Up the Screen?</span>
-            
+            <span className="block mb-2">{t('title')}</span>
           </h2>
-          
+
           <p className="text-2xl lg:text-3xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Book a discovery call to discuss your project and see how we can bring your vision to cinematic reality
+            {t('subtitle')}
           </p>
         </div>
 
@@ -88,15 +89,15 @@ export function Contact() {
               <div className="flex items-center justify-between">
                 <div>
                   <h3 className="text-xl font-black text-foreground mb-1">
-                    MOJJU Discovery Call
+                    {t('calendar.title')}
                   </h3>
                   <p className="text-muted-foreground">
-                    30 minutes • Video call • Free consultation
+                    {t('calendar.duration')} • {t('calendar.type')} • {t('calendar.price')}
                   </p>
                 </div>
                 <div className="hidden sm:flex items-center space-x-2">
                   <div className="w-3 h-3 bg-accent-emerald rounded-full" />
-                  <span className="text-sm text-muted-foreground font-medium">Available now</span>
+                  <span className="text-sm text-muted-foreground font-medium">{t('calendar.availability')}</span>
                 </div>
               </div>
             </div>
@@ -122,29 +123,29 @@ export function Contact() {
               <div className="w-12 h-12 bg-accent-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <div className="w-6 h-6 bg-accent-blue rounded-full" />
               </div>
-              <h4 className="font-black text-foreground mb-2">Project Discussion</h4>
+              <h4 className="font-black text-foreground mb-2">{t('features.discussion.title')}</h4>
               <p className="text-muted-foreground text-sm">
-                Share your vision and requirements with our team
+                {t('features.discussion.description')}
               </p>
             </div>
-            
+
             <div className="bg-background clean-border rounded-2xl p-6 subtle-shadow">
               <div className="w-12 h-12 bg-accent-emerald/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <div className="w-6 h-6 bg-accent-emerald rounded-full" />
               </div>
-              <h4 className="font-black text-foreground mb-2">Custom Strategy</h4>
+              <h4 className="font-black text-foreground mb-2">{t('features.strategy.title')}</h4>
               <p className="text-muted-foreground text-sm">
-                Get a tailored approach for your unique project
+                {t('features.strategy.description')}
               </p>
             </div>
-            
+
             <div className="bg-background clean-border rounded-2xl p-6 subtle-shadow">
               <div className="w-12 h-12 bg-accent-purple/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <div className="w-6 h-6 bg-accent-purple rounded-full" />
               </div>
-              <h4 className="font-black text-foreground mb-2">Next Steps</h4>
+              <h4 className="font-black text-foreground mb-2">{t('features.nextSteps.title')}</h4>
               <p className="text-muted-foreground text-sm">
-                Clear timeline and roadmap to bring your idea to life
+                {t('features.nextSteps.description')}
               </p>
             </div>
           </div>

@@ -1,6 +1,9 @@
 'use client'
 
+import { useTranslation } from 'react-i18next'
+
 export function Footer() {
+  const { t } = useTranslation('footer')
   const aiTools = [
     'Runway Gen-4',
     'Kling 2', 
@@ -23,11 +26,10 @@ export function Footer() {
           <div className="col-span-12 md:col-span-4">
             <div>
               <div className="font-bagel text-background text-3xl tracking-wider mb-4">
-                CODELUME
+                {t('brand')}
               </div>
               <p className="text-background/70 leading-relaxed mb-6">
-                Revolutionizing video production with intelligent AI that understands 
-                creativity, storytelling, and human emotion.
+                {t('description')}
               </p>
               {/* 社交媒体图标 */}
               <div className="flex items-center space-x-6">
@@ -92,12 +94,11 @@ export function Footer() {
           {/* 我们使用的工具区 */}
           <div className="col-span-12 md:col-span-8">
             <div>
-              <h4 className="font-black text-2xl text-background mb-4">TOOLS WE USE</h4>
-              
+              <h4 className="font-black text-2xl text-background mb-4">{t('tools.title')}</h4>
+
               {/* AI 工具说明 */}
               <p className="text-background/70 text-base mb-8 leading-relaxed">
-                We leverage the latest AI technology to deliver cutting-edge video production. 
-                Our toolkit combines the best generative AI models for video, audio, and visual content creation.
+                {t('tools.description')}
               </p>
               
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -118,10 +119,10 @@ export function Footer() {
         <div className="border-t border-background/20 pt-8 mt-16">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-sm text-background/70 mb-4 md:mb-0">
-              © {new Date().getFullYear()} CODELUME. All rights reserved.
+              {t('copyright', { year: new Date().getFullYear() })}
             </div>
             <div className="text-sm text-background/70">
-              2847 HIGHLAND AVE. SUITE 310 BIRMINGHAM 35205, AL, USA
+              {t('address')}
             </div>
           </div>
         </div>

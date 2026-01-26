@@ -1,0 +1,14 @@
+{
+  "title": {
+    "line1": "AI 影视",
+    "line2": "制作",
+    "line3": "无限可能"
+  },
+  "cta": {
+    "bookCall": "预约通话",
+    "soundOn": "开启声音"
+  },
+  "video": {
+    "unsupported": "您的浏览器不支持视频标签。"
+  }
+}

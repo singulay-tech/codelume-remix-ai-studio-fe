@@ -1,0 +1,30 @@
+{
+  "badge": "Featured Work",
+  "title": "Creative Productions",
+  "subtitle": "Our latest commercial for Hampton - exploring the lonely journey of startup founders and the power of community.",
+  "latestProject": "Latest Project",
+  "featured": {
+    "type": "Commercial",
+    "client": "Client: Hampton",
+    "title": "The Lonely Journey",
+    "description": "A powerful commercial exploring the isolation that startup founders face and how joining Hampton's community can transform that journey. This piece captures the emotional weight of entrepreneurship and the relief that comes with finding your tribe.",
+    "details": {
+      "industry": {
+        "label": "Industry",
+        "value": "Community Platform"
+      },
+      "style": {
+        "label": "Style",
+        "value": "Narrative Drama"
+      },
+      "tone": {
+        "label": "Tone",
+        "value": "Emotional Journey"
+      },
+      "format": {
+        "label": "Format",
+        "value": "Digital Commercial"
+      }
+    }
+  }
+}

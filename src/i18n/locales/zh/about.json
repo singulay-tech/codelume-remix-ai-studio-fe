@@ -1,0 +1,44 @@
+{
+  "badge": "幕后揭秘",
+  "title": "我们如何创造奇迹",
+  "subtitle": "一帧一帧见证我们的创作流程",
+  "steps": {
+    "start": "开始",
+    "end": "结束",
+    "step1": {
+      "number": "01",
+      "title": "概念与剧本",
+      "description": "逐场景草稿，包含对白和时间码"
+    },
+    "step2": {
+      "number": "02",
+      "title": "视觉与分镜",
+      "description": "AI引擎选型与视觉测试"
+    },
+    "step3": {
+      "number": "03",
+      "title": "AI制作",
+      "description": "动态测试与多版本生成"
+    },
+    "step4": {
+      "number": "04",
+      "title": "后期制作",
+      "description": "特效、调色与音频混合"
+    },
+    "step5": {
+      "number": "05",
+      "title": "母版交付",
+      "description": "多格式输出与安全传输"
+    }
+  },
+  "stats": {
+    "fps": "24 帧/秒",
+    "duration": "5-7 天",
+    "quality": "影院级画质"
+  },
+  "gallery": {
+    "title": "一窥我们的分镜开发流程",
+    "caption": "多样化的场景、角色和风格——全部通过我们的AI流水线生成",
+    "imageAlt": "展示Codelume多样化输出的AI生成视频内容缩略图集"
+  }
+}

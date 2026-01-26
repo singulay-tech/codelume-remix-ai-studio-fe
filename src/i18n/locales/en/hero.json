@@ -1,0 +1,14 @@
+{
+  "title": {
+    "line1": "AI FILM",
+    "line2": "PRODUCTION",
+    "line3": "WITHOUT LIMITS"
+  },
+  "cta": {
+    "bookCall": "Book a Call",
+    "soundOn": "Sound On"
+  },
+  "video": {
+    "unsupported": "Your browser does not support the video tag."
+  }
+}

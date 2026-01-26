@@ -1,0 +1,26 @@
+{
+  "badge": "Let's Create Together",
+  "title": "Ready to Light Up the Screen?",
+  "subtitle": "Book a discovery call to discuss your project and see how we can bring your vision to cinematic reality",
+  "calendar": {
+    "title": "MOJJU Discovery Call",
+    "duration": "30 minutes",
+    "type": "Video call",
+    "price": "Free consultation",
+    "availability": "Available now"
+  },
+  "features": {
+    "discussion": {
+      "title": "Project Discussion",
+      "description": "Share your vision and requirements with our team"
+    },
+    "strategy": {
+      "title": "Custom Strategy",
+      "description": "Get a tailored approach for your unique project"
+    },
+    "nextSteps": {
+      "title": "Next Steps",
+      "description": "Clear timeline and roadmap to bring your idea to life"
+    }
+  }
+}

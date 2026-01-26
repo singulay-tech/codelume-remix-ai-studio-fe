@@ -1,5 +1,6 @@
 'use client'
 
+import { useTranslation } from 'react-i18next'
 import { ImageWithFallback } from './figma/ImageWithFallback'
 import marcusPhoto from '../assets/team-member-1.png'
 import sofiaPhoto from '../assets/team-member-2.png'
@@ -10,69 +11,71 @@ import zaraPhoto from '../assets/team-member-6.png'
 import leoPhoto from '../assets/team-member-7.png'
 
 export function Team() {
+  const { t } = useTranslation('team')
+
   const wantedCriminals = [
     {
-      name: "Marcus 'The Pixel Bandit'",
-      crime: "ARMED CREATIVE ROBBERY",
-      bounty: "$8,500",
-      description: "Notorious for stealing ordinary footage and transforming it into extraordinary visual experiences. Approach with caution - carries dangerous levels of creative vision and technical expertise.",
+      name: t('members.marcus.name'),
+      crime: t('members.marcus.crime'),
+      bounty: t('members.marcus.bounty'),
+      description: t('members.marcus.description'),
       image: marcusPhoto,
       rotation: 'rotate-3',
-      mustacheStyle: "artistic"
+      mustacheStyle: 'artistic'
     },
     {
-      name: "Sofia 'The Frame Thief'",
-      crime: "GRAND THEFT OF IMAGINATION",
-      bounty: "$6,200",
-      description: "Wanted for stealing impossible creative briefs and turning them into award-winning masterpieces. Armed with strategic thinking and dangerous levels of project management skills.",
+      name: t('members.sofia.name'),
+      crime: t('members.sofia.crime'),
+      bounty: t('members.sofia.bounty'),
+      description: t('members.sofia.description'),
       image: sofiaPhoto,
       rotation: 'rotate-2',
-      mustacheStyle: "handlebar"
+      mustacheStyle: 'handlebar'
     },
     {
-      name: "Jake 'The Render Rogue'",
-      crime: "MASTERMINDING TECHNICAL HEISTS",
-      bounty: "$11,800",
-      description: "Ringleader of rendering crimes, orchestrating elaborate computational operations. Wanted for leading sophisticated processing schemes that push hardware beyond its limits.",
+      name: t('members.jake.name'),
+      crime: t('members.jake.crime'),
+      bounty: t('members.jake.bounty'),
+      description: t('members.jake.description'),
       image: jakePhoto,
       rotation: 'rotate-2',
-      mustacheStyle: "thick"
+      mustacheStyle: 'thick'
     },
     {
-      name: "Maya 'The Code Crusher'",
-      crime: "DIGITAL WIZARDRY & ALGORITHM SORCERY",
-      bounty: "$9,300",
-      description: "Wanted for conjuring flawless code from chaotic requirements using forbidden programming magic. Known to transform complex problems into elegant solutions with mysterious technical powers.",
+      name: t('members.maya.name'),
+      crime: t('members.maya.crime'),
+      bounty: t('members.maya.bounty'),
+      description: t('members.maya.description'),
       image: mayaPhoto,
       rotation: '-rotate-2',
-      mustacheStyle: "curly"
+      mustacheStyle: 'curly'
     },
     {
-      name: "Connor 'The Digital Desperado'",
-      crime: "PRODUCTION WITH INTENT TO AMAZE",
-      bounty: "$13,700",
-      description: "Mastermind behind revolutionary content creation operations. Wanted for disrupting traditional production methods and making competitors question their entire approach.",
+      name: t('members.connor.name'),
+      crime: t('members.connor.crime'),
+      bounty: t('members.connor.bounty'),
+      description: t('members.connor.description'),
       image: connorPhoto,
       rotation: 'rotate-1',
-      mustacheStyle: "villainous"
+      mustacheStyle: 'villainous'
     },
     {
-      name: "Zara 'The Motion Maverick'",
-      crime: "ANIMATION MANIPULATION & EFFECT FORGERY",
-      bounty: "$7,900",
-      description: "Notorious for crafting motion graphics so smooth they defy the laws of physics. Armed with After Effects mastery and a dangerous eye for kinetic perfection.",
+      name: t('members.zara.name'),
+      crime: t('members.zara.crime'),
+      bounty: t('members.zara.bounty'),
+      description: t('members.zara.description'),
       image: zaraPhoto,
       rotation: '-rotate-1',
-      mustacheStyle: "artistic"
+      mustacheStyle: 'artistic'
     },
     {
-      name: "Leo 'The Effect Enforcer'",
-      crime: "WANDERING VFX SYNTHESIS SCHEMES",
-      bounty: "$10,400",
-      description: "A nomadic visual effects outlaw who drifts from project to project, leaving behind a trail of jaw-dropping composites and impossible cinematic magic. Master of the digital realm.",
+      name: t('members.leo.name'),
+      crime: t('members.leo.crime'),
+      bounty: t('members.leo.bounty'),
+      description: t('members.leo.description'),
       image: leoPhoto,
       rotation: 'rotate-3',
-      mustacheStyle: "handlebar"
+      mustacheStyle: 'handlebar'
     }
   ]
 
@@ -122,18 +125,18 @@ export function Team() {
           <div className="inline-flex items-center gap-3 mb-6">
             <div className="w-3 h-3 bg-accent-emerald rounded-full animate-pulse" />
             <span className="text-sm font-semibold text-muted-foreground">
-              Meet the Outlaws
+              {t('badge')}
             </span>
             <div className="w-3 h-3 bg-accent-blue rounded-full animate-pulse" />
           </div>
-          
+
           <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight mb-8 text-foreground">
-            <span className="block mb-2">These people are</span>
-            <span className="block text-foreground">WANTED</span>
+            <span className="block mb-2">{t('title.line1')}</span>
+            <span className="block text-foreground">{t('title.line2')}</span>
           </h2>
-          
+
           <p className="text-2xl lg:text-3xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Highly skilled and creatively dangerous
+            {t('subtitle')}
           </p>
         </div>
 
@@ -242,7 +245,7 @@ export function Team() {
                                     fontFamily: 'serif',
                                     letterSpacing: '0.1em'
                                   }}>
-                                WANTED
+                                {t('wanted')}
                               </h3>
                               <div className="w-full h-0.5 bg-black mb-2" />
                             </div>
@@ -273,7 +276,7 @@ export function Team() {
                             {/* 详情 */}
                             <div className="text-left space-y-2" style={{ fontFamily: 'serif' }}>
                               <div className="font-black text-lg text-black">{criminal.name}</div>
-                              <div className="font-bold text-red-600 text-base">BOUNTY: {criminal.bounty}</div>
+                              <div className="font-bold text-red-600 text-base">{t('bounty')}: {criminal.bounty}</div>
                               <div className="text-sm text-gray-800 leading-relaxed bg-gray-50/50 p-3 border-l-2 border-black">
                                 {criminal.description}
                               </div>
@@ -330,7 +333,7 @@ export function Team() {
                                     fontFamily: 'serif',
                                     letterSpacing: '0.1em'
                                   }}>
-                                WANTED
+                                {t('wanted')}
                               </h3>
                               <div className="w-full h-0.5 bg-black mb-2" />
                             </div>
@@ -361,7 +364,7 @@ export function Team() {
                             {/* 详情 */}
                             <div className="text-left space-y-2" style={{ fontFamily: 'serif' }}>
                               <div className="font-black text-lg text-black">{criminal.name}</div>
-                              <div className="font-bold text-red-600 text-base">BOUNTY: {criminal.bounty}</div>
+                              <div className="font-bold text-red-600 text-base">{t('bounty')}: {criminal.bounty}</div>
                               <div className="text-sm text-gray-800 leading-relaxed bg-gray-50/50 p-3 border-l-2 border-black">
                                 {criminal.description}
                               </div>

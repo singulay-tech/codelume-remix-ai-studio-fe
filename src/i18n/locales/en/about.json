@@ -1,0 +1,44 @@
+{
+  "badge": "Behind the Scenes",
+  "title": "How We Create Magic",
+  "subtitle": "Watch our process unfold frame by frame",
+  "steps": {
+    "start": "START",
+    "end": "END",
+    "step1": {
+      "number": "01",
+      "title": "Concept & Script",
+      "description": "Scene-by-scene draft with dialogues and time-codes"
+    },
+    "step2": {
+      "number": "02",
+      "title": "Look & Storyboard",
+      "description": "AI engine selection and visual testing"
+    },
+    "step3": {
+      "number": "03",
+      "title": "AI Production",
+      "description": "Motion tests and multi-variant generation"
+    },
+    "step4": {
+      "number": "04",
+      "title": "Post-production",
+      "description": "VFX, color grading, and audio mixing"
+    },
+    "step5": {
+      "number": "05",
+      "title": "Master Delivery",
+      "description": "Multi-format export and secure transfer"
+    }
+  },
+  "stats": {
+    "fps": "24 FPS",
+    "duration": "5-7 Days",
+    "quality": "Cinema Quality"
+  },
+  "gallery": {
+    "title": "A glimpse into our storyboard development process",
+    "caption": "Diverse scenarios, characters, and styles — all generated through our AI pipeline",
+    "imageAlt": "Collection of AI-generated video content thumbnails showcasing Codelume's diverse output"
+  }
+}
