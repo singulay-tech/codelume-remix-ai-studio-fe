@@ -518,47 +518,20 @@ html {
     padding-right: 1rem;
   }
   
-  /* 防止服务区出现滚动条 */
-  #services {
+  /* 防止功能区出现滚动条 */
+  #features {
     overflow: visible !important;
   }
   
-  #services * {
+  #features * {
     overflow: visible !important;
   }
   
-  #services::-webkit-scrollbar,
-  #services *::-webkit-scrollbar {
+  #features::-webkit-scrollbar,
+  #features *::-webkit-scrollbar {
     display: none !important;
     width: 0 !important;
     height: 0 !important;
-  }
-  
-  /* 防止团队区出现滚动条 */
-  #team,
-  section[aria-label="Team section"],
-  section[aria-label="Team section"] * {
-    overflow: visible !important;
-    max-height: none !important;
-    height: auto !important;
-    min-height: 0 !important;
-  }
-  
-  #team::-webkit-scrollbar,
-  #team *::-webkit-scrollbar,
-  section[aria-label="Team section"]::-webkit-scrollbar,
-  section[aria-label="Team section"] *::-webkit-scrollbar {
-    display: none !important;
-    width: 0 !important;
-    height: 0 !important;
-  }
-  
-  /* 强制团队区完全可见 */
-  section[aria-label="Team section"] {
-    overflow: visible !important;
-    height: auto !important;
-    min-height: 0 !important;
-    max-height: none !important;
   }
   
   /* 修复可能溢出的绝对定位元素 */
