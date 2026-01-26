@@ -137,7 +137,10 @@ export function Hero() {
                 window.scrollTo({ top: 0, behavior: 'smooth' })
               }}
             >
-              <span className="font-bagel text-white text-xl tracking-wider">{t('navigation:brand')}</span>
+              <div className="flex items-center gap-3">
+                <img src="/codelume-icon.svg" alt="Codelume" className="h-7 w-7" />
+                <span className="font-bagel text-white text-xl tracking-wider">{t('navigation:brand')}</span>
+              </div>
             </motion.div>
 
             {/* 导航菜单 */}
@@ -149,28 +152,36 @@ export function Hero() {
                 {t('navigation:work')}
               </a>
               <a
-                href="#about"
+                href="#process"
                 className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105"
               >
                 {t('navigation:process')}
               </a>
               <a
-                href="#services"
+                href="#features"
                 className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105"
               >
-                {t('navigation:capabilities')}
+                {t('navigation:features')}
               </a>
               <a
-                href="#team"
+                href="#download"
                 className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105"
               >
-                {t('navigation:team')}
+                {t('navigation:download')}
               </a>
               <a
-                href="#contact"
+                href="#about-us"
                 className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105"
               >
-                {t('navigation:contact')}
+                {t('navigation:about')}
+              </a>
+              <a
+                href="/workshop"
+                target="_blank"
+                rel="noreferrer"
+                className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105"
+              >
+                {t('navigation:workshop')}
               </a>
             </div>
 
@@ -201,13 +212,13 @@ export function Hero() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => {
-                  const contactSection = document.getElementById('contact')
-                  contactSection?.scrollIntoView({ behavior: 'smooth' })
+              onClick={() => {
+                  const downloadSection = document.getElementById('download')
+                  downloadSection?.scrollIntoView({ behavior: 'smooth' })
                 }}
                 className="hidden sm:block bg-red-600 backdrop-blur-sm text-white font-semibold px-6 py-3 rounded-md hover:bg-red-700 gentle-animation ml-4 cursor-pointer"
               >
-                {t('hero:cta.bookCall')}
+                {t('hero:cta.download')}
               </motion.button>
 
               {/* 移动端汉堡菜单按钮 */}
@@ -264,32 +275,41 @@ export function Hero() {
                 {t('navigation:work')}
               </a>
               <a
-                href="#about"
+                href="#process"
                 className="mobile-menu-link px-4 py-3 hover:text-white/80 hover:bg-white/10 rounded-lg gentle-animation font-medium text-lg active:bg-white/20"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {t('navigation:process')}
               </a>
               <a
-                href="#services"
+                href="#features"
                 className="mobile-menu-link px-4 py-3 hover:text-white/80 hover:bg-white/10 rounded-lg gentle-animation font-medium text-lg active:bg-white/20"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                {t('navigation:capabilities')}
+                {t('navigation:features')}
               </a>
               <a
-                href="#team"
+                href="#download"
                 className="mobile-menu-link px-4 py-3 hover:text-white/80 hover:bg-white/10 rounded-lg gentle-animation font-medium text-lg active:bg-white/20"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                {t('navigation:team')}
+                {t('navigation:download')}
               </a>
               <a
-                href="#contact"
+                href="#about-us"
                 className="mobile-menu-link px-4 py-3 hover:text-white/80 hover:bg-white/10 rounded-lg gentle-animation font-medium text-lg active:bg-white/20"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                {t('navigation:contact')}
+                {t('navigation:about')}
+              </a>
+              <a
+                href="/workshop"
+                target="_blank"
+                rel="noreferrer"
+                className="mobile-menu-link px-4 py-3 hover:text-white/80 hover:bg-white/10 rounded-lg gentle-animation font-medium text-lg active:bg-white/20"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {t('navigation:workshop')}
               </a>
             </div>
 
@@ -298,13 +318,13 @@ export function Hero() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => {
-                const contactSection = document.getElementById('contact')
-                contactSection?.scrollIntoView({ behavior: 'smooth' })
+                const downloadSection = document.getElementById('download')
+                downloadSection?.scrollIntoView({ behavior: 'smooth' })
                 setIsMobileMenuOpen(false)
               }}
               className="bg-red-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-red-700 active:bg-red-800 gentle-animation mt-8 cursor-pointer"
             >
-              {t('hero:cta.bookCall')}
+              {t('hero:cta.download')}
             </motion.button>
           </div>
         </div>

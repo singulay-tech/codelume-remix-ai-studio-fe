@@ -1,8 +1,7 @@
 'use client'
 
-import { Play, ExternalLink } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
-import { Button } from './ui/button'
+import previewGif from '@/assets/codelume-preview.gif'
 
 export function Portfolio() {
   const { t } = useTranslation('portfolio')
@@ -29,19 +28,16 @@ export function Portfolio() {
           </p>
         </div>
 
-        {/* 精选视频 */}
+        {/* 精选展示 */}
         <div className="max-w-6xl mx-auto">
           <div className="relative bg-card clean-border rounded-3xl overflow-hidden elevated-shadow">
-            {/* 视频嵌入 */}
+            {/* 预览展示 */}
             <div className="relative">
               <div className="aspect-video">
-                <iframe
-                  src="https://www.youtube.com/embed/fIbDWDh6aYw?rel=0&showinfo=0&modestbranding=1"
-                  title={t('featured.title')}
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  className="w-full h-full rounded-t-3xl"
+                <img
+                  src={previewGif}
+                  alt={t('featured.title')}
+                  className="w-full h-full object-cover rounded-t-3xl"
                 />
               </div>
 
