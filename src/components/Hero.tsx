@@ -175,14 +175,14 @@ export function Hero() {
               >
                 {t('navigation:about')}
               </a>
-              <a
+              {/* <a
                 href="/workshop"
                 target="_blank"
                 rel="noreferrer"
                 className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105"
               >
                 {t('navigation:workshop')}
-              </a>
+              </a> */}
             </div>
 
             {/* 右侧 - 语言切换 + 视频控制 + 行动按钮 + 移动菜单 */}
@@ -302,7 +302,7 @@ export function Hero() {
               >
                 {t('navigation:about')}
               </a>
-              <a
+              {/* <a
                 href="/workshop"
                 target="_blank"
                 rel="noreferrer"
@@ -310,7 +310,7 @@ export function Hero() {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {t('navigation:workshop')}
-              </a>
+              </a> */}
             </div>
 
             {/* 移动端行动按钮 */}
