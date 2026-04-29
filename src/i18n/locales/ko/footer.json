@@ -1,36 +1,30 @@
 {
   "brand": "CODELUME",
-  "description": "Codelume은 로컬 재생, 멀티 스크린 제어, 프라이버시 우선 성능에 집중한 네이티브 macOS 동적 월페이퍼 스튜디오입니다.",
+  "description": "macOS용 네이티브 동적 월페이퍼 앱으로, 부드러운 재생·낮은 리소스 사용·세련된 데스크톱 경험에 집중합니다.",
   "tools": {
     "title": "핵심 기술 스택",
-    "description": "Apple 네이티브 프레임워크와 가벼운 도구 체인으로 구축되었습니다.",
     "items": [
+      "Supabase",
+      "Cloudflare",
+      "Swift",
       "SwiftUI",
-      "AppKit",
       "AVFoundation",
       "SpriteKit",
-      "SceneKit",
-      "SQLite",
-      "CodelumeBundle",
-      "SwiftyBeaver",
-      "macOS 샌드박스",
-      "Launch Services",
-      "화면 보호기"
+      "SQLite"
     ]
   },
   "links": {
-    "github": "https://github.com/guang-zi-yu/CodelumeApp.git",
     "appStore": "https://apps.apple.com/us/app/%E7%A0%81%E9%95%9C/id6751061329?mt=12",
     "email": "codelume@163.com",
     "douyin": "https://v.douyin.com/z7E8UAlUsfU/"
   },
   "labels": {
-    "github": "Codelume GitHub",
     "appStore": "Codelume App Store",
     "email": "Codelume 이메일",
     "douyin": "Codelume Douyin",
     "douyinId": "Douyin: 22501983627"
   },
-  "copyright": "© {{year}} Codelume Studio",
-  "address": "macOS 데스크톱 몰입 경험을 위해 설계"
+  "copyright": "© 2025–2026 北京星界力科技有限公司",
+  "address": "macOS 데스크톱 몰입 경험을 위해 설계",
+  "tagline": "macOS를 위해 ♥으로 제작"
 }

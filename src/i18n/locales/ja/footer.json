@@ -1,36 +1,30 @@
 {
   "brand": "CODELUME",
-  "description": "Codelumeはローカル再生、マルチ画面制御、プライバシー優先の性能に注力したネイティブmacOS動的壁紙スタジオです。",
+  "description": "ネイティブな macOS 向け動的壁紙アプリ。スムーズな再生、低リソース利用、洗練されたデスクトップ体験に注力します。",
   "tools": {
     "title": "コア技術スタック",
-    "description": "Appleネイティブのフレームワークと軽量なツールチェーンで構築。",
     "items": [
+      "Supabase",
+      "Cloudflare",
+      "Swift",
       "SwiftUI",
-      "AppKit",
       "AVFoundation",
       "SpriteKit",
-      "SceneKit",
-      "SQLite",
-      "CodelumeBundle",
-      "SwiftyBeaver",
-      "macOSサンドボックス",
-      "Launch Services",
-      "スクリーンセーバー"
+      "SQLite"
     ]
   },
   "links": {
-    "github": "https://github.com/guang-zi-yu/CodelumeApp.git",
     "appStore": "https://apps.apple.com/us/app/%E7%A0%81%E9%95%9C/id6751061329?mt=12",
     "email": "codelume@163.com",
     "douyin": "https://v.douyin.com/z7E8UAlUsfU/"
   },
   "labels": {
-    "github": "Codelume GitHub",
     "appStore": "Codelume App Store",
     "email": "Codelumeにメール",
     "douyin": "Codelume Douyin",
     "douyinId": "Douyin: 22501983627"
   },
-  "copyright": "© {{year}} Codelume Studio",
-  "address": "macOSデスクトップの没入体験のために設計"
+  "copyright": "© 2025–2026 北京星界力科技有限公司",
+  "address": "macOSデスクトップの没入体験のために設計",
+  "tagline": "macOS のために ♥ を込めて製作"
 }

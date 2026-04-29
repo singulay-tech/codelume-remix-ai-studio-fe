@@ -14,7 +14,6 @@ import enTeam from './locales/en/team.json'
 import enContact from './locales/en/contact.json'
 import enFooter from './locales/en/footer.json'
 import enAwards from './locales/en/awards.json'
-import enDownloads from './locales/en/downloads.json'
 import enAboutUs from './locales/en/aboutUs.json'
 import enWorkshop from './locales/en/workshop.json'
 import enErrors from './locales/en/errors.json'
@@ -30,7 +29,6 @@ import zhTeam from './locales/zh/team.json'
 import zhContact from './locales/zh/contact.json'
 import zhFooter from './locales/zh/footer.json'
 import zhAwards from './locales/zh/awards.json'
-import zhDownloads from './locales/zh/downloads.json'
 import zhAboutUs from './locales/zh/aboutUs.json'
 import zhWorkshop from './locales/zh/workshop.json'
 import zhErrors from './locales/zh/errors.json'
@@ -46,7 +44,6 @@ import zhTWTeam from './locales/zh-TW/team.json'
 import zhTWContact from './locales/zh-TW/contact.json'
 import zhTWFooter from './locales/zh-TW/footer.json'
 import zhTWAwards from './locales/zh-TW/awards.json'
-import zhTWDownloads from './locales/zh-TW/downloads.json'
 import zhTWAboutUs from './locales/zh-TW/aboutUs.json'
 import zhTWWorkshop from './locales/zh-TW/workshop.json'
 import zhTWErrors from './locales/zh-TW/errors.json'
@@ -62,7 +59,6 @@ import jaTeam from './locales/ja/team.json'
 import jaContact from './locales/ja/contact.json'
 import jaFooter from './locales/ja/footer.json'
 import jaAwards from './locales/ja/awards.json'
-import jaDownloads from './locales/ja/downloads.json'
 import jaAboutUs from './locales/ja/aboutUs.json'
 import jaWorkshop from './locales/ja/workshop.json'
 import jaErrors from './locales/ja/errors.json'
@@ -78,7 +74,6 @@ import koTeam from './locales/ko/team.json'
 import koContact from './locales/ko/contact.json'
 import koFooter from './locales/ko/footer.json'
 import koAwards from './locales/ko/awards.json'
-import koDownloads from './locales/ko/downloads.json'
 import koAboutUs from './locales/ko/aboutUs.json'
 import koWorkshop from './locales/ko/workshop.json'
 import koErrors from './locales/ko/errors.json'
@@ -95,7 +90,6 @@ const resources = {
     contact: enContact,
     footer: enFooter,
     awards: enAwards,
-    downloads: enDownloads,
     aboutUs: enAboutUs,
     workshop: enWorkshop,
     errors: enErrors,
@@ -111,7 +105,6 @@ const resources = {
     contact: zhContact,
     footer: zhFooter,
     awards: zhAwards,
-    downloads: zhDownloads,
     aboutUs: zhAboutUs,
     workshop: zhWorkshop,
     errors: zhErrors,
@@ -127,7 +120,6 @@ const resources = {
     contact: zhTWContact,
     footer: zhTWFooter,
     awards: zhTWAwards,
-    downloads: zhTWDownloads,
     aboutUs: zhTWAboutUs,
     workshop: zhTWWorkshop,
     errors: zhTWErrors,
@@ -143,7 +135,6 @@ const resources = {
     contact: jaContact,
     footer: jaFooter,
     awards: jaAwards,
-    downloads: jaDownloads,
     aboutUs: jaAboutUs,
     workshop: jaWorkshop,
     errors: jaErrors,
@@ -159,7 +150,6 @@ const resources = {
     contact: koContact,
     footer: koFooter,
     awards: koAwards,
-    downloads: koDownloads,
     aboutUs: koAboutUs,
     workshop: koWorkshop,
     errors: koErrors,
@@ -188,7 +178,6 @@ i18n
       'contact',
       'footer',
       'awards',
-      'downloads',
       'aboutUs',
       'workshop',
       'errors',

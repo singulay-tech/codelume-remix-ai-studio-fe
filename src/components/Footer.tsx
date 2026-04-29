@@ -24,19 +24,6 @@ export function Footer() {
               </p>
               {/* 社交媒体图标 */}
               <div className="flex items-center space-x-6">
-                {/* GitHub */}
-                <a
-                  href={t('links.github')}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:scale-110 gentle-animation cursor-pointer"
-                  aria-label={t('labels.github')}
-                >
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="#E5E7EB" aria-hidden="true">
-                    <path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.1.82-.26.82-.58v-2.1c-3.34.72-4.04-1.4-4.04-1.4-.55-1.4-1.35-1.78-1.35-1.78-1.1-.76.08-.75.08-.75 1.22.09 1.86 1.25 1.86 1.25 1.08 1.86 2.84 1.32 3.54 1.01.11-.79.42-1.32.77-1.62-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.39 1.24-3.24-.12-.31-.54-1.56.12-3.25 0 0 1.01-.32 3.3 1.24a11.4 11.4 0 0 1 6 0c2.29-1.56 3.3-1.24 3.3-1.24.66 1.69.24 2.94.12 3.25.77.85 1.24 1.93 1.24 3.24 0 4.61-2.8 5.62-5.47 5.92.43.38.81 1.12.81 2.26v3.35c0 .32.22.68.83.58A12 12 0 0 0 12 .5z"/>
-                  </svg>
-                </a>
-
                 {/* App Store */}
                 <a
                   href={t('links.appStore')}
@@ -88,13 +75,8 @@ export function Footer() {
           {/* 我们使用的工具区 */}
           <div className="col-span-12 md:col-span-8">
             <div>
-              <h4 className="font-black text-2xl text-background mb-4">{t('tools.title')}</h4>
+              <h4 className="font-black text-2xl text-background mb-8">{t('tools.title')}</h4>
 
-              {/* AI 工具说明 */}
-              <p className="text-background/70 text-base mb-8 leading-relaxed">
-                {t('tools.description')}
-              </p>
-              
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {tools.map((tool) => (
                   <div
@@ -109,16 +91,10 @@ export function Footer() {
           </div>
         </div>
 
-        {/* 底部栏 - 简化版 */}
+        {/* 底部栏：标语 + 版权 */}
         <div className="border-t border-background/20 pt-8 mt-16">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-sm text-background/70 mb-4 md:mb-0">
-              {t('copyright', { year: new Date().getFullYear() })}
-            </div>
-            <div className="text-sm text-background/70">
-              {t('address')}
-            </div>
-          </div>
+          <p className="text-center text-sm text-background/70">{t('tagline')}</p>
+          <p className="mt-2 text-center text-xs text-background/60">{t('copyright')}</p>
         </div>
       </div>
     </footer>

@@ -1,68 +1,22 @@
 {
-  "badge": "About Codelume",
-  "title": "Built for macOS dynamic wallpapers",
-  "subtitle": "Codelume delivers a native playback engine for local wallpaper bundles, with a focus on privacy, stability, and multi-screen control.",
+  "badge": "Wallpapers & collaboration",
+  "title": "Wallpapers, collaboration & Codelume",
   "highlights": {
-    "sandbox": {
-      "title": "macOS Sandbox",
-      "description": "Runs strictly within Apple’s sandbox rules for safer playback."
+    "hub": {
+      "title": "Creators & Wallpaper Hub",
+      "description": "Codelume focuses on developing and maintaining the dynamic wallpaper engine, and also offers a curated selection of wallpapers. Creators are welcome to submit work by email—accepted pieces are shown in Wallpaper Hub."
     },
-    "offline": {
-      "title": "Offline First",
-      "description": "No outbound network traffic and no data collection."
+    "formats": {
+      "title": "Formats we align on",
+      "description": "Prefer .bundle wallpaper packs exported from Codelume Studio—they make it easy to share your work's details and for Codelume to load them."
     },
-    "multiscreen": {
-      "title": "Per-Screen Control",
-      "description": "Assign, pause, mute, and tune playback per display."
+    "community": {
+      "title": "Where we stay in sync",
+      "description": "New wallpapers, releases, and technical notes mainly go out on Douyin—the easiest place to follow the product rhythm and send feedback."
     },
-    "openSource": {
-      "title": "Open Source Core",
-      "description": "Transparent codebase with App Store convenience."
-    }
-  },
-  "timeline": {
-    "title": "Release Timeline",
-    "items": {
-      "jan-24-2026": {
-        "date": "Jan 24, 2026",
-        "title": "Brand refresh & stability sweep",
-        "description": "Renamed to Codelume, refreshed the welcome flow, ensured single-instance launch, and updated default assets."
-      },
-      "jan-15-2026": {
-        "date": "Jan 15, 2026",
-        "title": "Screen saver refactor",
-        "description": "Streamlined the screen saver views and removed unused code paths."
-      },
-      "jan-14-2026": {
-        "date": "Jan 14, 2026",
-        "title": "System behavior hardening",
-        "description": "Disabled log storage by default and refined Dock icon handling."
-      },
-      "jan-13-2026": {
-        "date": "Jan 13, 2026",
-        "title": "Privacy-first controls",
-        "description": "Added Dock icon visibility controls, quick home access, and blocked outbound connections."
-      },
-      "dec-25-2025": {
-        "date": "Dec 25, 2025",
-        "title": "v1.4.0 release",
-        "description": "Published v1.4.0 with fixes and performance improvements."
-      },
-      "dec-23-2025": {
-        "date": "Dec 23, 2025",
-        "title": "Backend integration",
-        "description": "Introduced optional backend hooks for content workflows."
-      },
-      "dec-22-2025": {
-        "date": "Dec 22, 2025",
-        "title": "Main screen sync",
-        "description": "Restarted playback on main-screen change and refined pause conditions."
-      },
-      "dec-19-2025": {
-        "date": "Dec 19, 2025",
-        "title": "Preview reliability fix",
-        "description": "Resolved issues preventing preview windows from opening." 
-      }
+    "rights": {
+      "title": "Rights & mutual trust",
+      "description": "We attribute public materials where we can—that is part of how we work with creators and rights holders. If you see an issue, email us with details and we will review and reply."
     }
   }
 }

@@ -6,6 +6,10 @@ import { useState, useRef, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { LanguageSwitcher } from './LanguageSwitcher'
 
+/** App ID 不变时链接一般稳定；cn 区商店页（码镜-场景动态壁纸） */
+const CODELUME_MAC_APP_STORE_URL =
+  'https://apps.apple.com/cn/app/%E7%A0%81%E9%95%9C-%E5%8A%A8%E6%80%81%E5%A3%81%E7%BA%B8/id6751061329?mt=12'
+
 export function Hero() {
   const { t } = useTranslation(['hero', 'navigation'])
   const [isMuted, setIsMuted] = useState(true)
@@ -110,7 +114,7 @@ export function Hero() {
         loop
         playsInline
       >
-        <source src="https://mojli.s3.us-east-2.amazonaws.com/Mojli+Website+upscaled+(12mb).webm" type="video/webm" />
+        <source src="https://assets.codelume.cn/codelume-web-preview/preview.mov" type="video/quicktime" />
         {t('hero:video.unsupported')}
       </video>
 
@@ -164,25 +168,17 @@ export function Hero() {
                 {t('navigation:features')}
               </a>
               <a
-                href="#download"
-                className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105"
-              >
-                {t('navigation:download')}
-              </a>
-              <a
                 href="#about-us"
                 className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105"
               >
                 {t('navigation:about')}
               </a>
-              {/* <a
+              <a
                 href="/workshop"
-                target="_blank"
-                rel="noreferrer"
                 className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105"
               >
                 {t('navigation:workshop')}
-              </a> */}
+              </a>
             </div>
 
             {/* 右侧 - 语言切换 + 视频控制 + 行动按钮 + 移动菜单 */}
@@ -208,18 +204,16 @@ export function Hero() {
                 )}
               </div>
 
-              {/* 行动按钮 - 移动端隐藏 */}
-              <motion.button
+              <motion.a
+                href={CODELUME_MAC_APP_STORE_URL}
+                target="_blank"
+                rel="noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-              onClick={() => {
-                  const downloadSection = document.getElementById('download')
-                  downloadSection?.scrollIntoView({ behavior: 'smooth' })
-                }}
-                className="hidden sm:block bg-red-600 backdrop-blur-sm text-white font-semibold px-6 py-3 rounded-md hover:bg-red-700 gentle-animation ml-4 cursor-pointer"
+                className="inline-flex shrink-0 items-center justify-center bg-red-600 backdrop-blur-sm text-white font-semibold px-3 py-2 text-xs sm:px-6 sm:py-3 sm:text-sm rounded-md hover:bg-red-700 gentle-animation ml-2 sm:ml-4"
               >
                 {t('hero:cta.download')}
-              </motion.button>
+              </motion.a>
 
               {/* 移动端汉堡菜单按钮 */}
               <button
@@ -289,43 +283,20 @@ export function Hero() {
                 {t('navigation:features')}
               </a>
               <a
-                href="#download"
-                className="mobile-menu-link px-4 py-3 hover:text-white/80 hover:bg-white/10 rounded-lg gentle-animation font-medium text-lg active:bg-white/20"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {t('navigation:download')}
-              </a>
-              <a
                 href="#about-us"
                 className="mobile-menu-link px-4 py-3 hover:text-white/80 hover:bg-white/10 rounded-lg gentle-animation font-medium text-lg active:bg-white/20"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {t('navigation:about')}
               </a>
-              {/* <a
+              <a
                 href="/workshop"
-                target="_blank"
-                rel="noreferrer"
                 className="mobile-menu-link px-4 py-3 hover:text-white/80 hover:bg-white/10 rounded-lg gentle-animation font-medium text-lg active:bg-white/20"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {t('navigation:workshop')}
-              </a> */}
+              </a>
             </div>
-
-            {/* 移动端行动按钮 */}
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => {
-                const downloadSection = document.getElementById('download')
-                downloadSection?.scrollIntoView({ behavior: 'smooth' })
-                setIsMobileMenuOpen(false)
-              }}
-              className="bg-red-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-red-700 active:bg-red-800 gentle-animation mt-8 cursor-pointer"
-            >
-              {t('hero:cta.download')}
-            </motion.button>
           </div>
         </div>
       </motion.div>

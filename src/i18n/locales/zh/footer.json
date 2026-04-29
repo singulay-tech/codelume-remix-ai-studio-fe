@@ -1,36 +1,30 @@
 {
   "brand": "CODELUME",
-  "description": "Codelume 是一款原生 macOS 动态壁纸工作室，专注于本地播放、多屏控制与隐私优先体验。",
+  "description": "一款原生 macOS 动态壁纸应用，专注于流畅播放、低资源占用和精致的桌面体验。",
   "tools": {
     "title": "核心技术栈",
-    "description": "以 Apple 原生框架和轻量工具链构建。",
     "items": [
+      "Supabase",
+      "Cloudflare",
+      "Swift",
       "SwiftUI",
-      "AppKit",
       "AVFoundation",
       "SpriteKit",
-      "SceneKit",
-      "SQLite",
-      "CodelumeBundle",
-      "SwiftyBeaver",
-      "macOS 沙盒",
-      "启动服务",
-      "屏幕保护程序"
+      "SQLite"
     ]
   },
   "links": {
-    "github": "https://github.com/guang-zi-yu/CodelumeApp.git",
     "appStore": "https://apps.apple.com/us/app/%E7%A0%81%E9%95%9C/id6751061329?mt=12",
     "email": "codelume@163.com",
     "douyin": "https://v.douyin.com/z7E8UAlUsfU/"
   },
   "labels": {
-    "github": "Codelume GitHub",
     "appStore": "Codelume App Store",
     "email": "联系 Codelume",
     "douyin": "Codelume 抖音",
     "douyinId": "抖音号：22501983627"
   },
-  "copyright": "© {{year}} Codelume Studio",
-  "address": "为 macOS 桌面沉浸体验而生"
+  "copyright": "© 2025–2026 北京星界力科技有限公司",
+  "address": "为 macOS 桌面沉浸体验而生",
+  "tagline": "为 macOS 用♥制作"
 }

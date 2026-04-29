@@ -1,36 +1,30 @@
 {
   "brand": "CODELUME",
-  "description": "Codelume is a native macOS dynamic wallpaper studio focused on local playback, multi-screen control, and privacy-first performance.",
+  "description": "A native macOS dynamic wallpaper app focused on smooth playback, low resource usage, and a polished desktop experience.",
   "tools": {
     "title": "Core Stack",
-    "description": "Built with Apple-native frameworks and a lightweight toolchain.",
     "items": [
+      "Supabase",
+      "Cloudflare",
+      "Swift",
       "SwiftUI",
-      "AppKit",
       "AVFoundation",
       "SpriteKit",
-      "SceneKit",
-      "SQLite",
-      "CodelumeBundle",
-      "SwiftyBeaver",
-      "macOS Sandbox",
-      "Launch Services",
-      "Screen Saver"
+      "SQLite"
     ]
   },
   "links": {
-    "github": "https://github.com/guang-zi-yu/CodelumeApp.git",
     "appStore": "https://apps.apple.com/us/app/%E7%A0%81%E9%95%9C/id6751061329?mt=12",
     "email": "codelume@163.com",
     "douyin": "https://v.douyin.com/z7E8UAlUsfU/"
   },
   "labels": {
-    "github": "Codelume GitHub",
     "appStore": "Codelume App Store",
     "email": "Email Codelume",
     "douyin": "Codelume Douyin",
     "douyinId": "Douyin: 22501983627"
   },
-  "copyright": "© {{year}} Codelume Studio",
-  "address": "Designed for macOS desktop immersion"
+  "copyright": "© 2025–2026 Beijing Xingjieli Technology Co., Ltd.",
+  "address": "Designed for macOS desktop immersion",
+  "tagline": "Built with ♥ for macOS"
 }
