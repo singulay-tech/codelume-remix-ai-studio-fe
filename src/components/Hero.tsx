@@ -57,10 +57,10 @@ export function Hero() {
     })
   }, [isMuted])
 
-  // 背景轮播：短视频会按整循环播放到 >=20 秒后再切换
+  // 背景轮播：短视频会按整循环播放到 >=5 秒后再切换
   useEffect(() => {
     const currentDuration = videoDurations[currentVideoIndex]
-    const baseSeconds = 20
+    const baseSeconds = 5
     const switchAfterSeconds =
       currentDuration > 0 && currentDuration < baseSeconds
         ? Math.ceil(baseSeconds / currentDuration) * currentDuration
