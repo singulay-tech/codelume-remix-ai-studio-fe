@@ -15,7 +15,7 @@ const HERO_VIDEO_URLS = [
   'https://assets.codelume.cn/codelume-web-preview/preview_1.mp4',
   'https://assets.codelume.cn/codelume-web-preview/preview_0.mp4',
 ]
-const HERO_FALLBACK_IMAGE_URL = 'https://assets.codelume.cn/codelume-web-preview/preview.jpeg'
+const HERO_FALLBACK_IMAGE_URL = 'https://assets.codelume.cn/codelume-web-preview/preview.jpg'
 
 // 可调：固定只播放前 N 个视频
 const HERO_ACTIVE_VIDEO_COUNT = 2
