@@ -15,6 +15,7 @@ const HERO_VIDEO_URLS = [
   'https://assets.codelume.cn/codelume-web-preview/preview_1.mov',
   'https://assets.codelume.cn/codelume-web-preview/preview_0.mov',
 ]
+const HERO_FALLBACK_IMAGE_URL = 'https://assets.codelume.cn/codelume-web-preview/preview.png'
 
 // 可调：固定只播放前 N 个视频
 const HERO_ACTIVE_VIDEO_COUNT = 2
@@ -26,7 +27,18 @@ export function Hero() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0)
+  /** 轨道位移索引：0..heroVideos.length 为「克隆首帧」，用于无缝从最后一张继续向左滑 */
+  const [trackIndex, setTrackIndex] = useState(0)
+  const [isTrackTransitionEnabled, setIsTrackTransitionEnabled] = useState(true)
   const videoRefs = useRef<Array<HTMLVideoElement | null>>([])
+  const [readyVideos, setReadyVideos] = useState<boolean[]>(
+    () => Array(heroVideos.length).fill(false)
+  )
+  const isCarouselReady = readyVideos.length > 0 && readyVideos.every(Boolean)
+
+  useEffect(() => {
+    setReadyVideos(Array(heroVideos.length).fill(false))
+  }, [heroVideos.length])
 
   // 滚动检测
   useEffect(() => {
@@ -58,11 +70,25 @@ export function Hero() {
     })
   }, [isMuted])
 
-  // 播完当前视频再切换；点击指示器后按新索引继续
+  // 始终只播放当前轨道上的那一格视频；
+  // 当显示克隆位时，让真正的 video[0] 影子同步播放，以便瞬时复位到 0 时画面无缝衔接（避免“倒回开头”观感）。
   useEffect(() => {
+    if (!isCarouselReady) return
+
+    const cloneIdx = heroVideos.length
+    const clone = videoRefs.current[cloneIdx]
+
     videoRefs.current.forEach((video, index) => {
       if (!video) return
-      if (index === currentVideoIndex) {
+      if (index === trackIndex) {
+        const playPromise = video.play()
+        if (playPromise !== undefined) playPromise.catch(() => {})
+      } else if (trackIndex === cloneIdx && index === 0) {
+        try {
+          if (clone) video.currentTime = clone.currentTime
+        } catch {
+          // 部分浏览器在未就绪时 set currentTime 会抛错，忽略即可
+        }
         const playPromise = video.play()
         if (playPromise !== undefined) playPromise.catch(() => {})
       } else {
@@ -70,7 +96,32 @@ export function Hero() {
         video.currentTime = 0
       }
     })
-  }, [currentVideoIndex])
+  }, [trackIndex, isCarouselReady, heroVideos.length])
+
+  // 滑到克隆帧后瞬时复位到 0，视觉上永远向左、不会从右弹回
+  useEffect(() => {
+    if (trackIndex !== heroVideos.length) return
+    const timer = window.setTimeout(() => {
+      // 复位前把克隆位的进度同步给真正的 video[0]，确保接管时画面连续
+      const clone = videoRefs.current[heroVideos.length]
+      const first = videoRefs.current[0]
+      if (clone && first) {
+        try {
+          first.currentTime = clone.currentTime
+        } catch {
+          // 忽略未就绪时的赋值错误
+        }
+      }
+      setIsTrackTransitionEnabled(false)
+      setTrackIndex(0)
+      setCurrentVideoIndex(0)
+      window.requestAnimationFrame(() => {
+        setIsTrackTransitionEnabled(true)
+      })
+    }, 1000)
+
+    return () => window.clearTimeout(timer)
+  }, [trackIndex, heroVideos.length])
 
   // 移动端菜单打开时锁定页面滚动
   useEffect(() => {
@@ -107,25 +158,71 @@ export function Hero() {
 
   return (
     <div className="relative h-screen w-full overflow-hidden bg-black">
+      {/* 视频未就绪时优先展示静态背景图 */}
+      <div
+        className={`absolute inset-0 bg-cover bg-center gentle-animation ${
+          isCarouselReady ? 'opacity-0' : 'opacity-100'
+        }`}
+        style={{ backgroundImage: `url(${HERO_FALLBACK_IMAGE_URL})` }}
+      />
+
       {/* 背景视频轮播 */}
       <div
-        className="absolute inset-0 flex h-full w-full transition-transform duration-1000 ease-in-out"
-        style={{ transform: `translateX(-${currentVideoIndex * 100}%)` }}
+        className={`absolute inset-0 flex h-full w-full ${
+          isTrackTransitionEnabled ? 'transition-transform duration-1000 ease-in-out' : ''
+        } ${isCarouselReady ? 'opacity-100' : 'opacity-0'}`}
+        style={{ transform: `translateX(-${trackIndex * 100}%)` }}
       >
-        {heroVideos.map((url, index) => (
+        {[...heroVideos, heroVideos[0]].map((url, index) => {
+          const logicalIndex = index % heroVideos.length
+          return (
           <video
             key={`${url}-${index}`}
             ref={(el) => {
               videoRefs.current[index] = el
             }}
             preload="auto"
+            onCanPlayThrough={() => {
+              if (index >= heroVideos.length) return
+              setReadyVideos((prev) => {
+                if (prev[logicalIndex]) return prev
+                const next = [...prev]
+                next[logicalIndex] = true
+                return next
+              })
+            }}
             onEnded={() => {
-              if (index !== currentVideoIndex) return
-              setCurrentVideoIndex((prev) => (prev + 1) % heroVideos.length)
+              if (!isCarouselReady) return
+              if (index !== trackIndex) return
+              const last = heroVideos.length - 1
+              if (index < last) {
+                setCurrentVideoIndex(index + 1)
+                setTrackIndex(index + 1)
+              } else if (index === last) {
+                setCurrentVideoIndex(0)
+                setTrackIndex(heroVideos.length)
+              } else {
+                setIsTrackTransitionEnabled(false)
+                setTrackIndex(0)
+                setCurrentVideoIndex(0)
+                window.requestAnimationFrame(() => setIsTrackTransitionEnabled(true))
+              }
             }}
             onError={() => {
-              if (index !== currentVideoIndex) return
-              setCurrentVideoIndex((prev) => (prev + 1) % heroVideos.length)
+              if (index !== trackIndex) return
+              const n = heroVideos.length
+              if (index < n - 1) {
+                setCurrentVideoIndex(index + 1)
+                setTrackIndex(index + 1)
+              } else if (index === n - 1) {
+                setCurrentVideoIndex(0)
+                setTrackIndex(n)
+              } else {
+                setIsTrackTransitionEnabled(false)
+                setTrackIndex(0)
+                setCurrentVideoIndex(0)
+                window.requestAnimationFrame(() => setIsTrackTransitionEnabled(true))
+              }
             }}
             className="h-full min-w-full flex-shrink-0 object-cover"
             autoPlay={index === 0}
@@ -136,24 +233,43 @@ export function Hero() {
             <source src={url} />
             {t('hero:video.unsupported')}
           </video>
-        ))}
+        )})}
       </div>
 
-      {/* 轮播指示器 */}
-      <div className="absolute bottom-6 left-1/2 z-50 flex -translate-x-1/2 items-center gap-2 rounded-full bg-black/35 px-3 py-2 backdrop-blur-sm">
-        {heroVideos.map((_, index) => (
-          <button
-            key={`hero-indicator-${index}`}
-            type="button"
-            aria-label={`切换到第 ${index + 1} 张背景`}
-            onClick={() => setCurrentVideoIndex(index)}
-            className={`h-2.5 rounded-full gentle-animation ${
-              currentVideoIndex === index
-                ? 'w-6 bg-white'
-                : 'w-2.5 bg-white/50 hover:bg-white/80'
-            }`}
-          />
-        ))}
+      {/* 轮播指示器：激活点永远居中，其它点跟随轨道左移 */}
+      <div
+        className={`absolute bottom-6 left-1/2 z-50 -translate-x-1/2 overflow-hidden rounded-full bg-black/35 backdrop-blur-sm gentle-animation ${
+          isCarouselReady ? 'opacity-100' : 'opacity-0'
+        }`}
+        style={{ width: '6.5rem', height: '1.75rem' }}
+      >
+        {/* 内部轨道：通过 translate 让 active 圆点对齐到容器水平中心；
+            尺寸基于 dot=10px、active=24px、gap=8px，center 偏移 = trackIndex*18 + 12px */}
+        <div
+          className={`absolute top-1/2 left-1/2 flex items-center gap-2 ${
+            isTrackTransitionEnabled ? 'transition-transform duration-500 ease-out' : ''
+          }`}
+          style={{ transform: `translate(-${trackIndex * 18 + 12}px, -50%)` }}
+        >
+          {[...heroVideos, heroVideos[0]].map((_, index) => {
+            const isActive = trackIndex === index
+            return (
+              <button
+                key={`hero-indicator-${index}`}
+                type="button"
+                aria-label={`切换到第 ${(index % heroVideos.length) + 1} 张背景`}
+                onClick={() => {
+                  const i = index % heroVideos.length
+                  setCurrentVideoIndex(i)
+                  setTrackIndex(i)
+                }}
+                className={`h-2.5 flex-shrink-0 rounded-full gentle-animation ${
+                  isActive ? 'w-6 bg-white' : 'w-2.5 bg-white/50 hover:bg-white/80'
+                }`}
+              />
+            )
+          })}
+        </div>
       </div>
 
       {/* 全宽导航栏 */}
