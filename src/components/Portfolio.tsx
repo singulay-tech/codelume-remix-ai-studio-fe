@@ -26,7 +26,7 @@ export function Portfolio() {
             <div className="relative">
               <div className="aspect-video">
                 <video
-                  src="https://assets.codelume.cn/codelume-web-preview/Introduce.mov"
+                  src="https://assets.codelume.cn/codelume-web-preview/codelume.mov"
                   className="w-full h-full object-cover rounded-t-3xl"
                   autoPlay
                   loop
