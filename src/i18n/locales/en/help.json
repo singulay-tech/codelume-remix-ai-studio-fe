@@ -1,0 +1,82 @@
+{
+  "title": "Help & documentation",
+  "back": "Back to home",
+  "docBack": "Help hub",
+  "docNavToc": "On this page",
+  "categories": {
+    "app": {
+      "title": "Codelume (码镜)",
+      "description": "Install, use, and troubleshoot the dynamic wallpaper app."
+    },
+    "wallpaperPolicy": {
+      "title": "Wallpaper policy",
+      "description": "Full details of the Codelume wallpaper bundle policy (码镜)."
+    },
+    "studio": {
+      "title": "Codelume Studio (码镜工坊)",
+      "description": "The workshop app, exporting .bundle packs, and using them with Codelume."
+    }
+  },
+  "docs": {
+    "app": {
+      "pageTitle": "Codelume (码镜)",
+      "sections": [
+        {
+          "id": "overview",
+          "title": "Overview",
+          "content": "Codelume is a macOS dynamic wallpaper app supporting Scene2D and video bundles. This is sample copy—full guides will be added here."
+        },
+        {
+          "id": "install",
+          "title": "Install & updates",
+          "content": "Get the app from the Mac App Store. Update and compatibility notes will expand in this section. (Placeholder)"
+        },
+        {
+          "id": "hub",
+          "title": "Wallpaper Hub",
+          "content": "Browse curated and community picks in Wallpaper Hub; import and management steps will follow. (Placeholder)"
+        }
+      ]
+    },
+    "studio": {
+      "pageTitle": "Codelume Studio (码镜工坊)",
+      "sections": [
+        {
+          "id": "overview",
+          "title": "Overview",
+          "content": "Creative Lab edits scenes, previews, and exports .bundle wallpaper packs. Sample text—detailed tutorials coming later."
+        },
+        {
+          "id": "export",
+          "title": "Export bundles",
+          "content": "Use export to produce a .bundle for Codelume with metadata for sharing. (Placeholder)"
+        },
+        {
+          "id": "with-app",
+          "title": "Use with Codelume",
+          "content": "Import bundles into the Codelume app; contact support by email if you hit compatibility issues. (Placeholder)"
+        }
+      ]
+    },
+    "wallpaperPolicy": {
+      "pageTitle": "Wallpaper bundle policy",
+      "sections": [
+        {
+          "id": "scope",
+          "title": "Scope",
+          "content": "This policy covers bundles shown, submitted, or used with Codelume. Sample framework—final legal text will be published separately."
+        },
+        {
+          "id": "rights",
+          "title": "Rights & materials",
+          "content": "Submitters warrant they have rights to the content and will cooperate on attribution and takedown requests. (Placeholder)"
+        },
+        {
+          "id": "submission",
+          "title": "Submission & display",
+          "content": "Accepted work may appear in Wallpaper Hub; presentation details are agreed case by case. (Placeholder)"
+        }
+      ]
+    }
+  }
+}

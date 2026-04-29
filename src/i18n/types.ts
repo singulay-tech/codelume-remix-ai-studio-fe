@@ -13,6 +13,7 @@ import type footer from './locales/en/footer.json'
 import type awards from './locales/en/awards.json'
 import type aboutUs from './locales/en/aboutUs.json'
 import type workshop from './locales/en/workshop.json'
+import type help from './locales/en/help.json'
 import type errors from './locales/en/errors.json'
 
 // Type definitions for language resources (for documentation purposes)
@@ -29,6 +30,7 @@ export interface I18nResources {
   awards: typeof awards
   aboutUs: typeof aboutUs
   workshop: typeof workshop
+  help: typeof help
   errors: typeof errors
 }
 

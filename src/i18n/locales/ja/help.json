@@ -1,0 +1,82 @@
+{
+  "title": "ヘルプ・ドキュメント",
+  "back": "ホームに戻る",
+  "docBack": "ヘルプ一覧",
+  "docNavToc": "このページ",
+  "categories": {
+    "app": {
+      "title": "Codelume（码镜）",
+      "description": "動的壁紙アプリの導入・操作・よくある質問。"
+    },
+    "wallpaperPolicy": {
+      "title": "壁紙ポリシー",
+      "description": "Codelume（码镜）壁紙パック規約の詳細説明。"
+    },
+    "studio": {
+      "title": "Codelume Studio（码镜工坊）",
+      "description": "スタジオアプリ、.bundle の書き出し、Codelume との併用。"
+    }
+  },
+  "docs": {
+    "app": {
+      "pageTitle": "Codelume（码镜）",
+      "sections": [
+        {
+          "id": "overview",
+          "title": "概要",
+          "content": "Codelume は macOS 向けの動的壁紙アプリで、Scene2D や動画バンドルに対応します。サンプル文です。正式なガイドは後日ここに追加します。"
+        },
+        {
+          "id": "install",
+          "title": "導入と更新",
+          "content": "Mac App Store から入手してください。更新と互換性の説明は追記予定です。（プレースホルダー）"
+        },
+        {
+          "id": "hub",
+          "title": "Wallpaper Hub",
+          "content": "公式厳選や掲載作品を閲覧します。インポートや切り替え手順は後ほど整備します。（プレースホルダー）"
+        }
+      ]
+    },
+    "studio": {
+      "pageTitle": "Codelume Studio（码镜工坊）",
+      "sections": [
+        {
+          "id": "overview",
+          "title": "概要",
+          "content": "シーン編集、プレビュー、.bundle の書き出しに使います。サンプル文です。詳しいチュートリアルは順次追加します。"
+        },
+        {
+          "id": "export",
+          "title": "バンドルの書き出し",
+          "content": "編集後に書き出しで .bundle を生成し、Codelume で読み込みます。（プレースホルダー）"
+        },
+        {
+          "id": "with-app",
+          "title": "Codelume との併用",
+          "content": "書き出したパッケージをアプリに取り込んで利用します。不具合はメールでご連絡ください。（プレースホルダー）"
+        }
+      ]
+    },
+    "wallpaperPolicy": {
+      "pageTitle": "壁紙パック規約",
+      "sections": [
+        {
+          "id": "scope",
+          "title": "適用範囲",
+          "content": "Codelume での表示・投稿・利用に関わる壁紙パックが対象です。サンプル枠組みです。正式版は別途公開予定です。"
+        },
+        {
+          "id": "rights",
+          "title": "権利と素材",
+          "content": "投稿者は適法な権利を有することを保証し、出所表示や削除要請に協力します。（プレースホルダー）"
+        },
+        {
+          "id": "submission",
+          "title": "投稿と掲載",
+          "content": "採用作品は Wallpaper Hub に掲載される場合があります。表示内容は都度すり合わせます。（プレースホルダー）"
+        }
+      ]
+    }
+  }
+}

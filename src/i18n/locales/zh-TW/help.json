@@ -1,0 +1,82 @@
+{
+  "title": "說明文件",
+  "back": "返回首頁",
+  "docBack": "說明總覽",
+  "docNavToc": "本頁目錄",
+  "categories": {
+    "app": {
+      "title": "碼鏡",
+      "description": "動態壁紙用戶端的安裝、使用與常見問題。"
+    },
+    "wallpaperPolicy": {
+      "title": "壁紙協定",
+      "description": "碼鏡壁紙包協定詳細說明。"
+    },
+    "studio": {
+      "title": "碼鏡工坊",
+      "description": "工坊應用程式、.bundle 壁紙包匯出，以及與碼鏡搭配使用的說明。"
+    }
+  },
+  "docs": {
+    "app": {
+      "pageTitle": "碼鏡",
+      "sections": [
+        {
+          "id": "overview",
+          "title": "產品概述",
+          "content": "碼鏡是面向 macOS 的動態壁紙用戶端，支援 Scene2D 與影片等格式。以下為示例說明，正式文件將於此補充。"
+        },
+        {
+          "id": "install",
+          "title": "安裝與更新",
+          "content": "請透過 Mac App Store 取得碼鏡；更新與系統相容說明將於此展開。（示例占位）"
+        },
+        {
+          "id": "hub",
+          "title": "壁紙中心",
+          "content": "在壁紙中心瀏覽官方精選與收錄作品；匯入、切換與管理的步驟說明將後續完善。（示例占位）"
+        }
+      ]
+    },
+    "studio": {
+      "pageTitle": "碼鏡工坊",
+      "sections": [
+        {
+          "id": "overview",
+          "title": "概述",
+          "content": "碼鏡工坊用於編輯場景、預覽與匯出 .bundle 壁紙包。以下為示例段落，詳細教學將陸續新增。"
+        },
+        {
+          "id": "export",
+          "title": "匯出壁紙包",
+          "content": "完成編輯後，透過匯出功能產生 .bundle，便於在碼鏡中載入與分享中繼資料。（示例占位）"
+        },
+        {
+          "id": "with-app",
+          "title": "與碼鏡搭配",
+          "content": "將匯出的包匯入碼鏡用戶端即可使用；若遇相容問題，可寄信聯絡支援。（示例占位）"
+        }
+      ]
+    },
+    "wallpaperPolicy": {
+      "pageTitle": "壁紙包協定",
+      "sections": [
+        {
+          "id": "scope",
+          "title": "適用範圍",
+          "content": "本協定適用於透過碼鏡展示、投遞或使用的壁紙包及相關內容。以下為示例條款框架，正式文本將另發布。"
+        },
+        {
+          "id": "rights",
+          "title": "版權與素材",
+          "content": "投遞方應保證對所提交內容享有合法權利，並配合來源標註與侵權申訴處理流程。（示例占位）"
+        },
+        {
+          "id": "submission",
+          "title": "投遞與展示",
+          "content": "收錄作品可能在壁紙中心展示；展示形式與資訊欄位以雙方溝通確認為準。（示例占位）"
+        }
+      ]
+    }
+  }
+}

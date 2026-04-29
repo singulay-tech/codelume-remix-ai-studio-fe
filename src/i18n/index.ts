@@ -16,6 +16,7 @@ import enFooter from './locales/en/footer.json'
 import enAwards from './locales/en/awards.json'
 import enAboutUs from './locales/en/aboutUs.json'
 import enWorkshop from './locales/en/workshop.json'
+import enHelp from './locales/en/help.json'
 import enErrors from './locales/en/errors.json'
 
 // Simplified Chinese language packs
@@ -31,6 +32,7 @@ import zhFooter from './locales/zh/footer.json'
 import zhAwards from './locales/zh/awards.json'
 import zhAboutUs from './locales/zh/aboutUs.json'
 import zhWorkshop from './locales/zh/workshop.json'
+import zhHelp from './locales/zh/help.json'
 import zhErrors from './locales/zh/errors.json'
 
 // Traditional Chinese language packs
@@ -46,6 +48,7 @@ import zhTWFooter from './locales/zh-TW/footer.json'
 import zhTWAwards from './locales/zh-TW/awards.json'
 import zhTWAboutUs from './locales/zh-TW/aboutUs.json'
 import zhTWWorkshop from './locales/zh-TW/workshop.json'
+import zhTWHelp from './locales/zh-TW/help.json'
 import zhTWErrors from './locales/zh-TW/errors.json'
 
 // Japanese language packs
@@ -61,6 +64,7 @@ import jaFooter from './locales/ja/footer.json'
 import jaAwards from './locales/ja/awards.json'
 import jaAboutUs from './locales/ja/aboutUs.json'
 import jaWorkshop from './locales/ja/workshop.json'
+import jaHelp from './locales/ja/help.json'
 import jaErrors from './locales/ja/errors.json'
 
 // Korean language packs
@@ -76,6 +80,7 @@ import koFooter from './locales/ko/footer.json'
 import koAwards from './locales/ko/awards.json'
 import koAboutUs from './locales/ko/aboutUs.json'
 import koWorkshop from './locales/ko/workshop.json'
+import koHelp from './locales/ko/help.json'
 import koErrors from './locales/ko/errors.json'
 
 const resources = {
@@ -92,6 +97,7 @@ const resources = {
     awards: enAwards,
     aboutUs: enAboutUs,
     workshop: enWorkshop,
+    help: enHelp,
     errors: enErrors,
   },
   zh: {
@@ -107,6 +113,7 @@ const resources = {
     awards: zhAwards,
     aboutUs: zhAboutUs,
     workshop: zhWorkshop,
+    help: zhHelp,
     errors: zhErrors,
   },
   'zh-TW': {
@@ -122,6 +129,7 @@ const resources = {
     awards: zhTWAwards,
     aboutUs: zhTWAboutUs,
     workshop: zhTWWorkshop,
+    help: zhTWHelp,
     errors: zhTWErrors,
   },
   ja: {
@@ -137,6 +145,7 @@ const resources = {
     awards: jaAwards,
     aboutUs: jaAboutUs,
     workshop: jaWorkshop,
+    help: jaHelp,
     errors: jaErrors,
   },
   ko: {
@@ -152,6 +161,7 @@ const resources = {
     awards: koAwards,
     aboutUs: koAboutUs,
     workshop: koWorkshop,
+    help: koHelp,
     errors: koErrors,
   },
 } as const
@@ -180,6 +190,7 @@ i18n
       'awards',
       'aboutUs',
       'workshop',
+      'help',
       'errors',
     ],
 

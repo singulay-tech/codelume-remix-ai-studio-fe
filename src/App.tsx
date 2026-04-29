@@ -1,6 +1,8 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { HomePage } from './pages/HomePage'
 import { WorkshopPage } from './pages/WorkshopPage'
+import { HelpPage } from './pages/HelpPage'
+import { HelpDocPage } from './pages/HelpDocPage'
 
 export default function App() {
   return (
@@ -8,6 +10,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/workshop" element={<WorkshopPage />} />
+        <Route path="/help" element={<HelpPage />} />
+        <Route path="/help/:docKey" element={<HelpDocPage />} />
       </Routes>
     </BrowserRouter>
   )

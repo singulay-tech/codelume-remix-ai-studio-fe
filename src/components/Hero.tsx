@@ -3,12 +3,10 @@
 import { motion } from 'framer-motion'
 import { Volume2, VolumeX, Menu, X } from 'lucide-react'
 import { useState, useRef, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { LanguageSwitcher } from './LanguageSwitcher'
-
-/** App ID 不变时链接一般稳定；cn 区商店页（码镜-场景动态壁纸） */
-const CODELUME_MAC_APP_STORE_URL =
-  'https://apps.apple.com/cn/app/%E7%A0%81%E9%95%9C-%E5%8A%A8%E6%80%81%E5%A3%81%E7%BA%B8/id6751061329?mt=12'
+import { CODELUME_MAC_APP_STORE_URL } from '@/constants/externalLinks'
 
 export function Hero() {
   const { t } = useTranslation(['hero', 'navigation'])
@@ -168,17 +166,23 @@ export function Hero() {
                 {t('navigation:features')}
               </a>
               <a
+                href="#workshop"
+                className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105"
+              >
+                {t('navigation:workshop')}
+              </a>
+              <a
                 href="#about-us"
                 className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105"
               >
                 {t('navigation:about')}
               </a>
-              <a
-                href="/workshop"
+              <Link
+                to="/help"
                 className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105"
               >
-                {t('navigation:workshop')}
-              </a>
+                {t('navigation:help')}
+              </Link>
             </div>
 
             {/* 右侧 - 语言切换 + 视频控制 + 行动按钮 + 移动菜单 */}
@@ -283,19 +287,26 @@ export function Hero() {
                 {t('navigation:features')}
               </a>
               <a
+                href="#workshop"
+                className="mobile-menu-link px-4 py-3 hover:text-white/80 hover:bg-white/10 rounded-lg gentle-animation font-medium text-lg active:bg-white/20"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {t('navigation:workshop')}
+              </a>
+              <a
                 href="#about-us"
                 className="mobile-menu-link px-4 py-3 hover:text-white/80 hover:bg-white/10 rounded-lg gentle-animation font-medium text-lg active:bg-white/20"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {t('navigation:about')}
               </a>
-              <a
-                href="/workshop"
+              <Link
+                to="/help"
                 className="mobile-menu-link px-4 py-3 hover:text-white/80 hover:bg-white/10 rounded-lg gentle-animation font-medium text-lg active:bg-white/20"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                {t('navigation:workshop')}
-              </a>
+                {t('navigation:help')}
+              </Link>
             </div>
           </div>
         </div>

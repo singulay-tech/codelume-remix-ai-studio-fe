@@ -23,6 +23,7 @@ export const namespaces = [
   'contact',
   'aboutUs',
   'workshop',
+  'help',
   'footer',
   'awards',
   'errors'
