@@ -16,12 +16,20 @@ const HERO_VIDEO_URLS = [
   'https://assets.codelume.cn/codelume-web-preview/wallpaper_4.mp4',
 ]
 
+const getVideoMimeType = (url: string) => {
+  if (url.endsWith('.mp4')) return 'video/mp4'
+  if (url.endsWith('.mov')) return 'video/quicktime'
+  return 'video/mp4'
+}
+
 export function Hero() {
   const { t } = useTranslation(['hero', 'navigation'])
   const [isMuted, setIsMuted] = useState(true)
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0)
+  const [trackIndex, setTrackIndex] = useState(0)
+  const [isTrackTransitionEnabled, setIsTrackTransitionEnabled] = useState(true)
   const videoRefs = useRef<Array<HTMLVideoElement | null>>([])
   const [videoDurations, setVideoDurations] = useState<number[]>(
     () => Array(HERO_VIDEO_URLS.length).fill(0)
@@ -67,11 +75,32 @@ export function Hero() {
         : baseSeconds
 
     const timer = window.setTimeout(() => {
-      setCurrentVideoIndex((prev) => (prev + 1) % HERO_VIDEO_URLS.length)
+      const isLast = currentVideoIndex === HERO_VIDEO_URLS.length - 1
+      if (isLast) {
+        setCurrentVideoIndex(0)
+        setTrackIndex(HERO_VIDEO_URLS.length) // 先滑到“首帧克隆”
+      } else {
+        setCurrentVideoIndex((prev) => prev + 1)
+        setTrackIndex((prev) => prev + 1)
+      }
     }, switchAfterSeconds * 1000)
 
     return () => window.clearTimeout(timer)
   }, [currentVideoIndex, videoDurations])
+
+  // 到达克隆帧后，瞬时重置到第一张，形成无缝循环
+  useEffect(() => {
+    if (trackIndex !== HERO_VIDEO_URLS.length) return
+    const timer = window.setTimeout(() => {
+      setIsTrackTransitionEnabled(false)
+      setTrackIndex(0)
+      window.requestAnimationFrame(() => {
+        setIsTrackTransitionEnabled(true)
+      })
+    }, 1000)
+
+    return () => window.clearTimeout(timer)
+  }, [trackIndex])
 
   // 移动端菜单打开时锁定页面滚动
   useEffect(() => {
@@ -110,25 +139,35 @@ export function Hero() {
     <div className="relative h-screen w-full overflow-hidden bg-black">
       {/* 背景视频轮播 */}
       <div
-        className="absolute inset-0 flex h-full w-full transition-transform duration-1000 ease-in-out"
-        style={{ transform: `translateX(-${currentVideoIndex * 100}%)` }}
+        className={`absolute inset-0 flex h-full w-full ${
+          isTrackTransitionEnabled ? 'transition-transform duration-1000 ease-in-out' : ''
+        }`}
+        style={{ transform: `translateX(-${trackIndex * 100}%)` }}
       >
-        {HERO_VIDEO_URLS.map((url, index) => (
+        {[...HERO_VIDEO_URLS, HERO_VIDEO_URLS[0]].map((url, index) => {
+          const sourceIndex = index % HERO_VIDEO_URLS.length
+          return (
           <video
             key={`${url}-${index}`}
             ref={(el) => {
-              videoRefs.current[index] = el
+              videoRefs.current[sourceIndex] = el
             }}
             onLoadedMetadata={(event) => {
               const duration = event.currentTarget.duration
               if (!Number.isFinite(duration) || duration <= 0) return
 
               setVideoDurations((prev) => {
-                if (prev[index] === duration) return prev
+                if (prev[sourceIndex] === duration) return prev
                 const next = [...prev]
-                next[index] = duration
+                next[sourceIndex] = duration
                 return next
               })
+            }}
+            onError={() => {
+              if (sourceIndex !== currentVideoIndex) return
+              const nextIndex = (currentVideoIndex + 1) % HERO_VIDEO_URLS.length
+              setCurrentVideoIndex(nextIndex)
+              setTrackIndex((prev) => prev + 1)
             }}
             className="h-full min-w-full flex-shrink-0 object-cover"
             autoPlay
@@ -136,10 +175,10 @@ export function Hero() {
             loop
             playsInline
           >
-            <source src={url} type="video/quicktime" />
+            <source src={url} type={getVideoMimeType(url)} />
             {t('hero:video.unsupported')}
           </video>
-        ))}
+        )})}
       </div>
 
       {/* 轮播指示器 */}
@@ -149,7 +188,10 @@ export function Hero() {
             key={`hero-indicator-${index}`}
             type="button"
             aria-label={`切换到第 ${index + 1} 张背景`}
-            onClick={() => setCurrentVideoIndex(index)}
+            onClick={() => {
+              setCurrentVideoIndex(index)
+              setTrackIndex(index)
+            }}
             className={`h-2.5 rounded-full gentle-animation ${
               currentVideoIndex === index
                 ? 'w-6 bg-white'
