@@ -9,31 +9,24 @@ import { LanguageSwitcher } from './LanguageSwitcher'
 import { CODELUME_MAC_APP_STORE_URL } from '@/constants/externalLinks'
 
 const HERO_VIDEO_URLS = [
-  'https://assets.codelume.cn/codelume-web-preview/wallpaper_0.mov',
-  'https://assets.codelume.cn/codelume-web-preview/wallpaper_1.mp4',
-  'https://assets.codelume.cn/codelume-web-preview/wallpaper_2.mp4',
-  'https://assets.codelume.cn/codelume-web-preview/wallpaper_3.mp4',
-  'https://assets.codelume.cn/codelume-web-preview/wallpaper_4.mp4',
+  'https://assets.codelume.cn/codelume-web-preview/preview_0.mov',
+  'https://assets.codelume.cn/codelume-web-preview/preview_1.mov',
+  'https://assets.codelume.cn/codelume-web-preview/preview_0.mov',
+  'https://assets.codelume.cn/codelume-web-preview/preview_1.mov',
+  'https://assets.codelume.cn/codelume-web-preview/preview_0.mov',
 ]
 
-const getVideoMimeType = (url: string) => {
-  if (url.endsWith('.mp4')) return 'video/mp4'
-  if (url.endsWith('.mov')) return 'video/quicktime'
-  return 'video/mp4'
-}
+// 可调：固定只播放前 N 个视频
+const HERO_ACTIVE_VIDEO_COUNT = 2
 
 export function Hero() {
   const { t } = useTranslation(['hero', 'navigation'])
+  const heroVideos = HERO_VIDEO_URLS.slice(0, Math.max(1, Math.min(HERO_ACTIVE_VIDEO_COUNT, HERO_VIDEO_URLS.length)))
   const [isMuted, setIsMuted] = useState(true)
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0)
-  const [trackIndex, setTrackIndex] = useState(0)
-  const [isTrackTransitionEnabled, setIsTrackTransitionEnabled] = useState(true)
   const videoRefs = useRef<Array<HTMLVideoElement | null>>([])
-  const [videoDurations, setVideoDurations] = useState<number[]>(
-    () => Array(HERO_VIDEO_URLS.length).fill(0)
-  )
 
   // 滚动检测
   useEffect(() => {
@@ -65,42 +58,19 @@ export function Hero() {
     })
   }, [isMuted])
 
-  // 背景轮播：短视频会按整循环播放到 >=5 秒后再切换
+  // 播完当前视频再切换；点击指示器后按新索引继续
   useEffect(() => {
-    const currentDuration = videoDurations[currentVideoIndex]
-    const baseSeconds = 5
-    const switchAfterSeconds =
-      currentDuration > 0 && currentDuration < baseSeconds
-        ? Math.ceil(baseSeconds / currentDuration) * currentDuration
-        : baseSeconds
-
-    const timer = window.setTimeout(() => {
-      const isLast = currentVideoIndex === HERO_VIDEO_URLS.length - 1
-      if (isLast) {
-        setCurrentVideoIndex(0)
-        setTrackIndex(HERO_VIDEO_URLS.length) // 先滑到“首帧克隆”
+    videoRefs.current.forEach((video, index) => {
+      if (!video) return
+      if (index === currentVideoIndex) {
+        const playPromise = video.play()
+        if (playPromise !== undefined) playPromise.catch(() => {})
       } else {
-        setCurrentVideoIndex((prev) => prev + 1)
-        setTrackIndex((prev) => prev + 1)
+        video.pause()
+        video.currentTime = 0
       }
-    }, switchAfterSeconds * 1000)
-
-    return () => window.clearTimeout(timer)
-  }, [currentVideoIndex, videoDurations])
-
-  // 到达克隆帧后，瞬时重置到第一张，形成无缝循环
-  useEffect(() => {
-    if (trackIndex !== HERO_VIDEO_URLS.length) return
-    const timer = window.setTimeout(() => {
-      setIsTrackTransitionEnabled(false)
-      setTrackIndex(0)
-      window.requestAnimationFrame(() => {
-        setIsTrackTransitionEnabled(true)
-      })
-    }, 1000)
-
-    return () => window.clearTimeout(timer)
-  }, [trackIndex])
+    })
+  }, [currentVideoIndex])
 
   // 移动端菜单打开时锁定页面滚动
   useEffect(() => {
@@ -139,59 +109,44 @@ export function Hero() {
     <div className="relative h-screen w-full overflow-hidden bg-black">
       {/* 背景视频轮播 */}
       <div
-        className={`absolute inset-0 flex h-full w-full ${
-          isTrackTransitionEnabled ? 'transition-transform duration-1000 ease-in-out' : ''
-        }`}
-        style={{ transform: `translateX(-${trackIndex * 100}%)` }}
+        className="absolute inset-0 flex h-full w-full transition-transform duration-1000 ease-in-out"
+        style={{ transform: `translateX(-${currentVideoIndex * 100}%)` }}
       >
-        {[...HERO_VIDEO_URLS, HERO_VIDEO_URLS[0]].map((url, index) => {
-          const sourceIndex = index % HERO_VIDEO_URLS.length
-          return (
+        {heroVideos.map((url, index) => (
           <video
             key={`${url}-${index}`}
             ref={(el) => {
-              videoRefs.current[sourceIndex] = el
+              videoRefs.current[index] = el
             }}
-            onLoadedMetadata={(event) => {
-              const duration = event.currentTarget.duration
-              if (!Number.isFinite(duration) || duration <= 0) return
-
-              setVideoDurations((prev) => {
-                if (prev[sourceIndex] === duration) return prev
-                const next = [...prev]
-                next[sourceIndex] = duration
-                return next
-              })
+            preload="auto"
+            onEnded={() => {
+              if (index !== currentVideoIndex) return
+              setCurrentVideoIndex((prev) => (prev + 1) % heroVideos.length)
             }}
             onError={() => {
-              if (sourceIndex !== currentVideoIndex) return
-              const nextIndex = (currentVideoIndex + 1) % HERO_VIDEO_URLS.length
-              setCurrentVideoIndex(nextIndex)
-              setTrackIndex((prev) => prev + 1)
+              if (index !== currentVideoIndex) return
+              setCurrentVideoIndex((prev) => (prev + 1) % heroVideos.length)
             }}
             className="h-full min-w-full flex-shrink-0 object-cover"
-            autoPlay
+            autoPlay={index === 0}
             muted
-            loop
+            loop={false}
             playsInline
           >
-            <source src={url} type={getVideoMimeType(url)} />
+            <source src={url} />
             {t('hero:video.unsupported')}
           </video>
-        )})}
+        ))}
       </div>
 
       {/* 轮播指示器 */}
       <div className="absolute bottom-6 left-1/2 z-50 flex -translate-x-1/2 items-center gap-2 rounded-full bg-black/35 px-3 py-2 backdrop-blur-sm">
-        {HERO_VIDEO_URLS.map((_, index) => (
+        {heroVideos.map((_, index) => (
           <button
             key={`hero-indicator-${index}`}
             type="button"
             aria-label={`切换到第 ${index + 1} 张背景`}
-            onClick={() => {
-              setCurrentVideoIndex(index)
-              setTrackIndex(index)
-            }}
+            onClick={() => setCurrentVideoIndex(index)}
             className={`h-2.5 rounded-full gentle-animation ${
               currentVideoIndex === index
                 ? 'w-6 bg-white'
