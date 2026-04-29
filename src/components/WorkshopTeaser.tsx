@@ -22,7 +22,7 @@ export function WorkshopTeaser() {
             <div className="relative">
               <div className="aspect-video">
                 <video
-                  src="https://assets.codelume.cn/codelume-web-preview/codelume_studio.mov"
+                  src="https://assets.codelume.cn/codelume-web-preview/codelume_studio.mp4"
                   className="w-full h-full object-cover rounded-t-3xl"
                   autoPlay
                   loop

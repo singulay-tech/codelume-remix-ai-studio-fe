@@ -9,11 +9,11 @@ import { LanguageSwitcher } from './LanguageSwitcher'
 import { CODELUME_MAC_APP_STORE_URL } from '@/constants/externalLinks'
 
 const HERO_VIDEO_URLS = [
-  'https://assets.codelume.cn/codelume-web-preview/preview_0.mov',
-  'https://assets.codelume.cn/codelume-web-preview/preview_1.mov',
-  'https://assets.codelume.cn/codelume-web-preview/preview_0.mov',
-  'https://assets.codelume.cn/codelume-web-preview/preview_1.mov',
-  'https://assets.codelume.cn/codelume-web-preview/preview_0.mov',
+  'https://assets.codelume.cn/codelume-web-preview/preview_0.mp4',
+  'https://assets.codelume.cn/codelume-web-preview/preview_1.mp4',
+  'https://assets.codelume.cn/codelume-web-preview/preview_0.mp4',
+  'https://assets.codelume.cn/codelume-web-preview/preview_1.mp4',
+  'https://assets.codelume.cn/codelume-web-preview/preview_0.mp4',
 ]
 const HERO_FALLBACK_IMAGE_URL = 'https://assets.codelume.cn/codelume-web-preview/preview.png'
 
