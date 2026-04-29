@@ -9,11 +9,11 @@ import { LanguageSwitcher } from './LanguageSwitcher'
 import { CODELUME_MAC_APP_STORE_URL } from '@/constants/externalLinks'
 
 const HERO_VIDEO_URLS = [
-  'https://assets.codelume.cn/codelume-web-preview/preview.mov',
-  'https://assets.codelume.cn/codelume-web-preview/Introduce.mov',
-  'https://assets.codelume.cn/codelume-web-preview/preview.mov',
-  'https://assets.codelume.cn/codelume-web-preview/Introduce.mov',
-  'https://assets.codelume.cn/codelume-web-preview/preview.mov',
+  'https://assets.codelume.cn/codelume-web-preview/wallpaper_0.mov',
+  'https://assets.codelume.cn/codelume-web-preview/wallpaper_1.mp4',
+  'https://assets.codelume.cn/codelume-web-preview/wallpaper_2.mp4',
+  'https://assets.codelume.cn/codelume-web-preview/wallpaper_3.mp4',
+  'https://assets.codelume.cn/codelume-web-preview/wallpaper_4.mp4',
 ]
 
 export function Hero() {
@@ -23,6 +23,9 @@ export function Hero() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0)
   const videoRefs = useRef<Array<HTMLVideoElement | null>>([])
+  const [videoDurations, setVideoDurations] = useState<number[]>(
+    () => Array(HERO_VIDEO_URLS.length).fill(0)
+  )
 
   // 滚动检测
   useEffect(() => {
@@ -54,14 +57,21 @@ export function Hero() {
     })
   }, [isMuted])
 
-  // 背景轮播：每 20 秒切换一个视频（手动切换后重新计时）
+  // 背景轮播：短视频会按整循环播放到 >=20 秒后再切换
   useEffect(() => {
+    const currentDuration = videoDurations[currentVideoIndex]
+    const baseSeconds = 20
+    const switchAfterSeconds =
+      currentDuration > 0 && currentDuration < baseSeconds
+        ? Math.ceil(baseSeconds / currentDuration) * currentDuration
+        : baseSeconds
+
     const timer = window.setTimeout(() => {
       setCurrentVideoIndex((prev) => (prev + 1) % HERO_VIDEO_URLS.length)
-    }, 20000)
+    }, switchAfterSeconds * 1000)
 
     return () => window.clearTimeout(timer)
-  }, [currentVideoIndex])
+  }, [currentVideoIndex, videoDurations])
 
   // 移动端菜单打开时锁定页面滚动
   useEffect(() => {
@@ -108,6 +118,17 @@ export function Hero() {
             key={`${url}-${index}`}
             ref={(el) => {
               videoRefs.current[index] = el
+            }}
+            onLoadedMetadata={(event) => {
+              const duration = event.currentTarget.duration
+              if (!Number.isFinite(duration) || duration <= 0) return
+
+              setVideoDurations((prev) => {
+                if (prev[index] === duration) return prev
+                const next = [...prev]
+                next[index] = duration
+                return next
+              })
             }}
             className="h-full min-w-full flex-shrink-0 object-cover"
             autoPlay
