@@ -22,7 +22,7 @@
       },
       "shader": {
         "label": "著色器",
-        "value": "程式碼級即時渲染，精準控制，效果逼真"
+        "value": "程式碼級精確控制"
       }
     },
     "versionNote": "不同版本可能存在差異"
@@ -30,62 +30,62 @@
   "header": {
     "title": "碼鏡工坊",
     "subtitle": "Codelume Studio — 素材市場與編輯器預覽",
-    "back": "返回官网"
+    "back": "返回官網"
   },
   "hero": {
-    "title": "构建、混剪与管理动态壁纸",
+    "title": "構建、混剪與管理動態壁紙",
     "subtitle": "這是碼鏡工坊（Codelume Studio）的靜態預覽頁面，用於展示素材、模板與編輯流程。"
   },
   "tabs": {
-    "market": "素材市场",
-    "editor": "编辑器",
-    "publish": "发布"
+    "market": "素材市場",
+    "editor": "編輯器",
+    "publish": "發布"
   },
   "market": {
     "items": [
       {
         "badge": "Bundle",
-        "title": "本地壁纸",
-        "description": "建立私有素材包并保持本地存储。"
+        "title": "本機壁紙",
+        "description": "建立私有素材包並保持本機儲存。"
       },
       {
         "badge": "Template",
-        "title": "场景模板",
-        "description": "为 2D/3D 场景快速套用动效预设。"
+        "title": "場景模板",
+        "description": "為 2D/3D 場景快速套用動效預設。"
       },
       {
         "badge": "Library",
         "title": "收藏集",
-        "description": "按主题整理壁纸集合，便于快速切换。"
+        "description": "按主題整理壁紙集合，便於快速切換。"
       }
     ]
   },
   "editor": {
-    "badge": "编辑器",
-    "title": "时间线与图层控制",
+    "badge": "編輯器",
+    "title": "時間線與圖層控制",
     "description": "整理循環、音訊與播放預設，打包為碼鏡壁紙包。",
     "features": {
       "tooling": {
-        "title": "壁纸包构建",
-        "description": "将视频或场景素材快速打包。"
+        "title": "壁紙包構建",
+        "description": "將影片或場景素材快速打包。"
       },
       "timeline": {
-        "title": "场景时间线",
-        "description": "设置循环区间与过渡效果，实时预览。"
+        "title": "場景時間線",
+        "description": "設定循環區間與過渡效果，即時預覽。"
       },
       "preview": {
-        "title": "多屏预览",
-        "description": "在不同屏幕尺寸下提前确认效果。"
+        "title": "多螢幕預覽",
+        "description": "在不同螢幕尺寸下提前確認效果。"
       }
     }
   },
   "publish": {
-    "badge": "发布",
+    "badge": "發布",
     "title": "安心交付",
-    "description": "整理元数据、导出预设并私密分享壁纸包。",
+    "description": "整理中繼資料、匯出預設並私密分享壁紙包。",
     "tags": {
-      "review": "审核与质检",
-      "export": "导出预设",
+      "review": "審核與質檢",
+      "export": "匯出預設",
       "share": "私密分享"
     }
   }

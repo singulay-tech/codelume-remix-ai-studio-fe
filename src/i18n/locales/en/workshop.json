@@ -21,8 +21,8 @@
         "value": "Static particles / Dynamic particles / Parameter tuning"
       },
       "shader": {
-        "label": "Shaders",
-        "value": "Code-level real-time rendering, precise control, realistic results"
+        "label": "Shader",
+        "value": "Code-level precise control"
       }
     },
     "versionNote": "Differences may exist across versions"
