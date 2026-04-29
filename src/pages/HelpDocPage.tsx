@@ -19,7 +19,7 @@ export function HelpDocPage() {
       <header className="sticky top-0 z-20 border-b border-border/40 bg-background/80 backdrop-blur-xl">
         <div className="container mx-auto px-6 sm:px-8 lg:px-12 py-4 flex flex-wrap items-center justify-between gap-4">
           <Link to="/" className="flex items-center gap-3 gentle-animation hover:opacity-90">
-            <img src="/codelume-icon.svg" alt="Codelume" className="h-8 w-8" />
+            <img src="/codelume-icon.svg" alt={t('help:logoAlt')} className="h-8 w-8" />
             <span className="font-bagel text-xl tracking-wider">{t('navigation:brand')}</span>
           </Link>
           <div className="flex flex-wrap items-center justify-end gap-3 sm:gap-4">

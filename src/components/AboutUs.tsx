@@ -10,10 +10,12 @@ export function AboutUs() {
   return (
     <section id="about-us" className="relative py-24 bg-background">
       <div className="container mx-auto px-6 sm:px-8 lg:px-12">
-        <h2 className="mb-3 text-4xl font-black sm:text-5xl">{t('title')}</h2>
-        <div className="inline-flex items-center gap-3 mb-8">
-          <div className="h-3 w-3 rounded-full bg-accent-emerald animate-pulse" />
-          <span className="text-sm font-semibold text-muted-foreground">{t('badge')}</span>
+        <div className="mb-10 flex flex-col items-center text-center">
+          <div className="mb-3 inline-flex items-center justify-center gap-3">
+            <div className="h-3 w-3 shrink-0 rounded-full bg-accent-emerald animate-pulse" />
+            <span className="text-sm font-semibold text-muted-foreground">{t('badge')}</span>
+          </div>
+          <h2 className="text-4xl font-black sm:text-5xl">{t('title')}</h2>
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2">

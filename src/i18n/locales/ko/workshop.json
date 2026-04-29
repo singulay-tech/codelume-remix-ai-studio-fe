@@ -1,19 +1,19 @@
 {
-  "badge": "크리에이티브 랩",
+  "badge": "Codelume Studio",
   "teaser": {
-    "title": "크리에이티브 랩",
+    "title": "Codelume Studio",
     "subtitle": "Codelume 번들을 위한 미래의 마켓플레이스 겸 에디터. 현재는 자리 표시용 프리뷰입니다.",
-    "cta": "크리에이티브 랩 받기",
+    "cta": "Codelume Studio 받기",
     "note": "새 탭에서 Mac App Store로 이동합니다(현재는 Codelume과 동일 링크이며 추후 교체 예정)"
   },
   "header": {
-    "title": "Codelume 크리에이티브 랩",
-    "subtitle": "마켓플레이스 & 에디터 프리뷰",
+    "title": "Codelume Studio",
+    "subtitle": "마켓플레이스 & 에디터 프리뷰 · 码镜工坊",
     "back": "Codelume로 돌아가기"
   },
   "hero": {
     "title": "동적 월페이퍼를 만들고, 리믹스하고, 관리하세요",
-    "subtitle": "다가올 크리에이티브 랩의 정적 프리뷰입니다. 자산, 템플릿, 편집 워크플로우의 허브가 됩니다."
+    "subtitle": "다가올 Codelume Studio（码镜工坊）의 정적 프리뷰입니다. 자산, 템플릿, 편집 워크플로우의 허브가 됩니다."
   },
   "tabs": {
     "market": "마켓",

@@ -3,33 +3,34 @@
   "back": "Back to home",
   "docBack": "Help hub",
   "docNavToc": "On this page",
+  "logoAlt": "码镜",
   "categories": {
     "app": {
-      "title": "Codelume (码镜)",
+      "title": "码镜",
       "description": "Install, use, and troubleshoot the dynamic wallpaper app."
     },
     "wallpaperPolicy": {
       "title": "Wallpaper policy",
-      "description": "Full details of the Codelume wallpaper bundle policy (码镜)."
+      "description": "Full details of the 码镜 wallpaper bundle policy."
     },
     "studio": {
-      "title": "Codelume Studio (码镜工坊)",
-      "description": "The workshop app, exporting .bundle packs, and using them with Codelume."
+      "title": "码镜工坊",
+      "description": "The workshop app, exporting .bundle packs, and using them with 码镜."
     }
   },
   "docs": {
     "app": {
-      "pageTitle": "Codelume (码镜)",
+      "pageTitle": "码镜",
       "sections": [
         {
           "id": "overview",
           "title": "Overview",
-          "content": "Codelume is a macOS dynamic wallpaper app supporting Scene2D and video bundles. This is sample copy—full guides will be added here."
+          "content": "码镜 is a macOS dynamic wallpaper app supporting Scene2D and video bundles. This is sample copy—full guides will be added here."
         },
         {
           "id": "install",
           "title": "Install & updates",
-          "content": "Get the app from the Mac App Store. Update and compatibility notes will expand in this section. (Placeholder)"
+          "content": "Get 码镜 from the Mac App Store. Update and compatibility notes will expand in this section. (Placeholder)"
         },
         {
           "id": "hub",
@@ -39,22 +40,22 @@
       ]
     },
     "studio": {
-      "pageTitle": "Codelume Studio (码镜工坊)",
+      "pageTitle": "码镜工坊",
       "sections": [
         {
           "id": "overview",
           "title": "Overview",
-          "content": "Creative Lab edits scenes, previews, and exports .bundle wallpaper packs. Sample text—detailed tutorials coming later."
+          "content": "码镜工坊 edits scenes, previews, and exports .bundle wallpaper packs. Sample text—detailed tutorials coming later."
         },
         {
           "id": "export",
           "title": "Export bundles",
-          "content": "Use export to produce a .bundle for Codelume with metadata for sharing. (Placeholder)"
+          "content": "Use export to produce a .bundle for 码镜 with metadata for sharing. (Placeholder)"
         },
         {
           "id": "with-app",
-          "title": "Use with Codelume",
-          "content": "Import bundles into the Codelume app; contact support by email if you hit compatibility issues. (Placeholder)"
+          "title": "Use with 码镜",
+          "content": "Import bundles into the 码镜 app; contact support by email if you hit compatibility issues. (Placeholder)"
         }
       ]
     },
@@ -64,7 +65,7 @@
         {
           "id": "scope",
           "title": "Scope",
-          "content": "This policy covers bundles shown, submitted, or used with Codelume. Sample framework—final legal text will be published separately."
+          "content": "This policy covers bundles shown, submitted, or used with 码镜. Sample framework—final legal text will be published separately."
         },
         {
           "id": "rights",

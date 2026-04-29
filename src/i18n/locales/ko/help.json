@@ -3,28 +3,29 @@
   "back": "홈으로",
   "docBack": "도움말 목록",
   "docNavToc": "이 페이지",
+  "logoAlt": "码镜",
   "categories": {
     "app": {
-      "title": "Codelume（码镜）",
+      "title": "码镜",
       "description": "동적 월페이퍼 앱 설치, 사용, 자주 묻는 질문."
     },
     "wallpaperPolicy": {
       "title": "월페이퍼 정책",
-      "description": "Codelume(码镜) 월페이퍼 번들 정책 상세 설명."
+      "description": "码镜 월페이퍼 번들 정책 상세 설명."
     },
     "studio": {
-      "title": "Codelume Studio（码镜工坊）",
-      "description": "스튜디오 앱, .bundle 보내기, Codelume과의 연동 안내."
+      "title": "码镜工坊",
+      "description": "스튜디오 앱, .bundle 보내기, 码镜과의 연동 안내."
     }
   },
   "docs": {
     "app": {
-      "pageTitle": "Codelume（码镜）",
+      "pageTitle": "码镜",
       "sections": [
         {
           "id": "overview",
           "title": "개요",
-          "content": "Codelume은 macOS용 동적 월페이퍼 앱이며 Scene2D·동영상 번들을 지원합니다. 샘플 문구이며 정식 가이드는 추가 예정입니다."
+          "content": "码镜은 macOS용 동적 월페이퍼 앱이며 Scene2D·동영상 번들을 지원합니다. 샘플 문구이며 정식 가이드는 추가 예정입니다."
         },
         {
           "id": "install",
@@ -39,7 +40,7 @@
       ]
     },
     "studio": {
-      "pageTitle": "Codelume Studio（码镜工坊）",
+      "pageTitle": "码镜工坊",
       "sections": [
         {
           "id": "overview",
@@ -49,11 +50,11 @@
         {
           "id": "export",
           "title": "번들 보내기",
-          "content": "편집 후 보내기로 .bundle을 만들어 Codelume에서 불러옵니다. (플레이스홀더)"
+          "content": "편집 후 보내기로 .bundle을 만들어 码镜에서 불러옵니다. (플레이스홀더)"
         },
         {
           "id": "with-app",
-          "title": "Codelume과 함께",
+          "title": "码镜과 함께",
           "content": "보낸 패키지를 앱에 넣어 사용합니다. 문제가 있으면 이메일로 문의하세요. (플레이스홀더)"
         }
       ]
@@ -64,7 +65,7 @@
         {
           "id": "scope",
           "title": "적용 범위",
-          "content": "Codelume에서 노출·제출·이용되는 월페이퍼 번들이 대상입니다. 샘플 틀이며 정식 문서는 별도 공개 예정입니다."
+          "content": "码镜에서 노출·제출·이용되는 월페이퍼 번들이 대상입니다. 샘플 틀이며 정식 문서는 별도 공개 예정입니다."
         },
         {
           "id": "rights",

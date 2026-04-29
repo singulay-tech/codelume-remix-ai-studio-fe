@@ -1,19 +1,19 @@
 {
-  "badge": "Creative Lab",
+  "badge": "Codelume Studio",
   "teaser": {
-    "title": "Creative Lab",
+    "title": "Codelume Studio",
     "subtitle": "A future marketplace and editor for Codelume bundles. Placeholder preview only.",
-    "cta": "Download Creative Lab",
+    "cta": "Download Codelume Studio",
     "note": "Opens Mac App Store in a new tab (same listing as Codelume for now; will be replaced later)"
   },
   "header": {
-    "title": "Codelume Creative Lab",
-    "subtitle": "Marketplace & editor preview",
+    "title": "Codelume Studio",
+    "subtitle": "Marketplace & editor preview · 码镜工坊",
     "back": "Back to Codelume"
   },
   "hero": {
     "title": "Build, remix, and manage dynamic wallpapers",
-    "subtitle": "This is a static preview of the upcoming Creative Lab — a home for assets, templates, and editing workflows."
+    "subtitle": "This is a static preview of Codelume Studio — a home for assets, templates, and editing workflows."
   },
   "tabs": {
     "market": "Marketplace",

@@ -3,28 +3,29 @@
   "back": "ホームに戻る",
   "docBack": "ヘルプ一覧",
   "docNavToc": "このページ",
+  "logoAlt": "码镜",
   "categories": {
     "app": {
-      "title": "Codelume（码镜）",
+      "title": "码镜",
       "description": "動的壁紙アプリの導入・操作・よくある質問。"
     },
     "wallpaperPolicy": {
       "title": "壁紙ポリシー",
-      "description": "Codelume（码镜）壁紙パック規約の詳細説明。"
+      "description": "码镜の壁紙パック規約の詳細説明。"
     },
     "studio": {
-      "title": "Codelume Studio（码镜工坊）",
-      "description": "スタジオアプリ、.bundle の書き出し、Codelume との併用。"
+      "title": "码镜工坊",
+      "description": "スタジオアプリ、.bundle の書き出し、码镜との併用。"
     }
   },
   "docs": {
     "app": {
-      "pageTitle": "Codelume（码镜）",
+      "pageTitle": "码镜",
       "sections": [
         {
           "id": "overview",
           "title": "概要",
-          "content": "Codelume は macOS 向けの動的壁紙アプリで、Scene2D や動画バンドルに対応します。サンプル文です。正式なガイドは後日ここに追加します。"
+          "content": "码镜は macOS 向けの動的壁紙アプリで、Scene2D や動画バンドルに対応します。サンプル文です。正式なガイドは後日ここに追加します。"
         },
         {
           "id": "install",
@@ -39,7 +40,7 @@
       ]
     },
     "studio": {
-      "pageTitle": "Codelume Studio（码镜工坊）",
+      "pageTitle": "码镜工坊",
       "sections": [
         {
           "id": "overview",
@@ -49,11 +50,11 @@
         {
           "id": "export",
           "title": "バンドルの書き出し",
-          "content": "編集後に書き出しで .bundle を生成し、Codelume で読み込みます。（プレースホルダー）"
+          "content": "編集後に書き出しで .bundle を生成し、码镜で読み込みます。（プレースホルダー）"
         },
         {
           "id": "with-app",
-          "title": "Codelume との併用",
+          "title": "码镜との併用",
           "content": "書き出したパッケージをアプリに取り込んで利用します。不具合はメールでご連絡ください。（プレースホルダー）"
         }
       ]
@@ -64,7 +65,7 @@
         {
           "id": "scope",
           "title": "適用範囲",
-          "content": "Codelume での表示・投稿・利用に関わる壁紙パックが対象です。サンプル枠組みです。正式版は別途公開予定です。"
+          "content": "码镜での表示・投稿・利用に関わる壁紙パックが対象です。サンプル枠組みです。正式版は別途公開予定です。"
         },
         {
           "id": "rights",

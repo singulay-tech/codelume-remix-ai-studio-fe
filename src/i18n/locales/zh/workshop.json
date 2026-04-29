@@ -1,19 +1,19 @@
 {
-  "badge": "创意工坊",
+  "badge": "码镜工坊",
   "teaser": {
-    "title": "创意工坊",
-    "subtitle": "面向 Codelume 壁纸包的素材市场与编辑器预览，占位展示。",
-    "cta": "下载创意工坊",
+    "title": "码镜工坊",
+    "subtitle": "面向码镜壁纸包的素材市场与编辑器预览，占位展示。",
+    "cta": "下载码镜工坊",
     "note": "在新标签页打开 Mac App Store（暂与码镜主应用同一链接，后续将替换）"
   },
   "header": {
-    "title": "Codelume 创意工坊",
-    "subtitle": "素材市场与编辑器预览",
+    "title": "码镜工坊",
+    "subtitle": "Codelume Studio — 素材市场与编辑器预览",
     "back": "返回官网"
   },
   "hero": {
     "title": "构建、混剪与管理动态壁纸",
-    "subtitle": "这是创意工坊的静态预览页面，用于展示素材、模板与编辑流程。"
+    "subtitle": "这是码镜工坊（Codelume Studio）的静态预览页面，用于展示素材、模板与编辑流程。"
   },
   "tabs": {
     "market": "素材市场",
@@ -42,7 +42,7 @@
   "editor": {
     "badge": "编辑器",
     "title": "时间线与图层控制",
-    "description": "整理循环、音频与播放预设，打包为 Codelume 壁纸包。",
+    "description": "整理循环、音频与播放预设，打包为码镜壁纸包。",
     "features": {
       "tooling": {
         "title": "壁纸包构建",

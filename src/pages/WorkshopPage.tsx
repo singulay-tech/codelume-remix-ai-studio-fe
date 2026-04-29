@@ -2,14 +2,14 @@ import { useTranslation } from 'react-i18next'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 
 export function WorkshopPage() {
-  const { t } = useTranslation('workshop')
+  const { t } = useTranslation(['workshop', 'navigation'])
 
   return (
     <div className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-20 border-b border-border/40 bg-background/80 backdrop-blur-xl">
         <div className="container mx-auto px-6 sm:px-8 lg:px-12 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src="/codelume-icon.svg" alt="Codelume" className="h-8 w-8" />
+            <img src="/codelume-icon.svg" alt={t('navigation:brand')} className="h-8 w-8" />
             <div>
               <div className="text-lg font-black">{t('header.title')}</div>
               <div className="text-xs text-muted-foreground">{t('header.subtitle')}</div>

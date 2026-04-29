@@ -140,7 +140,7 @@ export function Hero() {
               }}
             >
               <div className="flex items-center gap-3">
-                <img src="/codelume-icon.svg" alt="Codelume" className="h-7 w-7" />
+                <img src="/codelume-icon.svg" alt={t('navigation:brand')} className="h-7 w-7" />
                 <span className="font-bagel text-white text-xl tracking-wider">{t('navigation:brand')}</span>
               </div>
             </motion.div>

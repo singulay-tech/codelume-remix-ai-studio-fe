@@ -1,19 +1,19 @@
 {
-  "badge": "クリエイティブラボ",
+  "badge": "Codelume Studio",
   "teaser": {
-    "title": "クリエイティブラボ",
+    "title": "Codelume Studio",
     "subtitle": "Codelumeバンドルの将来のマーケットプレイス兼エディター。ここはプレースホルダーのプレビューです。",
-    "cta": "クリエイティブラボをダウンロード",
+    "cta": "Codelume Studio をダウンロード",
     "note": "新しいタブで Mac App Store を開きます（当面は Codelume と同一のページです。後日差し替え予定）"
   },
   "header": {
-    "title": "Codelume クリエイティブラボ",
-    "subtitle": "マーケットプレイス & エディターのプレビュー",
+    "title": "Codelume Studio",
+    "subtitle": "マーケットプレイス & エディターのプレビュー · 码镜工坊",
     "back": "Codelumeに戻る"
   },
   "hero": {
     "title": "動的壁紙を作り、リミックスし、管理する",
-    "subtitle": "これは今後登場するクリエイティブラボの静的プレビューです。アセット、テンプレート、編集ワークフローの拠点になります。"
+    "subtitle": "これは今後登場する Codelume Studio（码镜工坊）の静的プレビューです。アセット、テンプレート、編集ワークフローの拠点になります。"
   },
   "tabs": {
     "market": "マーケット",

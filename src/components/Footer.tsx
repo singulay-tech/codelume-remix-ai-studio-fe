@@ -14,7 +14,7 @@ export function Footer() {
           <div className="col-span-12 md:col-span-4">
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <img src="/codelume-icon.svg" alt="Codelume" className="h-10 w-10" />
+                <img src="/codelume-icon.svg" alt={t('brand')} className="h-10 w-10" />
                 <div className="font-bagel text-background text-3xl tracking-wider">
                   {t('brand')}
                 </div>
