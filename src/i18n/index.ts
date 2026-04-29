@@ -7,8 +7,6 @@ import { defaultNS, fallbackLng, supportedLngs } from './config'
 import enCommon from './locales/en/common.json'
 import enNavigation from './locales/en/navigation.json'
 import enHero from './locales/en/hero.json'
-import enAbout from './locales/en/about.json'
-import enServices from './locales/en/services.json'
 import enPortfolio from './locales/en/portfolio.json'
 import enTeam from './locales/en/team.json'
 import enContact from './locales/en/contact.json'
@@ -23,8 +21,6 @@ import enErrors from './locales/en/errors.json'
 import zhCommon from './locales/zh/common.json'
 import zhNavigation from './locales/zh/navigation.json'
 import zhHero from './locales/zh/hero.json'
-import zhAbout from './locales/zh/about.json'
-import zhServices from './locales/zh/services.json'
 import zhPortfolio from './locales/zh/portfolio.json'
 import zhTeam from './locales/zh/team.json'
 import zhContact from './locales/zh/contact.json'
@@ -39,8 +35,6 @@ import zhErrors from './locales/zh/errors.json'
 import zhTWCommon from './locales/zh-TW/common.json'
 import zhTWNavigation from './locales/zh-TW/navigation.json'
 import zhTWHero from './locales/zh-TW/hero.json'
-import zhTWAbout from './locales/zh-TW/about.json'
-import zhTWServices from './locales/zh-TW/services.json'
 import zhTWPortfolio from './locales/zh-TW/portfolio.json'
 import zhTWTeam from './locales/zh-TW/team.json'
 import zhTWContact from './locales/zh-TW/contact.json'
@@ -55,8 +49,6 @@ import zhTWErrors from './locales/zh-TW/errors.json'
 import jaCommon from './locales/ja/common.json'
 import jaNavigation from './locales/ja/navigation.json'
 import jaHero from './locales/ja/hero.json'
-import jaAbout from './locales/ja/about.json'
-import jaServices from './locales/ja/services.json'
 import jaPortfolio from './locales/ja/portfolio.json'
 import jaTeam from './locales/ja/team.json'
 import jaContact from './locales/ja/contact.json'
@@ -71,8 +63,6 @@ import jaErrors from './locales/ja/errors.json'
 import koCommon from './locales/ko/common.json'
 import koNavigation from './locales/ko/navigation.json'
 import koHero from './locales/ko/hero.json'
-import koAbout from './locales/ko/about.json'
-import koServices from './locales/ko/services.json'
 import koPortfolio from './locales/ko/portfolio.json'
 import koTeam from './locales/ko/team.json'
 import koContact from './locales/ko/contact.json'
@@ -88,8 +78,6 @@ const resources = {
     common: enCommon,
     navigation: enNavigation,
     hero: enHero,
-    about: enAbout,
-    services: enServices,
     portfolio: enPortfolio,
     team: enTeam,
     contact: enContact,
@@ -104,8 +92,6 @@ const resources = {
     common: zhCommon,
     navigation: zhNavigation,
     hero: zhHero,
-    about: zhAbout,
-    services: zhServices,
     portfolio: zhPortfolio,
     team: zhTeam,
     contact: zhContact,
@@ -120,8 +106,6 @@ const resources = {
     common: zhTWCommon,
     navigation: zhTWNavigation,
     hero: zhTWHero,
-    about: zhTWAbout,
-    services: zhTWServices,
     portfolio: zhTWPortfolio,
     team: zhTWTeam,
     contact: zhTWContact,
@@ -136,8 +120,6 @@ const resources = {
     common: jaCommon,
     navigation: jaNavigation,
     hero: jaHero,
-    about: jaAbout,
-    services: jaServices,
     portfolio: jaPortfolio,
     team: jaTeam,
     contact: jaContact,
@@ -152,8 +134,6 @@ const resources = {
     common: koCommon,
     navigation: koNavigation,
     hero: koHero,
-    about: koAbout,
-    services: koServices,
     portfolio: koPortfolio,
     team: koTeam,
     contact: koContact,
@@ -181,8 +161,6 @@ i18n
       'common',
       'navigation',
       'hero',
-      'about',
-      'services',
       'portfolio',
       'team',
       'contact',

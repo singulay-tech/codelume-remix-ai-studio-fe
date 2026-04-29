@@ -10,22 +10,14 @@ export function Portfolio() {
     <section id="portfolio" className="relative py-32 bg-background">
       <div className="container mx-auto px-6 sm:px-8 lg:px-12">
         {/* 区块标题 */}
-        <div className="text-center mb-20">
-          <div className="inline-flex items-center gap-3 mb-6">
+        <div className="text-center mb-[30px]">
+          <div className="inline-flex items-center gap-3">
             <div className="w-3 h-3 bg-accent-emerald rounded-full animate-pulse" />
             <span className="text-sm font-semibold text-muted-foreground">
               {t('badge')}
             </span>
             <div className="w-3 h-3 bg-accent-blue rounded-full animate-pulse" />
           </div>
-
-          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight mb-8">
-            <span className="block mb-2">{t('title')}</span>
-          </h2>
-
-          <p className="text-2xl lg:text-3xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            {t('subtitle')}
-          </p>
         </div>
 
         {/* 精选展示 */}
@@ -42,8 +34,8 @@ export function Portfolio() {
               </div>
 
               {/* 浮动状态徽标 */}
-              <div className="absolute top-6 right-6">
-                <span className="glass-effect rounded-xl px-4 py-2 text-sm font-medium text-white backdrop-blur-md">
+              <div className="absolute top-4 right-4 max-w-[min(calc(100%-2rem),14rem)] sm:max-w-xs sm:top-6 sm:right-6">
+                <span className="glass-effect block rounded-xl px-3 py-2 text-right text-xs font-medium leading-snug text-white backdrop-blur-md sm:text-sm">
                   {t('latestProject')}
                 </span>
               </div>
@@ -52,22 +44,9 @@ export function Portfolio() {
             {/* 项目详情 */}
             <div className="p-8 lg:p-12">
               <div className="flex-1">
-                <div className="flex items-center gap-4 mb-4">
-                  <span className="bg-accent-purple/10 text-accent-purple px-3 py-1 rounded-full text-sm font-medium">
-                    {t('featured.type')}
-                  </span>
-                  <span className="text-sm text-muted-foreground">
-                    {t('featured.client')}
-                  </span>
-                </div>
-
-                <h3 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+                <h3 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
                   {t('featured.title')}
                 </h3>
-
-                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  {t('featured.description')}
-                </p>
 
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
                   <div>

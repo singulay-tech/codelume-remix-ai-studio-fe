@@ -16,8 +16,6 @@ export const namespaces = [
   'common',
   'navigation',
   'hero',
-  'about',
-  'services',
   'portfolio',
   'team',
   'contact',

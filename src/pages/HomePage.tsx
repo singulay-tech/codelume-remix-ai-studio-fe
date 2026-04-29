@@ -1,7 +1,5 @@
 import { Hero } from '@/components/Hero'
 import { Portfolio } from '@/components/Portfolio'
-import { About } from '@/components/About'
-import { Services } from '@/components/Services'
 import { WorkshopTeaser } from '@/components/WorkshopTeaser'
 import { AboutUs } from '@/components/AboutUs'
 import { Footer } from '@/components/Footer'
@@ -14,8 +12,6 @@ export function HomePage() {
           <Hero />
         </section>
         <Portfolio />
-        <About />
-        <Services />
         <WorkshopTeaser />
         <AboutUs />
       </main>

@@ -1,29 +1,24 @@
 {
-  "badge": "Creative Portfolio",
-  "title": "Creative Portfolio",
-  "subtitle": "We support private local works for any personal use.",
-  "latestProject": "Featured Demo",
+  "badge": "Preview",
+  "latestProject": "May differ from the latest app UI",
   "featured": {
-    "type": "Local Bundle",
-    "client": "Usage: Private Library",
-    "title": "Codelume Desktop Preview",
-    "description": "A short loop that demonstrates local bundles, multi-screen playback, and cinematic motion on macOS — all running entirely offline.",
+    "title": "Codelume app preview",
     "details": {
       "industry": {
-        "label": "Formats",
-        "value": "Video / Scene2D / Scene3D"
+        "label": "Display management",
+        "value": "Multi-display playback / Per-display controls / Pause / Mute"
       },
       "style": {
-        "label": "Playback",
-        "value": "Multi-screen / Sync"
+        "label": "Local wallpapers",
+        "value": "Offline export / Import / Re-edit"
       },
       "tone": {
-        "label": "Privacy",
-        "value": "Local-only"
+        "label": "Wallpaper hub",
+        "value": "Category browse / Authenticated downloads / Creator submissions"
       },
       "format": {
-        "label": "Platform",
-        "value": "macOS"
+        "label": "Screensaver",
+        "value": "Custom screensavers / Lock-screen playback"
       }
     }
   }

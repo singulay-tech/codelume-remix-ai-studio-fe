@@ -1,29 +1,24 @@
 {
-  "badge": "クリエイティブ作品集",
-  "title": "クリエイティブ作品集",
-  "subtitle": "ローカルの作品を、あらゆる個人用途でプライベートに使えます。",
-  "latestProject": "注目デモ",
+  "badge": "プレビュー",
+  "latestProject": "最新版の画面と異なる場合があります",
   "featured": {
-    "type": "ローカルバンドル",
-    "client": "用途: プライベートライブラリ",
-    "title": "Codelume デスクトッププレビュー",
-    "description": "ローカルバンドル、マルチ画面再生、macOSでの映画的な動きを、すべてオフラインで示す短いループです。",
+    "title": "Codelume アプリプレビュー",
     "details": {
       "industry": {
-        "label": "形式",
-        "value": "動画 / Scene2D / Scene3D"
+        "label": "画面管理",
+        "value": "マルチディスプレイ再生/個別管理/一時停止/ミュート"
       },
       "style": {
-        "label": "再生",
-        "value": "マルチ画面 / 同期"
+        "label": "ローカル壁紙",
+        "value": "オフライン書き出し/インポート/再編集"
       },
       "tone": {
-        "label": "プライバシー",
-        "value": "ローカル限定"
+        "label": "壁紙センター",
+        "value": "カテゴリ検索/認証付きダウンロード/素材投稿"
       },
       "format": {
-        "label": "プラットフォーム",
-        "value": "macOS"
+        "label": "スクリーンセーバー",
+        "value": "カスタムスクリーンセーバー/ロック画面再生"
       }
     }
   }
