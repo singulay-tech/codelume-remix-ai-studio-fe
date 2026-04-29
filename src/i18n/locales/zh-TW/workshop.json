@@ -2,9 +2,30 @@
   "badge": "碼鏡工坊",
   "teaser": {
     "title": "碼鏡工坊",
-    "subtitle": "面向碼鏡壁紙包的素材市場與編輯器預覽，占位展示。",
     "cta": "下載碼鏡工坊",
-    "note": "於新分頁開啟 Mac App Store（暫與碼鏡主應用相同連結，後續將替換）"
+    "details": {
+      "visual": {
+        "label": "可視化編輯",
+        "value": "場景編輯/屬性修改/即時預覽"
+      },
+      "nodes": {
+        "label": "節點",
+        "value": "精靈節點/圖形節點/影片節點/文字節點/聲音節點"
+      },
+      "animation": {
+        "label": "動畫",
+        "value": "移動/縮放/淡入淡出/序列幀"
+      },
+      "particles": {
+        "label": "粒子",
+        "value": "靜態粒子/動態粒子/參數調優"
+      },
+      "shader": {
+        "label": "著色器",
+        "value": "程式碼級即時渲染，精準控制，效果逼真"
+      }
+    },
+    "versionNote": "不同版本可能存在差異"
   },
   "header": {
     "title": "碼鏡工坊",

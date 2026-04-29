@@ -2,9 +2,30 @@
   "badge": "Codelume Studio",
   "teaser": {
     "title": "Codelume Studio",
-    "subtitle": "A future marketplace and editor for Codelume bundles. Placeholder preview only.",
     "cta": "Download Codelume Studio",
-    "note": "Opens Mac App Store in a new tab (same listing as Codelume for now; will be replaced later)"
+    "details": {
+      "visual": {
+        "label": "Visual editing",
+        "value": "Scene editing / Property tweaks / Live preview"
+      },
+      "nodes": {
+        "label": "Nodes",
+        "value": "Sprite nodes / Shape nodes / Video nodes / Text nodes / Audio nodes"
+      },
+      "animation": {
+        "label": "Animation",
+        "value": "Move / Scale / Fade in-out / Frame sequences"
+      },
+      "particles": {
+        "label": "Particles",
+        "value": "Static particles / Dynamic particles / Parameter tuning"
+      },
+      "shader": {
+        "label": "Shaders",
+        "value": "Code-level real-time rendering, precise control, realistic results"
+      }
+    },
+    "versionNote": "Differences may exist across versions"
   },
   "header": {
     "title": "Codelume Studio",
@@ -30,12 +51,12 @@
       {
         "badge": "Template",
         "title": "Scene Layouts",
-        "description": "Drop in motion presets for Scene2D and Scene3D." 
+        "description": "Drop in motion presets for Scene2D and Scene3D."
       },
       {
         "badge": "Library",
         "title": "Creator Collections",
-        "description": "Follow curated sets and organize them by mood." 
+        "description": "Follow curated sets and organize them by mood."
       }
     ]
   },
@@ -46,15 +67,15 @@
     "features": {
       "tooling": {
         "title": "Bundle Builder",
-        "description": "Package video or scene assets into a single Codelume bundle." 
+        "description": "Package video or scene assets into a single Codelume bundle."
       },
       "timeline": {
         "title": "Scene Timeline",
-        "description": "Set loop points, transitions, and preview clips instantly." 
+        "description": "Set loop points, transitions, and preview clips instantly."
       },
       "preview": {
         "title": "Preview Studio",
-        "description": "Compare playback on multiple screen sizes before export." 
+        "description": "Compare playback on multiple screen sizes before export."
       }
     }
   },

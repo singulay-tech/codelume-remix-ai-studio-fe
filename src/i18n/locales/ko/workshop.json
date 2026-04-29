@@ -2,9 +2,30 @@
   "badge": "Codelume Studio",
   "teaser": {
     "title": "Codelume Studio",
-    "subtitle": "Codelume 번들을 위한 미래의 마켓플레이스 겸 에디터. 현재는 자리 표시용 프리뷰입니다.",
     "cta": "Codelume Studio 받기",
-    "note": "새 탭에서 Mac App Store로 이동합니다(현재는 Codelume과 동일 링크이며 추후 교체 예정)"
+    "details": {
+      "visual": {
+        "label": "비주얼 편집",
+        "value": "씬 편집/속성 수정/실시간 미리보기"
+      },
+      "nodes": {
+        "label": "노드",
+        "value": "스프라이트 노드/도형 노드/비디오 노드/텍스트 노드/사운드 노드"
+      },
+      "animation": {
+        "label": "애니메이션",
+        "value": "이동/확대축소/페이드 인·아웃/시퀀스 프레임"
+      },
+      "particles": {
+        "label": "파티클",
+        "value": "정적 파티클/동적 파티클/파라미터 튜닝"
+      },
+      "shader": {
+        "label": "셰이더",
+        "value": "코드 레벨 실시간 렌더링으로 정밀 제어, 사실적인 표현"
+      }
+    },
+    "versionNote": "버전에 따라 차이가 있을 수 있습니다"
   },
   "header": {
     "title": "Codelume Studio",

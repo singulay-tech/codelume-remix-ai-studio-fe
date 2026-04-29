@@ -19,6 +19,10 @@
       "format": {
         "label": "Screensaver",
         "value": "Custom screensavers / Lock-screen playback"
+      },
+      "settings": {
+        "label": "Preferences",
+        "value": "Language / Theme / Launch at startup / Playback controls"
       }
     }
   }

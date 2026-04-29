@@ -2,9 +2,30 @@
   "badge": "Codelume Studio",
   "teaser": {
     "title": "Codelume Studio",
-    "subtitle": "Codelumeバンドルの将来のマーケットプレイス兼エディター。ここはプレースホルダーのプレビューです。",
     "cta": "Codelume Studio をダウンロード",
-    "note": "新しいタブで Mac App Store を開きます（当面は Codelume と同一のページです。後日差し替え予定）"
+    "details": {
+      "visual": {
+        "label": "ビジュアル編集",
+        "value": "シーン編集/属性変更/リアルタイムプレビュー"
+      },
+      "nodes": {
+        "label": "ノード",
+        "value": "スプライトノード/図形ノード/動画ノード/テキストノード/音声ノード"
+      },
+      "animation": {
+        "label": "アニメーション",
+        "value": "移動/拡大縮小/フェードイン・アウト/連番フレーム"
+      },
+      "particles": {
+        "label": "パーティクル",
+        "value": "静的パーティクル/動的パーティクル/パラメータ調整"
+      },
+      "shader": {
+        "label": "シェーダー",
+        "value": "コードレベルのリアルタイムレンダリングで、精密に制御し、リアルな表現を実現"
+      }
+    },
+    "versionNote": "バージョンによって差異がある場合があります"
   },
   "header": {
     "title": "Codelume Studio",

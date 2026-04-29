@@ -2,9 +2,30 @@
   "badge": "码镜工坊",
   "teaser": {
     "title": "码镜工坊",
-    "subtitle": "面向码镜壁纸包的素材市场与编辑器预览，占位展示。",
     "cta": "下载码镜工坊",
-    "note": "在新标签页打开 Mac App Store（暂与码镜主应用同一链接，后续将替换）"
+    "details": {
+      "visual": {
+        "label": "可视化编辑",
+        "value": "场景修改/属性设置/实时预览"
+      },
+      "nodes": {
+        "label": "节点",
+        "value": "精灵/图形/视频/文本/声音"
+      },
+      "animation": {
+        "label": "动画",
+        "value": "移动/缩放/淡入淡出/序列帧"
+      },
+      "particles": {
+        "label": "粒子",
+        "value": "静态/动态/参数修改"
+      },
+      "shader": {
+        "label": "着色器",
+        "value": "代码级精确控制"
+      }
+    },
+    "versionNote": "不同版本可能存在差异"
   },
   "header": {
     "title": "码镜工坊",

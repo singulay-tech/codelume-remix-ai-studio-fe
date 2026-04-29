@@ -1,8 +1,8 @@
 {
-  "badge": "预览",
-  "latestProject": "和最新版本界面可能存在差异",
+  "badge": "码镜",
+  "latestProject": "不同版本可能存在差异",
   "featured": {
-    "title": "码镜软件预览",
+    "title": "码镜",
     "details": {
       "industry": {
         "label": "屏幕管理",
@@ -19,6 +19,10 @@
       "format": {
         "label": "屏保程序",
         "value": "自定义屏保/锁屏播放"
+      },
+      "settings": {
+        "label": "偏好设置",
+        "value": "语言/主题/开机自启/播放控制"
       }
     }
   }

@@ -8,12 +8,21 @@ import { useTranslation } from 'react-i18next'
 import { LanguageSwitcher } from './LanguageSwitcher'
 import { CODELUME_MAC_APP_STORE_URL } from '@/constants/externalLinks'
 
+const HERO_VIDEO_URLS = [
+  'https://assets.codelume.cn/codelume-web-preview/preview.mov',
+  'https://assets.codelume.cn/codelume-web-preview/Introduce.mov',
+  'https://assets.codelume.cn/codelume-web-preview/preview.mov',
+  'https://assets.codelume.cn/codelume-web-preview/Introduce.mov',
+  'https://assets.codelume.cn/codelume-web-preview/preview.mov',
+]
+
 export function Hero() {
   const { t } = useTranslation(['hero', 'navigation'])
   const [isMuted, setIsMuted] = useState(true)
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const videoRef = useRef<HTMLVideoElement>(null)
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(0)
+  const videoRefs = useRef<Array<HTMLVideoElement | null>>([])
 
   // 滚动检测
   useEffect(() => {
@@ -28,45 +37,31 @@ export function Hero() {
 
   // 确保加载时立即静音，避免任何声音
   useEffect(() => {
-    if (videoRef.current) {
-      console.log('Video element found, setting up...')
-      videoRef.current.volume = 0
-      videoRef.current.muted = true
-      videoRef.current.defaultMuted = true
-      
-      // 添加调试用事件监听
-      videoRef.current.addEventListener('loadstart', () => console.log('Video: loadstart'))
-      videoRef.current.addEventListener('loadedmetadata', () => console.log('Video: loadedmetadata'))
-      videoRef.current.addEventListener('canplay', () => console.log('Video: canplay'))
-      videoRef.current.addEventListener('playing', () => console.log('Video: playing'))
-      videoRef.current.addEventListener('error', (e) => console.error('Video error:', e))
-      
-      // 播放时强制静音
-      videoRef.current.addEventListener('play', () => {
-        if (videoRef.current) {
-          console.log('Video play event fired')
-          videoRef.current.muted = isMuted
-          videoRef.current.volume = isMuted ? 0 : 0.7
-        }
-      })
-      
-      // 尝试播放视频
-      const playPromise = videoRef.current.play()
-      if (playPromise !== undefined) {
-        playPromise
-          .then(() => console.log('Video autoplay successful'))
-          .catch(error => console.error('Video autoplay failed:', error))
-      }
-    }
+    videoRefs.current.forEach((video) => {
+      if (!video) return
+      video.volume = 0
+      video.muted = true
+      video.defaultMuted = true
+    })
   }, [])
 
   // isMuted 变化时更新视频静音状态
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.muted = isMuted
-      videoRef.current.volume = isMuted ? 0 : 0.7
-    }
+    videoRefs.current.forEach((video) => {
+      if (!video) return
+      video.muted = isMuted
+      video.volume = isMuted ? 0 : 0.7
+    })
   }, [isMuted])
+
+  // 背景轮播：每 20 秒切换一个视频（手动切换后重新计时）
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      setCurrentVideoIndex((prev) => (prev + 1) % HERO_VIDEO_URLS.length)
+    }, 20000)
+
+    return () => window.clearTimeout(timer)
+  }, [currentVideoIndex])
 
   // 移动端菜单打开时锁定页面滚动
   useEffect(() => {
@@ -103,18 +98,45 @@ export function Hero() {
 
   return (
     <div className="relative h-screen w-full overflow-hidden bg-black">
-      {/* 超大视频 - 占据 95% 空间 */}
-      <video
-        ref={videoRef}
-        className="absolute inset-0 w-full h-full object-cover scale-110"
-        autoPlay
-        muted
-        loop
-        playsInline
+      {/* 背景视频轮播 */}
+      <div
+        className="absolute inset-0 flex h-full w-full transition-transform duration-1000 ease-in-out"
+        style={{ transform: `translateX(-${currentVideoIndex * 100}%)` }}
       >
-        <source src="https://assets.codelume.cn/codelume-web-preview/preview.mov" type="video/quicktime" />
-        {t('hero:video.unsupported')}
-      </video>
+        {HERO_VIDEO_URLS.map((url, index) => (
+          <video
+            key={`${url}-${index}`}
+            ref={(el) => {
+              videoRefs.current[index] = el
+            }}
+            className="h-full min-w-full flex-shrink-0 object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+          >
+            <source src={url} type="video/quicktime" />
+            {t('hero:video.unsupported')}
+          </video>
+        ))}
+      </div>
+
+      {/* 轮播指示器 */}
+      <div className="absolute bottom-6 left-1/2 z-50 flex -translate-x-1/2 items-center gap-2 rounded-full bg-black/35 px-3 py-2 backdrop-blur-sm">
+        {HERO_VIDEO_URLS.map((_, index) => (
+          <button
+            key={`hero-indicator-${index}`}
+            type="button"
+            aria-label={`切换到第 ${index + 1} 张背景`}
+            onClick={() => setCurrentVideoIndex(index)}
+            className={`h-2.5 rounded-full gentle-animation ${
+              currentVideoIndex === index
+                ? 'w-6 bg-white'
+                : 'w-2.5 bg-white/50 hover:bg-white/80'
+            }`}
+          />
+        ))}
+      </div>
 
       {/* 全宽导航栏 */}
       <motion.nav
