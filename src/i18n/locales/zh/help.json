@@ -4,14 +4,15 @@
   "back": "返回首页",
   "docBack": "帮助总览",
   "docNavToc": "本页目录",
+  "protocolLocaleNote": "",
   "categories": {
     "app": {
       "title": "码镜",
       "description": "动态壁纸客户端的安装、使用与常见问题。"
     },
-    "wallpaperPolicy": {
-      "title": "壁纸协议",
-      "description": "码镜壁纸包协议详细说明。"
+    "wallpaperProtocol": {
+      "title": "壁纸包协议",
+      "description": "`.bundle` 目录结构、plist 字段与资源约定。"
     },
     "studio": {
       "title": "码镜工坊",
@@ -59,25 +60,9 @@
         }
       ]
     },
-    "wallpaperPolicy": {
+    "wallpaperProtocol": {
       "pageTitle": "壁纸包协议",
-      "sections": [
-        {
-          "id": "scope",
-          "title": "适用范围",
-          "content": "本协议适用于通过码镜展示、投递或使用的壁纸包及相关内容。以下为示例条款框架，正式文本将单独发布。"
-        },
-        {
-          "id": "rights",
-          "title": "版权与素材",
-          "content": "投递方应保证对所提交内容享有合法权利，并配合来源标注与侵权投诉处理流程。（示例占位）"
-        },
-        {
-          "id": "submission",
-          "title": "投递与展示",
-          "content": "收录作品可能在壁纸中心展示；展示形式与信息字段以双方沟通确认为准。（示例占位）"
-        }
-      ]
+      "sections": []
     }
   }
 }

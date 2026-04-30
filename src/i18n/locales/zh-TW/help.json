@@ -4,14 +4,15 @@
   "back": "返回首頁",
   "docBack": "說明總覽",
   "docNavToc": "本頁目錄",
+  "protocolLocaleNote": "",
   "categories": {
     "app": {
       "title": "碼鏡",
       "description": "動態壁紙用戶端的安裝、使用與常見問題。"
     },
-    "wallpaperPolicy": {
-      "title": "壁紙協定",
-      "description": "碼鏡壁紙包協定詳細說明。"
+    "wallpaperProtocol": {
+      "title": "壁紙包協定",
+      "description": "`.bundle` 目錄結構、plist 欄位與資源約定。"
     },
     "studio": {
       "title": "碼鏡工坊",
@@ -59,25 +60,9 @@
         }
       ]
     },
-    "wallpaperPolicy": {
+    "wallpaperProtocol": {
       "pageTitle": "壁紙包協定",
-      "sections": [
-        {
-          "id": "scope",
-          "title": "適用範圍",
-          "content": "本協定適用於透過碼鏡展示、投遞或使用的壁紙包及相關內容。以下為示例條款框架，正式文本將另發布。"
-        },
-        {
-          "id": "rights",
-          "title": "版權與素材",
-          "content": "投遞方應保證對所提交內容享有合法權利，並配合來源標註與侵權申訴處理流程。（示例占位）"
-        },
-        {
-          "id": "submission",
-          "title": "投遞與展示",
-          "content": "收錄作品可能在壁紙中心展示；展示形式與資訊欄位以雙方溝通確認為準。（示例占位）"
-        }
-      ]
+      "sections": []
     }
   }
 }

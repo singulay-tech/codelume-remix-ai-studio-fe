@@ -1,11 +1,16 @@
 import { Link, Navigate, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
+import { HelpBundleProtocolDoc } from '@/components/HelpBundleProtocolDoc'
+import { getBundleProtocolNavItems } from '@/lib/bundleProtocolMarkdown'
 import { isHelpDocKey, type HelpDocBundle } from '@/constants/helpDocs'
+import bundleProtocolMarkdown from '../../docs/codelume-bundle-protocol.md?raw'
+
+const BUNDLE_PROTOCOL_DOC_KEY = 'wallpaperProtocol' as const
 
 export function HelpDocPage() {
   const { docKey = '' } = useParams<{ docKey: string }>()
-  const { t } = useTranslation(['help', 'navigation'])
+  const { t, i18n } = useTranslation(['help', 'navigation'])
 
   if (!isHelpDocKey(docKey)) {
     return <Navigate to="/help" replace />
@@ -13,6 +18,13 @@ export function HelpDocPage() {
 
   const doc = t(`help:docs.${docKey}`, { returnObjects: true }) as HelpDocBundle
   const sections = Array.isArray(doc?.sections) ? doc.sections : []
+
+  const isBundleProtocol = docKey === BUNDLE_PROTOCOL_DOC_KEY
+  const protocolNav = isBundleProtocol ? getBundleProtocolNavItems(bundleProtocolMarkdown) : []
+  const navItems = isBundleProtocol ? protocolNav : sections.map((s) => ({ id: s.id, title: s.title }))
+
+  const localeBanner =
+    isBundleProtocol && !i18n.language.startsWith('zh') ? t('help:protocolLocaleNote') : null
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -47,30 +59,34 @@ export function HelpDocPage() {
               {t('help:docNavToc')}
             </p>
             <nav className="flex flex-row gap-2 overflow-x-auto pb-1 lg:flex-col lg:gap-1 lg:overflow-visible lg:sticky lg:top-28">
-              {sections.map((section) => (
+              {navItems.map((item) => (
                 <a
-                  key={section.id}
-                  href={`#${section.id}`}
+                  key={item.id}
+                  href={`#${item.id}`}
                   className="whitespace-nowrap rounded-lg px-3 py-2 text-sm text-muted-foreground hover:bg-muted hover:text-foreground gentle-animation lg:whitespace-normal"
                 >
-                  {section.title}
+                  {item.title}
                 </a>
               ))}
             </nav>
           </aside>
 
-          <article className="min-w-0 flex-1 max-w-3xl">
+          <article className="min-w-0 flex-1 max-w-4xl">
             <h1 className="text-3xl sm:text-4xl font-black mb-10">{doc.pageTitle}</h1>
-            <div className="space-y-14">
-              {sections.map((section) => (
-                <section key={section.id} id={section.id} className="scroll-mt-28">
-                  <h2 className="text-xl font-black text-foreground border-b border-border/60 pb-2 mb-4">
-                    {section.title}
-                  </h2>
-                  <p className="text-muted-foreground leading-relaxed">{section.content}</p>
-                </section>
-              ))}
-            </div>
+            {isBundleProtocol ? (
+              <HelpBundleProtocolDoc markdown={bundleProtocolMarkdown} localeBanner={localeBanner} />
+            ) : (
+              <div className="space-y-14">
+                {sections.map((section) => (
+                  <section key={section.id} id={section.id} className="scroll-mt-28">
+                    <h2 className="text-xl font-black text-foreground border-b border-border/60 pb-2 mb-4">
+                      {section.title}
+                    </h2>
+                    <p className="text-muted-foreground leading-relaxed">{section.content}</p>
+                  </section>
+                ))}
+              </div>
+            )}
           </article>
         </div>
       </div>

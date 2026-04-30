@@ -3,15 +3,16 @@
   "back": "홈으로",
   "docBack": "도움말 목록",
   "docNavToc": "이 페이지",
+  "protocolLocaleNote": "아래 본문은 중국어로 작성되어 있습니다. plist 키 이름 등은 macOS 구현과 일치합니다. 영어 번역은 추후 추가될 수 있습니다.",
   "logoAlt": "码镜",
   "categories": {
     "app": {
       "title": "码镜",
       "description": "동적 월페이퍼 앱 설치, 사용, 자주 묻는 질문."
     },
-    "wallpaperPolicy": {
-      "title": "월페이퍼 정책",
-      "description": "码镜 월페이퍼 번들 정책 상세 설명."
+    "wallpaperProtocol": {
+      "title": "월페이퍼 번들 사양",
+      "description": "`.bundle` 레이아웃, plist 필드, 리소스 규약."
     },
     "studio": {
       "title": "码镜工坊",
@@ -59,25 +60,9 @@
         }
       ]
     },
-    "wallpaperPolicy": {
-      "pageTitle": "월페이퍼 번들 정책",
-      "sections": [
-        {
-          "id": "scope",
-          "title": "적용 범위",
-          "content": "码镜에서 노출·제출·이용되는 월페이퍼 번들이 대상입니다. 샘플 틀이며 정식 문서는 별도 공개 예정입니다."
-        },
-        {
-          "id": "rights",
-          "title": "저작권·소재",
-          "content": "제출자는 적법한 권리를 보유함을 보장하고 출처 표기·삭제 요청에 협조합니다. (플레이스홀더)"
-        },
-        {
-          "id": "submission",
-          "title": "제출·노출",
-          "content": "채택 작품은 Wallpaper Hub에 게시될 수 있습니다. 표시 방식은 협의에 따릅니다. (플레이스홀더)"
-        }
-      ]
+    "wallpaperProtocol": {
+      "pageTitle": "월페이퍼 번들 사양",
+      "sections": []
     }
   }
 }

@@ -1,7 +1,7 @@
 import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 import LanguageDetector from 'i18next-browser-languagedetector'
-import { defaultNS, fallbackLng, supportedLngs } from './config'
+import { defaultNS, ENABLE_LANGUAGE_SWITCHER, fallbackLng, supportedLngs } from './config'
 
 // English language packs
 import enCommon from './locales/en/common.json'
@@ -146,12 +146,14 @@ const resources = {
   },
 } as const
 
-i18n
-  .use(LanguageDetector)
-  .use(initReactI18next)
-  .init({
+if (ENABLE_LANGUAGE_SWITCHER) {
+  i18n.use(LanguageDetector)
+}
+
+i18n.use(initReactI18next).init({
     resources,
-    fallbackLng,
+    lng: ENABLE_LANGUAGE_SWITCHER ? undefined : 'zh',
+    fallbackLng: ENABLE_LANGUAGE_SWITCHER ? fallbackLng : 'zh',
     supportedLngs: [...supportedLngs],
     // Normalize region variants (e.g. ja-JP -> ja) to avoid falling back to English.
     load: 'languageOnly',
@@ -176,21 +178,23 @@ i18n
       escapeValue: false // React already handles XSS
     },
 
-    detection: {
-      order: ['localStorage', 'navigator', 'htmlTag'],
-      caches: ['localStorage'],
-      lookupLocalStorage: 'i18nextLng',
-      convertDetectedLanguage: (lng) => {
-        if (lng.startsWith('zh-TW') || lng.startsWith('zh-Hant') || lng.startsWith('zh-HK')) {
-          return 'zh-TW'
+    detection: ENABLE_LANGUAGE_SWITCHER
+      ? {
+          order: ['localStorage', 'navigator', 'htmlTag'],
+          caches: ['localStorage'],
+          lookupLocalStorage: 'i18nextLng',
+          convertDetectedLanguage: (lng) => {
+            if (lng.startsWith('zh-TW') || lng.startsWith('zh-Hant') || lng.startsWith('zh-HK')) {
+              return 'zh-TW'
+            }
+            if (lng.startsWith('zh-CN') || lng.startsWith('zh-SG')) {
+              return 'zh'
+            }
+            const base = lng.split('-')[0]
+            return supportedLngs.includes(base as (typeof supportedLngs)[number]) ? base : lng
+          },
         }
-        if (lng.startsWith('zh-CN') || lng.startsWith('zh-SG')) {
-          return 'zh'
-        }
-        const base = lng.split('-')[0]
-        return supportedLngs.includes(base as (typeof supportedLngs)[number]) ? base : lng
-      }
-    },
+      : false,
 
     react: {
       useSuspense: true

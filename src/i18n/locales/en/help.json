@@ -3,15 +3,16 @@
   "back": "Back to home",
   "docBack": "Help hub",
   "docNavToc": "On this page",
+  "protocolLocaleNote": "The specification below is in Chinese. Keys and field names match the macOS reference implementation; an English translation may be added later.",
   "logoAlt": "码镜",
   "categories": {
     "app": {
       "title": "码镜",
       "description": "Install, use, and troubleshoot the dynamic wallpaper app."
     },
-    "wallpaperPolicy": {
-      "title": "Wallpaper policy",
-      "description": "Full details of the 码镜 wallpaper bundle policy."
+    "wallpaperProtocol": {
+      "title": "Wallpaper Protocol",
+      "description": "`.bundle` layout, plist fields, and asset conventions."
     },
     "studio": {
       "title": "码镜工坊",
@@ -59,25 +60,9 @@
         }
       ]
     },
-    "wallpaperPolicy": {
-      "pageTitle": "Wallpaper bundle policy",
-      "sections": [
-        {
-          "id": "scope",
-          "title": "Scope",
-          "content": "This policy covers bundles shown, submitted, or used with 码镜. Sample framework—final legal text will be published separately."
-        },
-        {
-          "id": "rights",
-          "title": "Rights & materials",
-          "content": "Submitters warrant they have rights to the content and will cooperate on attribution and takedown requests. (Placeholder)"
-        },
-        {
-          "id": "submission",
-          "title": "Submission & display",
-          "content": "Accepted work may appear in Wallpaper Hub; presentation details are agreed case by case. (Placeholder)"
-        }
-      ]
+    "wallpaperProtocol": {
+      "pageTitle": "Wallpaper Protocol",
+      "sections": []
     }
   }
 }

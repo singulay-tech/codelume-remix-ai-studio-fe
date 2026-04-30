@@ -8,7 +8,13 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu'
-import { fallbackLng, supportedLngs, languageNames, type SupportedLanguage } from '@/i18n/config'
+import {
+  ENABLE_LANGUAGE_SWITCHER,
+  fallbackLng,
+  supportedLngs,
+  languageNames,
+  type SupportedLanguage,
+} from '@/i18n/config'
 import { cn } from '@/lib/utils'
 
 export type LanguageSwitcherVariant = 'onDarkVideo' | 'onSurface'
@@ -20,6 +26,10 @@ type LanguageSwitcherProps = {
 
 export function LanguageSwitcher({ variant = 'onDarkVideo' }: LanguageSwitcherProps) {
   const { i18n } = useTranslation()
+
+  if (!ENABLE_LANGUAGE_SWITCHER) {
+    return null
+  }
   const resolved = (i18n.resolvedLanguage || i18n.language || fallbackLng) as string
   const base = resolved.split('-')[0] as SupportedLanguage
   const currentLang = (

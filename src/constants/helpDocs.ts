@@ -1,4 +1,4 @@
-export const HELP_DOC_KEYS = ['app', 'studio', 'wallpaperPolicy'] as const
+export const HELP_DOC_KEYS = ['app', 'studio', 'wallpaperProtocol'] as const
 
 export type HelpDocKey = (typeof HELP_DOC_KEYS)[number]
 

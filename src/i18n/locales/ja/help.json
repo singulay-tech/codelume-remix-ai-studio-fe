@@ -3,15 +3,16 @@
   "back": "ホームに戻る",
   "docBack": "ヘルプ一覧",
   "docNavToc": "このページ",
+  "protocolLocaleNote": "以下の仕様本文は中国語です。plist のキー名などは macOS 実装と一致します。英語版は追って追加する場合があります。",
   "logoAlt": "码镜",
   "categories": {
     "app": {
       "title": "码镜",
       "description": "動的壁紙アプリの導入・操作・よくある質問。"
     },
-    "wallpaperPolicy": {
-      "title": "壁紙ポリシー",
-      "description": "码镜の壁紙パック規約の詳細説明。"
+    "wallpaperProtocol": {
+      "title": "壁紙パック仕様",
+      "description": "`.bundle` の構成、plist フィールド、リソースの取り決め。"
     },
     "studio": {
       "title": "码镜工坊",
@@ -59,25 +60,9 @@
         }
       ]
     },
-    "wallpaperPolicy": {
-      "pageTitle": "壁紙パック規約",
-      "sections": [
-        {
-          "id": "scope",
-          "title": "適用範囲",
-          "content": "码镜での表示・投稿・利用に関わる壁紙パックが対象です。サンプル枠組みです。正式版は別途公開予定です。"
-        },
-        {
-          "id": "rights",
-          "title": "権利と素材",
-          "content": "投稿者は適法な権利を有することを保証し、出所表示や削除要請に協力します。（プレースホルダー）"
-        },
-        {
-          "id": "submission",
-          "title": "投稿と掲載",
-          "content": "採用作品は Wallpaper Hub に掲載される場合があります。表示内容は都度すり合わせます。（プレースホルダー）"
-        }
-      ]
+    "wallpaperProtocol": {
+      "pageTitle": "壁紙パック仕様",
+      "sections": []
     }
   }
 }

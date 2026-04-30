@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { HomePage } from './pages/HomePage'
 import { WorkshopPage } from './pages/WorkshopPage'
 import { HelpPage } from './pages/HelpPage'
@@ -11,6 +11,7 @@ export default function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/workshop" element={<WorkshopPage />} />
         <Route path="/help" element={<HelpPage />} />
+        <Route path="/help/wallpaperPolicy" element={<Navigate to="/help/wallpaperProtocol" replace />} />
         <Route path="/help/:docKey" element={<HelpDocPage />} />
       </Routes>
     </BrowserRouter>
