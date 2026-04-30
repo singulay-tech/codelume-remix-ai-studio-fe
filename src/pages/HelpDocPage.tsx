@@ -4,6 +4,7 @@ import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { HelpBundleProtocolDoc } from '@/components/HelpBundleProtocolDoc'
 import { getBundleProtocolNavItems } from '@/lib/bundleProtocolMarkdown'
 import { isHelpDocKey, type HelpDocBundle } from '@/constants/helpDocs'
+import { mergeHelpDocBundle } from '@/data/codelumeHelpContent'
 import bundleProtocolMarkdown from '../../docs/codelume-bundle-protocol.md?raw'
 
 const BUNDLE_PROTOCOL_DOC_KEY = 'wallpaperProtocol' as const
@@ -16,7 +17,8 @@ export function HelpDocPage() {
     return <Navigate to="/help" replace />
   }
 
-  const doc = t(`help:docs.${docKey}`, { returnObjects: true }) as HelpDocBundle
+  const docI18n = t(`help:docs.${docKey}`, { returnObjects: true }) as HelpDocBundle
+  const doc = mergeHelpDocBundle(docKey, docI18n)
   const sections = Array.isArray(doc?.sections) ? doc.sections : []
 
   const isBundleProtocol = docKey === BUNDLE_PROTOCOL_DOC_KEY

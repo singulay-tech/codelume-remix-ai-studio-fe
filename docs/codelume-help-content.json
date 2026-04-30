@@ -1,0 +1,67 @@
+{
+  "readme": "码镜帮助文档数据：帮助中心列表与各文档页的标题、段落集中在此 JSON 编辑；未写的字段仍使用 i18n 中的翻译。修改后保存即可随前端构建生效。",
+  "version": 1,
+  "helpHub": {
+    "listPageTitle": "帮助文档",
+    "categories": {
+      "app": {
+        "title": "码镜",
+        "description": "动态壁纸客户端的安装、使用与常见问题。"
+      },
+      "wallpaperProtocol": {
+        "title": "壁纸包协议",
+        "description": "壁纸包目录结构、plist 字段与资源约定。"
+      },
+      "studio": {
+        "title": "码镜工坊",
+        "description": "工坊应用、.bundle 壁纸包导出，以及与码镜配合使用的说明。"
+      }
+    },
+    "docs": {
+      "app": {
+        "pageTitle": "码镜",
+        "sections": [
+          {
+            "id": "overview",
+            "title": "产品概述",
+            "content": "码镜是面向 macOS 的动态壁纸客户端，支持 Scene2D 与视频等格式。以下为示例说明，正式文档将在此补充。"
+          },
+          {
+            "id": "install",
+            "title": "安装与更新",
+            "content": "请通过 Mac App Store 获取码镜；更新与系统兼容说明将在此展开。（示例占位）"
+          },
+          {
+            "id": "hub",
+            "title": "壁纸中心",
+            "content": "在壁纸中心浏览官方精选与收录作品；导入、切换与管理的步骤说明将后续完善。（示例占位）"
+          }
+        ]
+      },
+      "studio": {
+        "pageTitle": "码镜工坊",
+        "sections": [
+          {
+            "id": "overview",
+            "title": "概述",
+            "content": "码镜工坊用于编辑场景、预览与导出 .bundle 壁纸包。以下为示例段落，详细教程将陆续添加。"
+          },
+          {
+            "id": "export",
+            "title": "导出壁纸包",
+            "content": "完成编辑后，通过导出功能生成 .bundle，便于在码镜中加载与分享元数据。（示例占位）"
+          },
+          {
+            "id": "with-app",
+            "title": "与码镜配合",
+            "content": "将导出的包导入码镜客户端即可使用；若遇兼容问题，可邮件联系支持。（示例占位）"
+          }
+        ]
+      },
+      "wallpaperProtocol": {
+        "pageTitle": "壁纸包协议",
+        "sections": []
+      }
+    }
+  }
+}
