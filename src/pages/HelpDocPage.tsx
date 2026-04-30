@@ -7,9 +7,11 @@ import { isHelpDocKey, type HelpDocBundle } from '@/constants/helpDocs'
 import { mergeHelpDocBundle } from '@/data/codelumeHelpContent'
 import bundleProtocolMarkdown from '../../docs/codelume-bundle-protocol.md?raw'
 import codelumeMarkdown from '../../docs/codelume.md?raw'
+import codelumeStudioMarkdown from '../../docs/codelume-studio.md?raw'
 
 const BUNDLE_PROTOCOL_DOC_KEY = 'wallpaperProtocol' as const
 const CODELUME_DOC_KEY = 'app' as const
+const STUDIO_DOC_KEY = 'studio' as const
 
 export function HelpDocPage() {
   const { docKey = '' } = useParams<{ docKey: string }>()
@@ -25,18 +27,23 @@ export function HelpDocPage() {
 
   const isBundleProtocol = docKey === BUNDLE_PROTOCOL_DOC_KEY
   const isCodelumeDoc = docKey === CODELUME_DOC_KEY
+  const isStudioDoc = docKey === STUDIO_DOC_KEY
   const protocolNav = isBundleProtocol ? getBundleProtocolNavItems(bundleProtocolMarkdown) : []
   const codelumeNav = isCodelumeDoc ? getBundleProtocolNavItems(codelumeMarkdown) : []
+  const codelumeStudioNav = isStudioDoc ? getBundleProtocolNavItems(codelumeStudioMarkdown) : []
   const navItems = isBundleProtocol
     ? protocolNav
     : isCodelumeDoc
       ? codelumeNav
+      : isStudioDoc
+        ? codelumeStudioNav
       : sections.map((s) => ({ id: s.id, title: s.title }))
 
   const localeBanner =
     isBundleProtocol && !i18n.language.startsWith('zh') ? t('help:protocolLocaleNote') : null
   const codelumeTitle = isCodelumeDoc ? getMarkdownH1Title(codelumeMarkdown) : null
-  const pageTitle = codelumeTitle || doc.pageTitle
+  const codelumeStudioTitle = isStudioDoc ? getMarkdownH1Title(codelumeStudioMarkdown) : null
+  const pageTitle = codelumeTitle || codelumeStudioTitle || doc.pageTitle
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -89,6 +96,8 @@ export function HelpDocPage() {
               <HelpBundleProtocolDoc markdown={bundleProtocolMarkdown} localeBanner={localeBanner} />
             ) : isCodelumeDoc ? (
               <HelpBundleProtocolDoc markdown={codelumeMarkdown} />
+            ) : isStudioDoc ? (
+              <HelpBundleProtocolDoc markdown={codelumeStudioMarkdown} />
             ) : (
               <div className="space-y-14">
                 {sections.map((section) => (

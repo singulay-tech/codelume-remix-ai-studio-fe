@@ -25,6 +25,23 @@ type Props = {
   localeBanner?: string | null
 }
 
+function getNodeText(node: ReactNode): string {
+  if (typeof node === 'string' || typeof node === 'number') return String(node)
+  if (Array.isArray(node)) return node.map(getNodeText).join('')
+  if (isValidElement(node)) return getNodeText((node.props as { children?: ReactNode }).children)
+  return ''
+}
+
+function getStatusBadgeClass(text: string): string | null {
+  const normalized = text.trim()
+  if (normalized === '说明项') return 'bg-orange-500/15 text-orange-700 dark:text-orange-300'
+  if (normalized === '待修复') return 'bg-slate-500/15 text-slate-700 dark:text-slate-200'
+  if (normalized === '修复中') return 'bg-amber-500/15 text-amber-700 dark:text-amber-300'
+  if (normalized === '已完成') return 'bg-emerald-500/15 text-emerald-700 dark:text-emerald-300'
+  if (normalized === '阻塞') return 'bg-rose-500/15 text-rose-700 dark:text-rose-300'
+  return null
+}
+
 const markdownComponents: Components = {
   h2: ({ children, ...props }) => {
     const text = String(children)
@@ -80,6 +97,18 @@ const markdownComponents: Components = {
       </code>
     )
   },
+  td: ({ children, ...rest }) => {
+    const text = getNodeText(children)
+    const badgeClass = getStatusBadgeClass(text)
+    if (badgeClass) {
+      return (
+        <td {...rest}>
+          <span className={cn('inline-flex rounded-full px-2.5 py-0.5 text-xs font-semibold', badgeClass)}>{text}</span>
+        </td>
+      )
+    }
+    return <td {...rest}>{children}</td>
+  },
 }
 
 export function HelpBundleProtocolDoc({ markdown, localeBanner }: Props) {
@@ -100,7 +129,11 @@ export function HelpBundleProtocolDoc({ markdown, localeBanner }: Props) {
           'prose-a:no-underline',
           'prose-code:rounded-md prose-code:bg-muted/90 prose-code:px-1.5 prose-code:py-0.5 prose-code:font-mono prose-code:text-[0.875em] prose-code:font-medium prose-code:text-foreground prose-code:before:content-none prose-code:after:content-none',
           'prose-pre:my-0 prose-pre:bg-transparent prose-pre:p-0 prose-pre:font-mono',
-          'prose-table:text-sm prose-th:border prose-th:border-border/60 prose-td:border prose-td:border-border/60',
+          'prose-table:w-full prose-table:table-fixed prose-table:text-sm prose-th:border prose-th:border-border/60 prose-td:border prose-td:border-border/60',
+          '[&_th:nth-child(1)]:w-[10%] [&_td:nth-child(1)]:w-[10%]',
+          '[&_th:nth-child(2)]:w-[30%] [&_td:nth-child(2)]:w-[30%]',
+          '[&_th:nth-child(3)]:w-[10%] [&_td:nth-child(3)]:w-[10%]',
+          '[&_th:nth-child(4)]:w-[60%] [&_td:nth-child(4)]:w-[60%]',
           'prose-li:text-muted-foreground',
           'prose-img:mx-auto prose-img:my-8 prose-img:block prose-img:max-h-52 prose-img:w-auto prose-img:max-w-full prose-img:rounded-2xl prose-img:border prose-img:border-border/50 prose-img:object-contain prose-img:shadow-sm',
         ].join(' ')}
