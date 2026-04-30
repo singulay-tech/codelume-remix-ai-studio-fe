@@ -12,7 +12,7 @@
     },
     "wallpaperProtocol": {
       "title": "壁纸包协议",
-      "description": "`.bundle` 目录结构、plist 字段与资源约定。"
+      "description": "壁纸包目录结构、plist 字段与资源约定。"
     },
     "studio": {
       "title": "码镜工坊",
