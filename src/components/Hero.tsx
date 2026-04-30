@@ -11,14 +11,14 @@ import { CODELUME_MAC_APP_STORE_URL } from '@/constants/externalLinks'
 const HERO_VIDEO_URLS = [
   'https://assets.codelume.cn/codelume-web-preview/preview_0.mp4',
   'https://assets.codelume.cn/codelume-web-preview/preview_1.mp4',
-  'https://assets.codelume.cn/codelume-web-preview/preview_0.mp4',
+  'https://assets.codelume.cn/codelume-web-preview/preview_2.mp4',
   'https://assets.codelume.cn/codelume-web-preview/preview_1.mp4',
   'https://assets.codelume.cn/codelume-web-preview/preview_0.mp4',
 ]
 const HERO_FALLBACK_IMAGE_URL = 'https://assets.codelume.cn/codelume-web-preview/preview.jpg'
 
 // 可调：固定只播放前 N 个视频
-const HERO_ACTIVE_VIDEO_COUNT = 2
+const HERO_ACTIVE_VIDEO_COUNT = 3
 
 export function Hero() {
   const { t } = useTranslation(['hero', 'navigation'])
