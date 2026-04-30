@@ -2,12 +2,14 @@ import { Link, Navigate, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { HelpBundleProtocolDoc } from '@/components/HelpBundleProtocolDoc'
-import { getBundleProtocolNavItems } from '@/lib/bundleProtocolMarkdown'
+import { getBundleProtocolNavItems, getMarkdownH1Title } from '@/lib/bundleProtocolMarkdown'
 import { isHelpDocKey, type HelpDocBundle } from '@/constants/helpDocs'
 import { mergeHelpDocBundle } from '@/data/codelumeHelpContent'
 import bundleProtocolMarkdown from '../../docs/codelume-bundle-protocol.md?raw'
+import codelumeMarkdown from '../../docs/codelume.md?raw'
 
 const BUNDLE_PROTOCOL_DOC_KEY = 'wallpaperProtocol' as const
+const CODELUME_DOC_KEY = 'app' as const
 
 export function HelpDocPage() {
   const { docKey = '' } = useParams<{ docKey: string }>()
@@ -22,11 +24,19 @@ export function HelpDocPage() {
   const sections = Array.isArray(doc?.sections) ? doc.sections : []
 
   const isBundleProtocol = docKey === BUNDLE_PROTOCOL_DOC_KEY
+  const isCodelumeDoc = docKey === CODELUME_DOC_KEY
   const protocolNav = isBundleProtocol ? getBundleProtocolNavItems(bundleProtocolMarkdown) : []
-  const navItems = isBundleProtocol ? protocolNav : sections.map((s) => ({ id: s.id, title: s.title }))
+  const codelumeNav = isCodelumeDoc ? getBundleProtocolNavItems(codelumeMarkdown) : []
+  const navItems = isBundleProtocol
+    ? protocolNav
+    : isCodelumeDoc
+      ? codelumeNav
+      : sections.map((s) => ({ id: s.id, title: s.title }))
 
   const localeBanner =
     isBundleProtocol && !i18n.language.startsWith('zh') ? t('help:protocolLocaleNote') : null
+  const codelumeTitle = isCodelumeDoc ? getMarkdownH1Title(codelumeMarkdown) : null
+  const pageTitle = codelumeTitle || doc.pageTitle
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -74,9 +84,11 @@ export function HelpDocPage() {
           </aside>
 
           <article className="min-w-0 flex-1 max-w-4xl">
-            <h1 className="text-3xl sm:text-4xl font-black mb-10">{doc.pageTitle}</h1>
+            <h1 className="text-3xl sm:text-4xl font-black mb-10">{pageTitle}</h1>
             {isBundleProtocol ? (
               <HelpBundleProtocolDoc markdown={bundleProtocolMarkdown} localeBanner={localeBanner} />
+            ) : isCodelumeDoc ? (
+              <HelpBundleProtocolDoc markdown={codelumeMarkdown} />
             ) : (
               <div className="space-y-14">
                 {sections.map((section) => (

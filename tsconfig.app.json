@@ -27,5 +27,5 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src", "docs/codelume-help-content.json"]
+  "include": ["src", "docs/codelume-help-content.md"]
 }

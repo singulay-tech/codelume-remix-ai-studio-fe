@@ -1,5 +1,5 @@
-import raw from '../../docs/codelume-help-content.json'
-import type { HelpDocBundle, HelpDocKey } from '@/constants/helpDocs'
+import rawMarkdown from '../../docs/codelume-help-content.md?raw'
+import { HELP_DOC_KEYS, type HelpDocBundle, type HelpDocKey } from '@/constants/helpDocs'
 
 export type CodelumeHelpContentHelpCategory = {
   title: string
@@ -7,16 +7,55 @@ export type CodelumeHelpContentHelpCategory = {
 }
 
 export type CodelumeHelpContent = {
-  readme?: string
-  version?: number
   helpHub?: {
     listPageTitle?: string
     categories?: Partial<Record<HelpDocKey, CodelumeHelpContentHelpCategory>>
-    docs?: Partial<Record<HelpDocKey, Partial<HelpDocBundle>>>
   }
 }
 
-export const codelumeHelpContent = raw as CodelumeHelpContent
+function getFirstLineValue(block: string, keys: string[]): string | undefined {
+  const escaped = keys.map((k) => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')
+  const match = new RegExp(`(?:^|\\n)(?:${escaped})[：:]\\s*(.+)`, 'm').exec(block)
+  return match?.[1]?.trim() || undefined
+}
+
+function getHeadingBlock(markdown: string, level: number, title: string): string {
+  const hashes = '#'.repeat(level)
+  const next = '#'.repeat(Math.max(1, level - 1))
+  const pattern = new RegExp(
+    `${hashes}\\s+${title.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\n([\\s\\S]*?)(?=\\n${next}\\s+|$)`,
+    'm',
+  )
+  return pattern.exec(markdown)?.[1] ?? ''
+}
+
+function parseHelpContentMarkdown(markdown: string): CodelumeHelpContent {
+  const listTitleBlock = getHeadingBlock(markdown, 2, '帮助中心标题')
+  const categoriesBlock = getHeadingBlock(markdown, 2, '分类卡片')
+
+  const categories: Partial<Record<HelpDocKey, CodelumeHelpContentHelpCategory>> = {}
+
+  for (const key of HELP_DOC_KEYS) {
+    const categoryBlock = getHeadingBlock(`### ${key}\n${categoriesBlock}`, 3, key)
+    const categoryTitle = getFirstLineValue(categoryBlock, ['标题'])
+    const categoryDescription = getFirstLineValue(categoryBlock, ['描述'])
+    if (categoryTitle || categoryDescription) {
+      categories[key] = {
+        title: categoryTitle || '',
+        description: categoryDescription || '',
+      }
+    }
+  }
+
+  return {
+    helpHub: {
+      listPageTitle: listTitleBlock.trim().split('\n').find((line) => line.trim())?.trim(),
+      categories,
+    },
+  }
+}
+
+export const codelumeHelpContent = parseHelpContentMarkdown(rawMarkdown)
 
 export function getHelpHubListTitle(fallback: string): string {
   return codelumeHelpContent.helpHub?.listPageTitle?.trim() || fallback
@@ -30,12 +69,8 @@ export function getHelpCategoryCard(key: HelpDocKey, fallbackTitle: string, fall
   }
 }
 
-/** 帮助文档 JSON 中 `docs.*` 的字段覆盖 i18n；未提供时沿用翻译。 */
+/** 帮助中心卡片之外的正文统一走各自文档或 i18n。 */
 export function mergeHelpDocBundle(key: HelpDocKey, i18nDoc: HelpDocBundle): HelpDocBundle {
-  const patch = codelumeHelpContent.helpHub?.docs?.[key]
-  if (!patch) return i18nDoc
-  return {
-    pageTitle: patch.pageTitle?.trim() || i18nDoc.pageTitle,
-    sections: patch.sections !== undefined ? patch.sections : i18nDoc.sections,
-  }
+  void key
+  return i18nDoc
 }

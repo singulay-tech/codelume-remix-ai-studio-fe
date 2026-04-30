@@ -13,3 +13,9 @@ export function getBundleProtocolNavItems(markdown: string): { id: string; title
     return { id: markdownHeadingSlug(title), title }
   })
 }
+
+export function getMarkdownH1Title(markdown: string): string | null {
+  const firstLine = markdown.trim().split('\n')[0]
+  const match = /^#\s+(.+)$/.exec(firstLine)
+  return match?.[1]?.trim() || null
+}
