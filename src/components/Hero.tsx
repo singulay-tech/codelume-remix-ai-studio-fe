@@ -15,10 +15,12 @@ const HERO_VIDEO_URLS = [
   'https://assets.codelume.cn/codelume-web-preview/preview_1.mp4',
   'https://assets.codelume.cn/codelume-web-preview/preview_0.mp4',
 ]
-const HERO_FALLBACK_IMAGE_URL = 'https://assets.codelume.cn/codelume-web-preview/preview.jpg'
 
 // 可调：固定只播放前 N 个视频
 const HERO_ACTIVE_VIDEO_COUNT = 3
+const HERO_INITIAL_START_INDEX = Math.floor(
+  Math.random() * Math.max(1, Math.min(HERO_ACTIVE_VIDEO_COUNT, HERO_VIDEO_URLS.length)),
+)
 
 export function Hero() {
   const { t } = useTranslation(['hero', 'navigation'])
@@ -26,9 +28,9 @@ export function Hero() {
   const [isMuted, setIsMuted] = useState(true)
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [currentVideoIndex, setCurrentVideoIndex] = useState(0)
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(HERO_INITIAL_START_INDEX)
   /** 轨道位移索引：0..heroVideos.length 为「克隆首帧」，用于无缝从最后一张继续向左滑 */
-  const [trackIndex, setTrackIndex] = useState(0)
+  const [trackIndex, setTrackIndex] = useState(HERO_INITIAL_START_INDEX)
   const [isTrackTransitionEnabled, setIsTrackTransitionEnabled] = useState(true)
   const videoRefs = useRef<Array<HTMLVideoElement | null>>([])
   const [readyVideos, setReadyVideos] = useState<boolean[]>(
@@ -158,19 +160,11 @@ export function Hero() {
 
   return (
     <div className="relative h-screen w-full overflow-hidden bg-black">
-      {/* 视频未就绪时优先展示静态背景图 */}
-      <div
-        className={`absolute inset-0 bg-cover bg-center gentle-animation ${
-          isCarouselReady ? 'opacity-0' : 'opacity-100'
-        }`}
-        style={{ backgroundImage: `url(${HERO_FALLBACK_IMAGE_URL})` }}
-      />
-
       {/* 背景视频轮播 */}
       <div
         className={`absolute inset-0 flex h-full w-full ${
           isTrackTransitionEnabled ? 'transition-transform duration-1000 ease-in-out' : ''
-        } ${isCarouselReady ? 'opacity-100' : 'opacity-0'}`}
+        }`}
         style={{ transform: `translateX(-${trackIndex * 100}%)` }}
       >
         {[...heroVideos, heroVideos[0]].map((url, index) => {
@@ -225,7 +219,7 @@ export function Hero() {
               }
             }}
             className="h-full min-w-full flex-shrink-0 object-cover"
-            autoPlay={index === 0}
+            autoPlay={index === HERO_INITIAL_START_INDEX}
             muted
             loop={false}
             playsInline
