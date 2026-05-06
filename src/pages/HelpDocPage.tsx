@@ -90,7 +90,7 @@ export function HelpDocPage() {
             </nav>
           </aside>
 
-          <article className="min-w-0 flex-1 max-w-4xl">
+          <article className={isStudioDoc ? 'min-w-0 flex-1' : 'min-w-0 flex-1 max-w-4xl'}>
             <h1 className="text-3xl sm:text-4xl font-black mb-10">{pageTitle}</h1>
             {isBundleProtocol ? (
               <HelpBundleProtocolDoc markdown={bundleProtocolMarkdown} localeBanner={localeBanner} />

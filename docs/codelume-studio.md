@@ -6,43 +6,14 @@
 
 ## 快速开始
 
-本章节以制作两款不同类型的动态壁纸为例，介绍码镜工坊的入门使用。
+本章节以制作两款不同类型的动态壁纸为例，介绍码镜工坊的入门使用。为了方便演示，直接以视频形式提供。
 
 ### 视频壁纸制作
 
-在开始制作视频壁纸之前，您需要准备好相应的壁纸视频文件，格式为 `.mp4` 或者 `.mov`， 将其放在桌面或者任何您能找到的路径下。这类视频文件可以通过专业的工具制作，比如 Adobe After Effects、Blender...
-
-1. 打开码镜工坊软件，选择 `新建视频壁纸`
-![image_0](/images/quickstart/image_0.png)
-
-2. 在弹出的模态对话框中输入 `项目名称`， 同时选择项目的存储 `位置`，可以根据自己的喜好选择是否将当前位置设置为默认存储位置。成功选择后点击 `创建` 按钮完成项目创建.
-![image_1](/images/quickstart/image_1.png)
-
-3. 在界面左侧的 ![image_3](/images/quickstart/image_3.png "inline") 面板中输入壁纸信息，在导入码镜后会在壁纸详情面板中展示。
-![image_2](/images/quickstart/image_2.png)
-    - 名称：壁纸的名称
-    - 分类：壁纸分类，目前只能选择，不支持自定义输入
-    - 作者：壁纸创作者
-    - 邮箱：壁纸创作者邮箱
-    - 标签：壁纸标签，多个标签使用 # 分割，例如： #tag1 #tag2
-    - 描述：提供一段壁纸的描述信息。
-
-4. 将准备好的视频壁纸拖动到右侧面板中，如果需要重新选择视频壁纸可以点击 `移除` 按钮后重新添加。
-![image_4](/images/quickstart/image_4.png)
-
-5. 在导入视频资源后可以点击![image_5](/images/quickstart/image_5.png "inline")按钮进入视频详情界面，在此界面可以看到当前视频的基础信息。如果此视频是首尾帧相同的循环视频，请选中 `循环` 按钮。
-![image_6](/images/quickstart/image_6.png)
-
-6. 使用 command + s 键保存当前项目，或者手动点击码镜菜单栏 `文件` 中的 `存储` 按钮完成项目的保存，方便下次做修改。稍后点击 `导出Bundle...` 按钮，将制作的壁纸保存到桌面或者其他目录下，然后使用 `码镜` 导入使用。  
-![image_7](/images/quickstart/image_7.png)
+演示视频：
+<video controls playsinline preload="metadata" src="https://assets.codelume.cn/codelume-web-preview/video_present.mp4"></video>
 
 ### 2D 场景壁纸制作
 
-## 界面与导航
-
-## 2D 场景动态壁纸
-
-### Node
-### Action
-### Shader
-
+演示视频：
+<video controls playsinline preload="metadata" src="https://assets.codelume.cn/codelume-web-preview/scene2D_present.mp4"></video>

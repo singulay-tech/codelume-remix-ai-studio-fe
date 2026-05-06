@@ -2,6 +2,7 @@ import { Children, isValidElement, type ReactNode } from 'react'
 import type { Components } from 'react-markdown'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
+import rehypeRaw from 'rehype-raw'
 import { MarkdownProtocolCodeBlock } from '@/components/MarkdownProtocolCodeBlock'
 import { stripBundleProtocolLeadingH1 } from '@/lib/bundleProtocolMarkdown'
 import { markdownHeadingSlug } from '@/lib/markdownHeadingSlug'
@@ -127,6 +128,16 @@ const markdownComponents: Components = {
       />
     )
   },
+  /** Embedded HTML `<video>` (trusted docs only); full width of doc column (no side gutters). */
+  video: ({ className, ...rest }) => (
+    <video
+      {...rest}
+      className={cn(
+        'not-prose my-8 block h-auto w-full max-w-none rounded-xl border border-border/50 shadow-sm',
+        className,
+      )}
+    />
+  ),
 }
 
 export function HelpBundleProtocolDoc({ markdown, localeBanner }: Props) {
@@ -153,9 +164,10 @@ export function HelpBundleProtocolDoc({ markdown, localeBanner }: Props) {
           '[&_th:nth-child(3)]:w-[10%] [&_td:nth-child(3)]:w-[10%]',
           '[&_th:nth-child(4)]:w-[60%] [&_td:nth-child(4)]:w-[60%]',
           'prose-li:text-muted-foreground',
+          '[&_video]:mx-0 [&_video]:max-w-none [&_video]:w-full',
         ].join(' ')}
       >
-        <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
+        <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]} components={markdownComponents}>
           {body}
         </ReactMarkdown>
       </div>
