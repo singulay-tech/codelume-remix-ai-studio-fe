@@ -109,6 +109,24 @@ const markdownComponents: Components = {
     }
     return <td {...rest}>{children}</td>
   },
+  /**
+   * Block: capped width for screenshots. Inline: `![alt](url "inline")` — same line as text, height ≈ font (`1em`).
+   */
+  img: ({ className, title, ...rest }) => {
+    const inline = title === 'inline'
+    return (
+      <img
+        className={cn(
+          inline
+            ? 'mx-0.5 inline-block h-[1em] w-auto max-w-none align-middle rounded-sm border border-border/50 shadow-none'
+            : 'mx-auto my-8 block h-auto w-auto max-w-[min(100%,42rem)] rounded-2xl border border-border/50 shadow-sm',
+          className,
+        )}
+        {...rest}
+        title={inline ? undefined : title}
+      />
+    )
+  },
 }
 
 export function HelpBundleProtocolDoc({ markdown, localeBanner }: Props) {
@@ -135,7 +153,6 @@ export function HelpBundleProtocolDoc({ markdown, localeBanner }: Props) {
           '[&_th:nth-child(3)]:w-[10%] [&_td:nth-child(3)]:w-[10%]',
           '[&_th:nth-child(4)]:w-[60%] [&_td:nth-child(4)]:w-[60%]',
           'prose-li:text-muted-foreground',
-          'prose-img:mx-auto prose-img:my-8 prose-img:block prose-img:max-h-52 prose-img:w-auto prose-img:max-w-full prose-img:rounded-2xl prose-img:border prose-img:border-border/50 prose-img:object-contain prose-img:shadow-sm',
         ].join(' ')}
       >
         <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
