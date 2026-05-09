@@ -1,7 +1,7 @@
 'use client'
 
 import { useTranslation } from 'react-i18next'
-import { CODELUME_MAC_APP_STORE_URL } from '@/constants/externalLinks'
+import { CODELUME_STUDIO_MAC_APP_STORE_URL } from '@/constants/externalLinks'
 
 export function WorkshopTeaser() {
   const { t } = useTranslation('workshop')
@@ -44,7 +44,7 @@ export function WorkshopTeaser() {
                   <h2 className="text-3xl lg:text-4xl font-bold text-foreground">{t('teaser.title')}</h2>
                   <div className="lg:max-w-md lg:text-right">
                     <a
-                      href={CODELUME_MAC_APP_STORE_URL}
+                      href={CODELUME_STUDIO_MAC_APP_STORE_URL}
                       target="_blank"
                       rel="noreferrer"
                       className="inline-flex items-center justify-center rounded-full bg-accent-emerald px-6 py-3 text-sm font-semibold text-white hover:bg-accent-emerald/80 gentle-animation"
