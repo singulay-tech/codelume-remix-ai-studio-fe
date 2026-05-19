@@ -15,6 +15,7 @@ import enAwards from './locales/en/awards.json'
 import enAboutUs from './locales/en/aboutUs.json'
 import enWorkshop from './locales/en/workshop.json'
 import enHelp from './locales/en/help.json'
+import enLegal from './locales/en/legal.json'
 import enErrors from './locales/en/errors.json'
 
 // Simplified Chinese language packs
@@ -29,6 +30,7 @@ import zhAwards from './locales/zh/awards.json'
 import zhAboutUs from './locales/zh/aboutUs.json'
 import zhWorkshop from './locales/zh/workshop.json'
 import zhHelp from './locales/zh/help.json'
+import zhLegal from './locales/zh/legal.json'
 import zhErrors from './locales/zh/errors.json'
 
 // Traditional Chinese language packs
@@ -86,6 +88,7 @@ const resources = {
     aboutUs: enAboutUs,
     workshop: enWorkshop,
     help: enHelp,
+    legal: enLegal,
     errors: enErrors,
   },
   zh: {
@@ -100,6 +103,7 @@ const resources = {
     aboutUs: zhAboutUs,
     workshop: zhWorkshop,
     help: zhHelp,
+    legal: zhLegal,
     errors: zhErrors,
   },
   'zh-TW': {
@@ -114,6 +118,7 @@ const resources = {
     aboutUs: zhTWAboutUs,
     workshop: zhTWWorkshop,
     help: zhTWHelp,
+    legal: zhLegal,
     errors: zhTWErrors,
   },
   ja: {
@@ -128,6 +133,7 @@ const resources = {
     aboutUs: jaAboutUs,
     workshop: jaWorkshop,
     help: jaHelp,
+    legal: zhLegal,
     errors: jaErrors,
   },
   ko: {
@@ -142,6 +148,7 @@ const resources = {
     aboutUs: koAboutUs,
     workshop: koWorkshop,
     help: koHelp,
+    legal: zhLegal,
     errors: koErrors,
   },
 } as const
@@ -171,6 +178,7 @@ i18n.use(initReactI18next).init({
       'aboutUs',
       'workshop',
       'help',
+      'legal',
       'errors',
     ],
 

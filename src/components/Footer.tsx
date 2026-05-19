@@ -1,5 +1,6 @@
 'use client'
 
+import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
 export function Footer() {
@@ -73,7 +74,28 @@ export function Footer() {
           </div>
 
           {/* 我们使用的工具区 */}
-          <div className="col-span-12 md:col-span-8">
+          <div className="col-span-12 md:col-span-4">
+            <h4 className="font-black text-2xl text-background mb-8">{t('legal.title')}</h4>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <Link to="/legal/terms" className="text-background/80 hover:text-background gentle-animation font-medium">
+                  {t('legal.terms')}
+                </Link>
+              </li>
+              <li>
+                <Link to="/legal/privacy" className="text-background/80 hover:text-background gentle-animation font-medium">
+                  {t('legal.privacy')}
+                </Link>
+              </li>
+              <li>
+                <Link to="/legal/ugc" className="text-background/80 hover:text-background gentle-animation font-medium">
+                  {t('legal.ugc')}
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="col-span-12 md:col-span-4">
             <div>
               <h4 className="font-black text-2xl text-background mb-8">{t('tools.title')}</h4>
 

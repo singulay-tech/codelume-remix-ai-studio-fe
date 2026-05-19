@@ -1,0 +1,13 @@
+{
+  "logoAlt": "Codelume",
+  "back": "Back to home",
+  "docNavToc": "On this page",
+  "relatedTitle": "Related policies",
+  "versionLabel": "Version",
+  "localeNote": "If this English text conflicts with the Simplified Chinese version, the Simplified Chinese version prevails.",
+  "docTitles": {
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "ugc": "UGC Guidelines"
+  }
+}
